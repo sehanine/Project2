@@ -106,7 +106,7 @@
 							<li><a href="components.html" class="sf-with-ul">블로그2</a></li>
 						</ul>
 					</li>
-					<li><a href="#" class="sf-with-ul"> 기타1 <span
+					<li><a href="board.do" class="sf-with-ul"> 게시판 <span
 							class="sf-sub-indicator"> <i class="fa fa-angle-down "></i>
 						</span>
 					</a>

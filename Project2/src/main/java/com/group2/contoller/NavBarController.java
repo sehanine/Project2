@@ -63,4 +63,15 @@ public class NavBarController {
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
 		return "blog/single-post";
 	}
+	
+	/*
+	 * board
+	 */
+	@RequestMapping("board.do")
+	public String board(Model model){
+		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
+		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
+		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
+		return "board/board";
+	}
 }
