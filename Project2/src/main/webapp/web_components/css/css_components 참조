@@ -1,0 +1,9 @@
+css_components.jsp를 사용하는 파일들
+	main.jsp
+		-member (폴더)
+			page-login.jsp
+			page-register.jsp
+		-categories (폴더)
+			accomodation.jsp
+			meet-up.jsp
+			trip.jsp

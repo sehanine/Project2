@@ -1,0 +1,11 @@
+페이지마다 불러오는 js가 다름
+원본과 확인후에 다를 경우 web_components 안에 새로운 script.jsp 파일 만들것
+
+web_components에 css와 script모음 폴더만듬
+폴더명: scripts,  css
+
+양식: scripts_폴더명.jsp 
+	 예) scripts_categories.jsp
+	css_폴더명.jsp
+
+자세한것은 web_components 폴더 참조
