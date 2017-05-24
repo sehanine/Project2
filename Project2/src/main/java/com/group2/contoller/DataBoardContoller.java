@@ -18,7 +18,7 @@ public class DataBoardContoller {
 	@Autowired
 	private DataBoardDAO dao;
 	
-	@RequestMapping("board/board-list.do")
+	@RequestMapping("board/board.do")
 	public String databoard_list(String page,Model model){
 		if(page==null)
 			page="1";
@@ -40,7 +40,7 @@ public class DataBoardContoller {
 		model.addAttribute("curpage", curpage);
 		model.addAttribute("totalpage", totalpage);
 		
-		return "board/board-list";
+		return "board/board";
 	}
 	
 }

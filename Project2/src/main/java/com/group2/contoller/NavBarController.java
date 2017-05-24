@@ -10,8 +10,7 @@ public class NavBarController {
 	private void add_attributes(Model model){
 		model.addAttribute("css_components", "../web_components/css/css_components.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
-	}
-	private void add_cate_attributes(Model model){
+	}	private void add_cate_attributes(Model model){
 		model.addAttribute("scripts_categories", "../web_components/scripts/scripts_categories.jsp");
 	}
 	private void add_main_attributes(Model model){
