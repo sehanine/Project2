@@ -72,6 +72,8 @@ public class NavBarController {
 		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
+		//model.addAttribute("board-list", "../board/board-list.jsp");
+		
 		return "board/board";
 	}
 }

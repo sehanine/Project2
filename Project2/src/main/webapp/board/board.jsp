@@ -46,7 +46,10 @@
                         </div>
                     </div>
                 </div>
-
+                
+                <!-- Main Content -->
+				<%@ include file="../board/board-list.jsp"%>
+                <!-- /Main Content -->
                 <!-- /Title, Breadcrumb -->
 <!--                 Main Content
                 <div class="content margin-top60 margin-bottom60">
@@ -533,7 +536,7 @@
             <!-- Modal -->
             <section id="modals">
                 <!-- Login Modal -->
-<!--                 <div class="modal login fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+                <div class="modal login fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -562,7 +565,7 @@
                             </form>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <!-- /Login Modal -->
                 <!-- Registration Modal -->
                 <div class="modal register fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModal" aria-hidden="true">
