@@ -13,7 +13,6 @@
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
-
 	<context:annotation-config/>
 	<!-- DI
 		@Autowired
@@ -39,15 +38,31 @@
 		p:username="scott"
 		p:password="tiger"
 	/>
+<!-- 	<util:properties id="db" location="/WEB-INF/config/db.properties"/>
+	<bean id="ds" 
+		class="org.apache.commons.dbcp.BasicDataSource"
+	 	p:driverClassName="#{db['driver']}"
+	 	p:url="#{db['url']}"
+	 	p:username="#{db['username']}"
+	 	p:password="#{db['password']}"
+	 	p:maxActive="#{db['maxActive']}"
+	 	p:maxIdle="#{db['maxIdle']}"
+	 	p:maxWait="#{db['maxWait']}"
+	 />  
+	 -->
 	<!-- Mybis -->
 	<bean id="ssf"
 		class="org.mybatis.spring.SqlSessionFactoryBean"
 		p:dataSource-ref="ds"
 	/>
-	<bean id="mapper"
+	<bean id="memberMapper"
 		class="org.mybatis.spring.mapper.MapperFactoryBean"
 		p:sqlSessionFactory-ref="ssf"
 		p:mapperInterface="com.group2.member.MemberMapper"
+	/>
+	<bean id="boardMapper" class="org.mybatis.spring.mapper.MapperFactoryBean"
+	 	p:sqlSessionFactory-ref="ssf"
+	 	p:mapperInterface="com.group2.board.DataBoardMapper"
 	/>
 	<!-- ViewResolver:JSP 찾기 -->
 	<bean id="viewResolver"
@@ -55,17 +70,5 @@
 		p:prefix="/"
 		p:suffix=".jsp"
 	/>
+
 </beans>
-
-
-
-
-
-
-
-
-
-
-
-
-

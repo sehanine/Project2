@@ -10,10 +10,12 @@ public class NavBarController {
 	private void add_attributes(Model model){
 		model.addAttribute("css_components", "../web_components/css/css_components.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
-	}
+	}	
+	
 	private void add_cate_attributes(Model model){
 		model.addAttribute("scripts_categories", "../web_components/scripts/scripts_categories.jsp");
 	}
+	
 	private void add_main_attributes(Model model){
 		model.addAttribute("scripts_main", "../web_components/scripts/scripts_main.jsp");
 	}
@@ -63,6 +65,7 @@ public class NavBarController {
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
 		return "blog/single-post";
 	}
+
 	/*
 	 * 	Member
 	*/
@@ -73,4 +76,19 @@ public class NavBarController {
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		return "member/mypage";
 	}
+
+	
+	/*
+	 * board
+	 */
+//	@RequestMapping("board.do")
+//	public String board(Model model){
+//		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
+//		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
+//		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
+//		//model.addAttribute("board-list", "../board/board-list.jsp");
+//		
+//		return "board/board";
+//	}
+
 }
