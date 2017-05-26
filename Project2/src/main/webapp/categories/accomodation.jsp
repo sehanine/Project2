@@ -83,7 +83,7 @@
                                                     </span>
                                                     <!-- Swap image -->
                                                     <div class="flip">
-                                                        <a href="product-view.html" class="swap-image">
+                                                        <a href="mypage.do" class="swap-image">
                                                         <img src="img/shop/product_01.jpg" title="iPhone 5s 64 GB" alt="iPhone 5s 64 GB" class="front">
                                                         </a>
                                                     </div>
