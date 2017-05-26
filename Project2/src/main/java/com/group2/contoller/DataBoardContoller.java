@@ -18,11 +18,23 @@ public class DataBoardContoller {
 	@Autowired
 	private DataBoardDAO dao;
 	
-	@RequestMapping("board/board.do")
+//	@RequestMapping("board.do")
+//	public String board(Model model){
+//		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
+//		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
+//		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
+//		//model.addAttribute("board-list", "../board/board-list.jsp");
+//		
+//		return "board/board";
+//	}
+	@RequestMapping("board.do")
 	public String databoard_list(String page,Model model){
+		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
+		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
+		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
 		if(page==null)
 			page="1";
-		
+
 		int curpage = Integer.parseInt(page);
 		
 		Map map = new HashMap();
@@ -39,7 +51,7 @@ public class DataBoardContoller {
 		model.addAttribute("list", list);
 		model.addAttribute("curpage", curpage);
 		model.addAttribute("totalpage", totalpage);
-		
+
 		return "board/board";
 	}
 	

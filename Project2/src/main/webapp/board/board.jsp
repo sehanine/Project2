@@ -7,6 +7,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>board</title>
+   <script src="/resources/bootstrap/js/respond.js"></script>
+        <script src="/resources/bootstrap/js/jquery.number.min.js"></script>
+        <script src="/resources/bootstrap/js/jssor.slider.mini.js"></script>
 <!-- css import see /web_contents/css_components.jsp -->
 	<jsp:include page="${css_blog }"></jsp:include>
 <!-- css import see /web_contents/css_components.jsp -->
@@ -22,7 +25,8 @@
         <!-- Wrap -->
         <div class="wrap">
             <!-- Header -->
-			<%@ include file="../web_components/nav_bar.jsp"%>
+			
+			<jsp:include page="${nav_bar }"></jsp:include>
             <!-- /Header --> 
             <!-- Main Section -->
             <section id="main">
@@ -49,7 +53,10 @@
                     </div>
                 </div>
                 
-                <!-- Main Content -->
+        <!-- Main Content -->
+        <p>
+        <p>
+        <p>
 		<center>
 		<table border="0" width="700">
 			<tr>
@@ -58,7 +65,8 @@
 				</td>
 			</tr>
 		</table>
-		<table border="1" width="700" id="table_content">
+		
+		<table  width="700" class="table table-hover" style="width: 70% ">
 			<tr>
 				<th width="10%">번호</th>
 				<th width="45%">제목</th>
@@ -88,10 +96,17 @@
 		<table border="0" width="700">
 			<tr>
 				<td align="right">
+				 <div class="form-group" style="">
+                     <ul class="pagination">
+                     	<li class="pagination"><a href="board.do?page=${curpage>1 ? curpage-1:curpage }"><</a></li>
+                     		
+                     		
+                     	<li class="pagination"><a href="board.do?page=${curpage<totalpage ? curpage+1:curpage }">></a></li>
+                     </ul>
+                  </div>
 					<!-- model.addAttribute("curpage", curpage) 이전 페이지-->
 					<!-- model.addAttribute("totalpage", totalpage); -->
-					<a href="list.do?page=${curpage>1 ? curpage-1:curpage }">이전</a>&nbsp;
-					<a href="list.do?page=${curpage<totalpage ? curpage+1:curpage }">다음</a>&nbsp;&nbsp;
+		
 					${curpage } page / ${totalpage } pages
 				</td>
 			</tr>
