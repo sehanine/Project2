@@ -54,18 +54,18 @@
                                     <div class="featured-box featured-box-secundary default info-content">
                                         <h2 class="form-signin-heading">로그인</h2>
                                         <div class="box-content ">
-                                            <form action="#"  id="siginin" method="post">
+                                            <form action="login.do"  id="siginin" method="post">
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <div class="col-md-12">
-                                                            <input type="text" value="" class="form-control" placeholder="이메일 주소">
+                                                            <input type="text" value="" name="email" class="form-control" placeholder="이메일 주소">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <div class="col-md-12">
-                                                            <input type="password" value="" class="form-control" placeholder="비밀번호">
+                                                            <input type="password" value="" name="pwd" class="form-control" placeholder="비밀번호">
                                                             <a class="pull-right" href="#">패스워드 찾기</a>
                                                         </div>
                                                     </div>

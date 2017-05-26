@@ -1,0 +1,27 @@
+package com.group2.member;
+
+import java.util.List;
+
+public interface MemberService {
+	public int memberIdCheck(String email);
+	public String memberGetPassword(String id);
+	public void memberJoin(String firstName,String lastName,String email,String pwd);
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
