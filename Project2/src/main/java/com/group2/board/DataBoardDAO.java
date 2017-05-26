@@ -18,4 +18,8 @@ public class DataBoardDAO {
 	public int databoardTotalPage(){
 		return mapper.databoardTotalPage();   
 	}
+	public DataBoardVO boardContentData(int no){
+		mapper.boardHitIncrement(no);
+		return mapper.boardContentData(no);
+	}
 }

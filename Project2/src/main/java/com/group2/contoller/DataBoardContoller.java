@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.group2.board.DataBoardDAO;
 import com.group2.board.DataBoardVO;
 
+
 @Controller
 public class DataBoardContoller {
 
@@ -51,8 +52,21 @@ public class DataBoardContoller {
 		model.addAttribute("list", list);
 		model.addAttribute("curpage", curpage);
 		model.addAttribute("totalpage", totalpage);
+		model.addAttribute("start", start);
+		model.addAttribute("end", end);
+
 
 		return "board/board";
+	}
+	
+	@RequestMapping("board-content.do")
+	public String board_content(int no,Model model){
+		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
+		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
+		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
+		DataBoardVO vo = dao.boardContentData(no);
+		model.addAttribute("vo",vo);
+		return "board/board-content";
 	}
 	
 }
