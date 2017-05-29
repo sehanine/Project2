@@ -1,14 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>       
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>로그인</title>
-<jsp:include page="${css_components }"></jsp:include>
+<title>게시판</title>
+<!--    <script src="/resources/bootstrap/js/respond.js"></script>
+        <script src="/resources/bootstrap/js/jquery.number.min.js"></script>
+        <script src="/resources/bootstrap/js/jssor.slider.mini.js"></script> -->
+<!-- css import see /web_contents/css_components.jsp -->
+	<jsp:include page="${css_blog }"></jsp:include>
+<!-- css import see /web_contents/css_components.jsp -->
 </head>
-<body class="home">
-       <div class="page-mask">
+<body>
+    <body class="blog">
+        <div class="page-mask">
             <div class="page-loader">
                 <div class="spinner"></div>
                 로딩중
@@ -17,8 +25,9 @@
         <!-- Wrap -->
         <div class="wrap">
             <!-- Header -->
+			
 			<jsp:include page="${nav_bar }"></jsp:include>
-            <!-- /Header -->  
+            <!-- /Header --> 
             <!-- Main Section -->
             <section id="main">
                 <!-- Title, Breadcrumb -->
@@ -27,14 +36,15 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                                    <h2 class="title">로그인</h2>
+                                    <h2 class="title">게시글 내용보기</h2>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
                                     <div class="breadcrumbs pull-right">
                                         <ul>
-                                            <li>현재위치:</li>
+                                            <li>현재 위치</li>
                                             <li><a href="../index.jsp">메인</a></li>
-                                            <li>로그인</li>
+                                            <li><a href="#">게시판</a></li>
+                                            <li>상세 보기</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -42,58 +52,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- /Title, Breadcrumb -->
-                <!-- Main Content -->
-                <div class="content margin-top60 margin-bottom60">
-                    <div class="container">
-                        <div class="row">
-                           <!-- Login -->
-                            <div class="featured-boxes login">
-                                <!-- Login -->
-                                <div class="col-md-6">
-                                    <div class="featured-box featured-box-secundary default info-content">
-                                        <h2 class="form-signin-heading">로그인</h2>
-                                        <div class="box-content ">
-                                            <form action="login.do"  id="siginin" method="post">
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <input type="text" value="" name="email" class="form-control" placeholder="이메일 주소">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <input type="password" value="" name="pwd" class="form-control" placeholder="비밀번호">
-                                                            <a class="pull-right" href="#">패스워드 찾기</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-9">
-                                                        <span class="remember-box checkbox">
-                                                        <label for="rememberme">
-                                                        <input type="checkbox" id="rememberme" name="rememberme">아이디 저장
-                                                        </label>
-                                                        </span>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <input type="submit" value="로그인" class="btn btn-color push-bottom" data-loading-text="Loading...">
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /Login -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Main Content -->
-            </section>
-            <!-- /Main Section -->
+                
+        <!-- Main Content(BoardList) -->
+        <p><p><p>
+		<center>
+			<h1>내용보기</h1>
+		</center>
+	<!-- Main Content End -->
             <!-- Footer -->
             <footer id="footer">
                 <div class="pattern-overlay">
@@ -151,7 +116,7 @@
                         </div>
                     </div>
                     <!-- /Footer Top --> 
-                    <!-- Footer Bottom Start -->
+                    <!-- Footer Bottom -->
                     <div class="footer-bottom">
                         <div class="container">
                             <div class="row">
@@ -173,7 +138,89 @@
                     <!-- /Footer Bottom --> 
                 </div>
             </footer>
- 
+            <!-- /Footer --> 
+            <!-- Modal -->
+            <section id="modals">
+                <!-- Login Modal -->
+                <div class="modal login fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="form-signin-heading modal-title" id="myModalLabel">Login</h2>
+                            </div>
+                            <form method="post" id="login">
+                                <div class="modal-body">
+                                    <fieldset>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <input class="form-control" id="username" name="username" type="text" placeholder="Username" value="" required>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <input class="form-control" type="email" id="email" name="email" placeholder="Email" value="" required>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="password-recovery.html" class="pull-left">(Lost Password?)</a>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-color">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Login Modal -->
+                <!-- Registration Modal -->
+                <div class="modal register fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h2 class="form-signin-heading modal-title" id="registrationModalLabel">Create a new account</h2>
+                        </div>
+                        <form method="post" id="registration">
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-md-6">
+                                                <input type="text" value="" class="form-control" placeholder="First Name">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" value="" class="form-control" placeholder="Last Name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <input type="text" value="" class="form-control" placeholder="E-mail Address">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-md-6">
+                                                <input type="password" value="" class="form-control" placeholder="Password">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="password" value="" class="form-control" placeholder="Re-enter Password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-color">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Registration Modal -->
+            </section>
+            <!-- /Modal -->
             <!-- Scroll To Top --> 
             <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
         </div>
@@ -231,6 +278,6 @@
         </section>
         <!-- /Style Switcher -->
         <!-- The Scripts -->
-		<jsp:include page="${scripts_main }"></jsp:include>
+	<jsp:include page="${scripts_blog }"></jsp:include>
 </body>
 </html>

@@ -52,31 +52,31 @@
                                     <div class="featured-box featured-box-secundary default info-content">
                                         <h2 class="form-signin-heading">회원가입</h2>
                                         <div class="box-content">
-                                            <form action="#" id="signup" method="post">
+                                            <form action="memberJoin.do" id="signup" method="post">
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <div class="col-md-6">
-                                                            <input type="text" value="" class="form-control" placeholder="성">
+                                                            <input type="text" value="" name="lastName" class="form-control" placeholder="성">
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <input type="text" value="" class="form-control" placeholder="이름">
+                                                            <input type="text" value="" name="firstName" class="form-control" placeholder="이름">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <div class="col-md-12">
-                                                            <input type="text" value="" class="form-control" placeholder="이메일 주소">
+                                                            <input type="text" value="" name="email" class="form-control" placeholder="이메일 주소">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <div class="col-md-6">
-                                                            <input type="password" value="" class="form-control" placeholder="비밀번호">
+                                                            <input type="password" value="" name="pwd1" class="form-control" placeholder="비밀번호">
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <input type="password" value="" class="form-control" placeholder="재입력">
+                                                            <input type="password" value="" name="pwd2"  class="form-control" placeholder="재입력">
                                                         </div>
                                                     </div>
                                                 </div>

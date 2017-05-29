@@ -22,11 +22,20 @@
 					</ul>
 				</div>
 			
-				<div class="phone-login pull-right">
-					<a href="page-login.do"><i class="fa fa-sign-in"></i>로그인</a>
-					<a href="page-register.do"><i
-						class="fa fa-user-plus"></i>회원가입</a>
-				</div>
+			
+					<c:if test="${sessionScope.email==null }">
+						<div class="phone-login pull-right">
+							<a href="page-login.do"><i class="fa fa-sign-in"></i>로그인</a>
+							<a href="page-register.do"><i class="fa fa-user-plus"></i>회원가입</a>
+						</div>
+					</c:if>
+					<c:if test="${sessionScope.email!=null }">
+						<div class="phone-login pull-right">
+							${sessionScope.email }님! 안녕하세요.&nbsp;&nbsp;
+							<a href="#"><i class="fa fa-sign-in"></i>마이페이지</a>
+							<a href="logout.do"><i class="fa fa-sign-in"></i>로그아웃</a>
+						</div>
+					</c:if>
 			</div>
 		</div>
 	</div>
@@ -106,7 +115,7 @@
 							<li><a href="components.html" class="sf-with-ul">블로그2</a></li>
 						</ul>
 					</li>
-					<li><a href="#" class="sf-with-ul"> 기타1 <span
+					<li><a href="board.do" class="sf-with-ul"> 게시판 <span
 							class="sf-sub-indicator"> <i class="fa fa-angle-down "></i>
 						</span>
 					</a>
@@ -143,7 +152,7 @@
 						</span>
 					</a>
 						<ul>
-							<li><a href="contact.html" class="sf-with-ul">Contact</a></li>
+							<li><a href="new_trip.do" class="sf-with-ul">새글</a></li>
 							<li><a href="contact-2.html" class="sf-with-ul">Contact
 									Option</a></li>
 							<li><a href="contact-3.html" class="sf-with-ul">Contact

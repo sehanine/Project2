@@ -541,4 +541,8 @@
         </section>
         <jsp:include page="${scripts_mypage }"></jsp:include>
     </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> refs/remotes/origin/master
