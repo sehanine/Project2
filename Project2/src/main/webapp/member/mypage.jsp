@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
 <!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
@@ -31,15 +32,14 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                                    <h2 class="title">About Me</h2>
+                                    <h2 class="title">마이페이지</h2>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
                                     <div class="breadcrumbs pull-right">
                                         <ul>
-                                            <li>You are Now on:</li>
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="#">Page</a></li>
-                                            <li>About Me</li>
+                                            <li>현재 위치</li>
+                                            <li><a href="index.jsp">메인</a></li>
+                                            <li>마이페이지</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -70,21 +70,21 @@
                             <!-- Left Section End -->
                             <!-- welcome Section Start -->
                             <div class="welcome col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                <h2 class="shorter">John <span>Doe</span></h2>
-                                <h4 class="color">Web Designer</h4>
+                                <h2 class="shorter">${sessionScope.lastName } <span>${sessionScope.firstName }</span></h2>
+                                <h4 class="color" >${sessionScope.email }</h4>
+                                <input type="hidden" name="email" value="abcd">
                                 <div class="star-divider star-divider-small">
                                     <div class="star-divider-icon">
                                         <i class=" fa fa-star"></i>
                                     </div>
                                 </div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                    when an unknown printer took a galley of type and scrambled it to make a type 
-                                    specimen book. 
+                                <p>
+                                	소개글 작성  >> if 소개글이 없으면 자신의 소개글을 작성해 주세요.
+                                				else 작성한 소개글  
                                 </p>
                                 <ul class="list icons list-unstyled">
-                                    <li><i class="fa fa-check"></i> Fusce sit amet orci quis arcu vestibulum vestibulum sed ut felis.</li>
-                                    <li><i class="fa fa-check"></i> Phasellus in risus quis lectus iaculis vulputate id quis nisl.</li>
+                                    <li><i class="fa fa-check"></i>성별</li>
+                                    <li><i class="fa fa-check"></i>거주도시</li>
                                     <li><i class="fa fa-check"></i> Iaculis vulputate id quis nisl.</li>
                                     <li><i class="fa fa-check"></i> Iaculis vulputate id.</li>
                                 </ul>
@@ -116,7 +116,7 @@
                                 <div class="circular-knob">
                                     <input class="knob" data-linecap="round" data-fgColor="#0088CC" data-thickness=".2" value="85" data-readOnly="true" data-displayInput="false">
                                     <div class="circular-knob-content">
-                                        <strong>HTML/CSS</strong>
+                                        <strong>사용처</strong>
                                         <label>85%</label>
                                     </div>
                                 </div>
@@ -125,7 +125,7 @@
                                 <div class="circular-knob">
                                     <input class="knob" data-linecap="round" data-fgColor="#59AB02" data-thickness=".2" value="75" data-readOnly="true" data-displayInput="false">
                                     <div class="circular-knob-content">
-                                        <strong>Wordpress</strong>
+                                        <strong>생각해보기</strong>
                                         <label>75%</label>
                                     </div>
                                 </div>
@@ -134,7 +134,7 @@
                                 <div class="circular-knob">
                                     <input class="knob" data-linecap="round" data-fgColor="#FA6900" data-thickness=".2" value="60" data-readOnly="true" data-displayInput="false">
                                     <div class="circular-knob-content">
-                                        <strong>jQuery</strong>
+                                        <strong>없으면</strong>
                                         <label>60%</label>
                                     </div>
                                 </div>
@@ -143,7 +143,7 @@
                                 <div class="circular-knob">
                                     <input class="knob" data-linecap="round" data-fgColor="#008080" data-thickness=".2" value="80" data-readOnly="true" data-displayInput="false">
                                     <div class="circular-knob-content">
-                                        <strong>Design</strong>
+                                        <strong>주석</strong>
                                         <label>80%</label>
                                     </div>
                                 </div>
@@ -159,7 +159,7 @@
                             <div class="row">
                                 <div class="slogan-content">
                                     <div class="col-lg-9 col-md-9">
-                                        <h2 class="slogan-title">Found a reason to work with me? Lets's start!</h2>
+                                        <h2 class="slogan-title">게시물 모아보기</h2>
                                     </div>
                                     <div class="col-lg-3 col-md-3">
                                         <div class="get-started">
@@ -180,7 +180,7 @@
                             <div class="portfolio-content">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="portfolio-title text-center">
-                                        <h2>Recent Works</h2>
+                                        <h2>찜목록</h2>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-isotope portfolio-four-column">
@@ -266,7 +266,7 @@
                                 <div class="client-logo">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="text-center">
-                                            <h2>My <span>Clients</span></h2>
+                                            <h2>작성한 글</h2>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -423,7 +423,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <input class="form-control" type="email" id="email" name="email" placeholder="Email" value="" required>
+                                                <!-- <input class="form-control" type="email" id="email" name="email" placeholder="Email" value="" required> -->
                                             </div>
                                         </div>
                                     </fieldset>
@@ -541,8 +541,4 @@
         </section>
         <jsp:include page="${scripts_mypage }"></jsp:include>
     </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> refs/remotes/origin/master

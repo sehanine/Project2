@@ -1,11 +1,18 @@
 package com.group2.contoller;
 
+import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.group2.member.MemberService;
+
 @Controller
 public class NavBarController {
+	@Resource(name="md")
+	private MemberService service;
 	
 	private void add_attributes(Model model){
 		model.addAttribute("css_components", "../web_components/css/css_components.jsp");
@@ -77,7 +84,6 @@ public class NavBarController {
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		return "member/mypage";
 	}
-
 	
 	/*
 	 * board

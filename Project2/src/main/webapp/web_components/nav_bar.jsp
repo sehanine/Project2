@@ -32,7 +32,7 @@
 					<c:if test="${sessionScope.email!=null }">
 						<div class="phone-login pull-right">
 							${sessionScope.email }님! 안녕하세요.&nbsp;&nbsp;
-							<a href="#"><i class="fa fa-sign-in"></i>마이페이지</a>
+							<a href="mypage.do"><i class="fa fa-sign-in"></i>마이페이지</a>
 							<a href="logout.do"><i class="fa fa-sign-in"></i>로그아웃</a>
 						</div>
 					</c:if>
