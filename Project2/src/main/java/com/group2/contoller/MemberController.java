@@ -1,11 +1,14 @@
 package com.group2.contoller;
 
+import java.io.Console;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.context.request.SessionScope;
 
 import com.group2.member.MemberService;
 //import com.group2.member.MemberVO;
@@ -20,14 +23,21 @@ public class MemberController {
 	public String member_login(String email,String pwd,Model model,HttpSession session){
 		int count=service.memberIdCheck(email);
 		String res="";
-		
+		String firstName="";
+		String lastName="";
 		if(count==0){
 			res="noid";
 		}else{
 			String db_pwd=service.memberGetPassword(email);
 			if(db_pwd.equals(pwd)){
 				res="ok";
+				firstName=service.memberFirstNameData(email);
+				lastName=service.memberLastNameData(email);
+				System.out.println("º∫:"+lastName);
+				System.out.println("¿Ã∏ß:"+firstName);
 				session.setAttribute("email", email);
+				session.setAttribute("firstName", firstName);
+				session.setAttribute("lastName", lastName);
 				
 			}else{
 				res="nopwd";

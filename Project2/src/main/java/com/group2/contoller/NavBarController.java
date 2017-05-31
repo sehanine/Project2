@@ -1,11 +1,18 @@
 package com.group2.contoller;
 
+import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.group2.member.MemberService;
+
 @Controller
 public class NavBarController {
+	@Resource(name="md")
+	private MemberService service;
 	
 	private void add_attributes(Model model){
 		model.addAttribute("css_components", "../web_components/css/css_components.jsp");
@@ -66,17 +73,17 @@ public class NavBarController {
 		return "blog/single-post";
 	}
 
+
 	/*
-	 * 	Member
+	 * 	Member Á¤¿ì»ï ÁÖ¼®
 	*/
-	@RequestMapping("mypage.do")
+	/*@RequestMapping("mypage.do")
 	public String mypage(Model model){
 		model.addAttribute("css_mypage", "../web_components/css/css_mypage.jsp");
 		model.addAttribute("scripts_mypage", "../web_components/scripts/scripts_mypage.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		return "member/mypage";
-	}
-
+	}*/
 	
 	/*
 	 * board
@@ -92,3 +99,4 @@ public class NavBarController {
 //	}
 
 }
+

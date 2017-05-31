@@ -21,6 +21,15 @@ public class MemberDAO implements MemberService{
 		mapper.memberJoin(firstName, lastName, email, pwd);
 	}
 	
+	@Override
+	public String memberFirstNameData(String email) {
+		return mapper.memberFirstNameData(email);
+	}
+	
+	@Override
+	public String memberLastNameData(String email) {
+		return mapper.memberLastNameData(email);
+	}
 	
 	
 }

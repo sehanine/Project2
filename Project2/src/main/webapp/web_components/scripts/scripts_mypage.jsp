@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!-- The Scripts -->
+
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery-migrate-1.0.0.js"></script>
         <script src="js/jquery-ui.js"></script>

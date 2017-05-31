@@ -35,6 +35,7 @@
 							<a href="new_post.do"><i class="fa fa-file-text-o"> 글쓰기</i></a>
 							<a href="mypage.do"><i class="fa fa-user"></i>마이페이지</a>
 							<a href="logout.do"><i class="fa fa-sign-out"></i>로그아웃</a>
+
 						</div>
 					</c:if>
 			</div>
