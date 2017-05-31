@@ -7,8 +7,9 @@ import org.springframework.stereotype.Repository;
 public class MyPgaeDAO implements MyPageService{
 	@Autowired
 	private MyPageMapper mapper;
+	
 	@Override
-	public String ContnentCheck(String content){
-		return mapper.ContnentCheck(content);
+	public String ContentCheck(String email) {
+		return mapper.ContentCheck(email);
 	}
 }

@@ -16,10 +16,11 @@ public class MyPageController {
 	private MyPageService service;
 	
 	@RequestMapping("mypage.do")
-	public String mypage(Model model,String content,HttpSession session){
-		String con = service.ContnentCheck(content);
-		System.out.println("MyPageController con"+con);
-		System.out.println("MyPageController content"+content);
+	public String mypage(Model model, HttpSession session){
+		String email = (String) session.getAttribute("email");
+		String con = service.ContentCheck(email);
+		System.out.println("MyPageController con: " + con);
+		System.out.println("MyPageController content: " + email);
 		String check = "";
 		
 		if(con==null){
@@ -27,7 +28,7 @@ public class MyPageController {
 			session.setAttribute("check", check);
 		}else{
 			check = "OK";
-			session.setAttribute("conntent:", con);
+			session.setAttribute("content", con);
 			session.setAttribute("check", check);
 		}
 		model.addAttribute("check:", check);

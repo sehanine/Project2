@@ -81,7 +81,7 @@
                                 <c:if test="${sessionScope.check==null }">
                                 <form action="selfIntroduction.jsp" method="post">
                                 <p>
-                                	자신을 소개하여 주세요 !
+                                	${sessionScope.content }
                                 </p>
                                 <ul class="list icons list-unstyled">
                                     <li><i class="fa fa-check"></i>성별</li>

@@ -6,6 +6,6 @@ public interface MyPageMapper {
 	
 	@Select("SELECT content FROM mypage "
 			+ "WHERE email=#{email, jdbcType=VARCHAR}")
-	public String ContnentCheck(String content); // content불러오기
+	public String ContentCheck(String email); // content불러오기
 	
 }
