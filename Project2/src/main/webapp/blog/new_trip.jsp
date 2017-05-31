@@ -8,6 +8,7 @@
 <title>새글</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <jsp:include page="${css_components }"></jsp:include>
+
 </head>
 <body class="home">
      <div class="page-mask">
@@ -50,29 +51,32 @@
                              <div class="widget category">
                                  <h3 class="title">여행 호스팅 하기</h3>
                                  <ul class="category-list slide">
-                                     <li><a href="new_trip.do?mode=1">1. 시작</a></li>
-                                     <li><a href="new_trip.do?mode=2">2. 언어</a></li>
-                                     <li><a href="new_trip.do?mode=3">3. 카테고리</a></li>
-                                     <li><a href="new_trip.do?mode=4">4. 기관 설명</a></li>
-                                     <li><a href="new_trip.do?mode=5">5. 여행 제목</a></li>
-                                     <li><a href="new_trip.do?mode=6">6. 태그 설정</a></li>
-                                     <li><a href="new_trip.do?mode=7">7. 포스터 이미지 추가</a></li>
-                                     <li><a href="new_trip.do?mode=8">8. 일정표 작성</a></li>
-                                     <li><a href="new_trip.do?mode=9">9. 제공 항목</a></li>
-                                     <li><a href="new_trip.do?mode=10">10. 관련 사진 추가</a></li>
-                                     <li><a href="new_trip.do?mode=11">11. 프로그램 소개</a></li>
-                                     <li><a href="new_trip.do?mode=12">12. 여행 장소 입력</a></li>
-                                     <li><a href="new_trip.do?mode=13">13. 주의사항</a></li>
-                                     <li><a href="new_trip.do?mode=14">14. 게스트 설정</a></li>
-                                     <li><a href="new_trip.do?mode=15">15. 요금 책정</a></li>
-                                     <li><a href="new_trip.do?mode=16">16. 제출</a></li>
+                                     <li><a href="javascript:change(1);">1. 시작</a></li>
+                                     <li><a href="javascript:change(2);">2. 언어</a></li>
+                                     <li><a href="javascript:change(3);">3. 카테고리</a></li>
+                                     <li><a href="javascript:change(4);">4. 기관 설명</a></li>
+                                     <li><a href="javascript:change(5);">5. 여행 제목</a></li>
+                                     <li><a href="javascript:change(6);">6. 태그 설정</a></li>
+                                     <li><a href="javascript:change(7);">7. 포스터 이미지 추가</a></li>
+                                     <li><a href="javascript:change(8);">8. 일정표 작성</a></li>
+                                     <li><a href="javascript:change(9);">9. 제공 항목</a></li>
+                                     <li><a href="javascript:change(10);">10. 관련 사진 추가</a></li>
+                                     <li><a href="javascript:change(11);">11. 프로그램 소개</a></li>
+                                     <li><a href="javascript:change(12);">12. 여행 장소 입력</a></li>
+                                     <li><a href="javascript:change(13);">13. 주의사항</a></li>
+                                     <li><a href="javascript:change(14);">14. 게스트 설정</a></li>
+                                     <li><a href="javascript:change(15);">15. 요금 책정</a></li>
+                                     <li><a href="javascript:change(16);">16. 제출</a></li>
                                  </ul>
                              </div>
                              <!-- Left nav Widget End -->
                         </div>
                          <!-- Sidebar End -->
                          <!-- Post Content -->
-						<c:choose>
+                        <div id="change">
+                         
+                        </div>
+					<%-- 	<c:choose>
 							<c:when test="${param.mode == null || param.mode == 1}">
 								<jsp:include page="${new_trip_01}"></jsp:include>
 							</c:when>
@@ -125,7 +129,7 @@
 								<jsp:include page="${fin_trip}"></jsp:include>
 							</c:when>
 						</c:choose>
-                         
+                          --%>
 <!--                          <div class="posts-block col-lg-8 col-md-8 col-sm-8 col-xs-12">
                              <article class="post hentry">
                                  <div class="post-image">
@@ -238,6 +242,24 @@
          <!-- Scroll To Top --> 
          <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
      </div>
-	 <jsp:include page="${scripts_main }"></jsp:include>
+<jsp:include page="${scripts_main }"></jsp:include>
+<script type="text/javascript">
+	function change(mode) {
+		var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange =
+            function(){
+                if(this.readyState == 4 && this.status == 200){
+					document.getElementById("change").innerHTML = this.responseText;
+                }
+            };
+        xhttp.open(
+        		"GET", 
+        		"trip_content.do?mode=" + mode, 
+        		false
+        );
+        xhttp.send(); 
+    };
+    window.onload = change(1);
+</script>	
 </body>
 </html>

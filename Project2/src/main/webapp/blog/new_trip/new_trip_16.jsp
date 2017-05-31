@@ -28,7 +28,7 @@
 	            </p>
 	        </div>
 	        <div class="pull-right">
-	        	<a href="new_trip.do?mode=17" class="btn btn-success" role="button">제출</a>
+	        	<a href="javascript:change(17);" class="btn btn-success" role="button">제출</a>
 	        </div>
 	    </article>
 	</div>

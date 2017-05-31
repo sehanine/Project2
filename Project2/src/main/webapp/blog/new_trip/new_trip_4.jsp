@@ -18,7 +18,7 @@
 	        </div>
 	        <div class="post-content">
 	            <p>
-	               	post 10
+	               	post 4
 	            </p>
 	            <p>
 	                	원하는 트립을 디자인 해보세요. 
@@ -28,9 +28,9 @@
 	            </p>
 	        </div>
 	        <div class="pull-right">
-	        	<a href="new_trip.do?mode=11" class="btn btn-success" role="button">다음</a>
+	        	<a href="javascript:change(5);" class="btn btn-success" role="button">다음</a>
 	        </div>
-	    </article>
+		</article>
 	</div>
 </body>
 </html>

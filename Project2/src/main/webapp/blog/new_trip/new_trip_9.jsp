@@ -18,7 +18,7 @@
 	        </div>
 	        <div class="post-content">
 	            <p>
-	               	post 2
+	               	post 9
 	            </p>
 	            <p>
 	                	원하는 트립을 디자인 해보세요. 
@@ -27,8 +27,8 @@
 	                	회원님의 트립이 기준에 만족되면 게시글이 등록됩니다.
 	            </p>
 	        </div>
-	       	<div class="pull-right">
-	        	<a href="new_trip.do?mode=3" class="btn btn-success" role="button">다음</a>
+	        <div class="pull-right">
+	        	<a href="javascript:change(10);" class="btn btn-success" role="button">다음</a>
 	        </div>
 	    </article>
 	</div>

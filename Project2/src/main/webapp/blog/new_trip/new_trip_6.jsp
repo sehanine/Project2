@@ -28,7 +28,7 @@
 	            </p>
 	        </div>
 	        <div class="pull-right">
-	        	<a href="new_trip.do?mode=7" class="btn btn-success" role="button">다음</a>
+	        	<a href="javascript:change(7);" class="btn btn-success" role="button">다음</a>
 	        </div>
 	    </article>
 	</div>

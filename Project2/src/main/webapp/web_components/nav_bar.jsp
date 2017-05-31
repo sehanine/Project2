@@ -25,15 +25,16 @@
 			
 					<c:if test="${sessionScope.email==null }">
 						<div class="phone-login pull-right">
-							<a href="page-login.do"><i class="fa fa-sign-in"></i>로그인</a>
 							<a href="page-register.do"><i class="fa fa-user-plus"></i>회원가입</a>
+							<a href="page-login.do"><i class="fa fa-sign-in"></i>로그인</a>
 						</div>
 					</c:if>
 					<c:if test="${sessionScope.email!=null }">
 						<div class="phone-login pull-right">
 							${sessionScope.email }님! 안녕하세요.&nbsp;&nbsp;
-							<a href="#"><i class="fa fa-sign-in"></i>마이페이지</a>
-							<a href="logout.do"><i class="fa fa-sign-in"></i>로그아웃</a>
+							<a href="new_post.do"><i class="fa fa-file-text-o"> 글쓰기</i></a>
+							<a href="mypage.do"><i class="fa fa-user"></i>마이페이지</a>
+							<a href="logout.do"><i class="fa fa-sign-out"></i>로그아웃</a>
 						</div>
 					</c:if>
 			</div>

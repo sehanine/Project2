@@ -27,7 +27,7 @@
 	            <br/>
 	        </div>
 	        <div class="pull-right"> 
-            	<a href="#" class="btn btn-success" role="button">확인</a>
+            	<a href="main.do" class="btn btn-success" role="button">메인으로</a>
 	        </div>
 	    </article>
 	</div>
