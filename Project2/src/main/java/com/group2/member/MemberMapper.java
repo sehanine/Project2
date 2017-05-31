@@ -18,13 +18,13 @@ public interface MemberMapper {
 			+ "VALUES(#{firstName},#{lastName},#{email},#{pwd})")
 	public void memberJoin(@Param("firstName")String firstName,@Param("lastName")String lastName,@Param("email")String email,@Param("pwd")String pwd);	//회원가입
 	
-	@Select("SELECT firstName FROM tripMember "//tripMember의 정보 가져오기
+	@Select("SELECT firstName FROM tripMember "//tripMember의 firstName 가져오기
 			+ "WHERE email=#{email,jdbcType=VARCHAR}")
-	public String memberFirstNameData(String email);//모든 정보 가져오기
+	public String memberFirstNameData(String email);
 	
-	@Select("SELECT lastName FROM tripMember "//tripMember의 정보 가져오기
+	@Select("SELECT lastName FROM tripMember "//tripMember의 lastName 가져오기
 			+ "WHERE email=#{email,jdbcType=VARCHAR}")
-	public String memberLastNameData(String email);//모든 정보 가져오기
+	public String memberLastNameData(String email);
 	
 	
 }

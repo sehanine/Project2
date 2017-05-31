@@ -64,6 +64,10 @@
 	 	p:sqlSessionFactory-ref="ssf"
 	 	p:mapperInterface="com.group2.board.DataBoardMapper"
 	/>
+	<bean id="MyPageMapper" class="org.mybatis.spring.mapper.MapperFactoryBean"
+		p:sqlSessionFactory-ref="ssf"
+		p:mapperInterface="com.group2.mypage.MyPageMapper"
+	/>
 	<!-- ViewResolver:JSP 찾기 -->
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"

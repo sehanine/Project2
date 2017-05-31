@@ -78,9 +78,10 @@
                                         <i class=" fa fa-star"></i>
                                     </div>
                                 </div>
+                                <c:if test="${sessionScope.check==null }">
+                                <form action="selfIntroduction.jsp" method="post">
                                 <p>
-                                	소개글 작성  >> if 소개글이 없으면 자신의 소개글을 작성해 주세요.
-                                				else 작성한 소개글  
+                                	자신을 소개하여 주세요 !
                                 </p>
                                 <ul class="list icons list-unstyled">
                                     <li><i class="fa fa-check"></i>성별</li>
@@ -88,6 +89,20 @@
                                     <li><i class="fa fa-check"></i> Iaculis vulputate id quis nisl.</li>
                                     <li><i class="fa fa-check"></i> Iaculis vulputate id.</li>
                                 </ul>
+                                <input type="submit" value="자기소개 작성/수정" size="5" align="right">
+                                <textarea rows="3" cols="100%"></textarea>
+                                </form>
+                                </c:if>
+                                <c:if test="${sessionScope.check !=null }">
+                                <p>
+                                	${sessionScope.content }
+                                </p>
+                                <ul class="list icons list-unstyled">
+                                    <li><i class="fa fa-check"></i>성별</li>
+                                    <li><i class="fa fa-check"></i>거주도시</li>
+                                    <li><i class="fa fa-check"></i> Iaculis vulputate id quis nisl.</li>
+                                    <li><i class="fa fa-check"></i> Iaculis vulputate id.</li>
+                                </ul></c:if>
                             </div>
                         </div>
                     </div>
