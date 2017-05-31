@@ -8,6 +8,7 @@
 <html> 
 	<!--<![endif]-->
     <head>
+
         <meta charset="UTF-8">
         <title>My Page</title>
         <jsp:include page="${css_mypage }"></jsp:include>
@@ -79,7 +80,6 @@
                                     </div>
                                 </div>
                                 <c:if test="${sessionScope.check==null }">
-                                <form action="selfIntroduction.jsp" method="post">
                                 <p>
                                 	자신을 소개하여 주세요 !
                                 </p>
@@ -89,13 +89,19 @@
                                     <li><i class="fa fa-check"></i> Iaculis vulputate id quis nisl.</li>
                                     <li><i class="fa fa-check"></i> Iaculis vulputate id.</li>
                                 </ul>
-                                <input type="submit" value="자기소개 작성/수정" size="5" align="right">
-                                <textarea rows="3" cols="100%"></textarea>
+                                <!-- <button type="button" class="btn btn-success">Success</button> -->
+                                <button class="btn btn-success" size="5" id="btn">자기소개 작성/수정</button>
+                                <form action="#" method="post" id="toggle">
+                                <div class="form-group">
+								  <textarea class="form-control" rows="5" id="comment"></textarea>
+								  <input type="submit" class="btn btn-success" value="입력">
+								</div>
                                 </form>
                                 </c:if>
                                 <c:if test="${sessionScope.check !=null }">
                                 <p>
                                 	${sessionScope.content }
+                                	${email }
                                 </p>
                                 <ul class="list icons list-unstyled">
                                     <li><i class="fa fa-check"></i>성별</li>

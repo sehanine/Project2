@@ -30,7 +30,7 @@ public class MyPageController {
 			session.setAttribute("conntent:", con);
 			session.setAttribute("check", check);
 		}
-		model.addAttribute("check:", check);
+		model.addAttribute("check", check);
 		
 		System.out.println("MyPageController check:"+check);
 		
