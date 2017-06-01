@@ -9,17 +9,11 @@
 <body>
 	<div class="posts-block col-lg-8 col-md-8 col-sm-8 col-xs-12">
 	    <article class="post hentry">
-	        <div class="post-image">
-	            <a href="img/blog/road-trip-las-vegas-to-nevada.jpg" data-rel="prettyPhoto">
-	            <span class="img-hover"></span>
-	            <span class="fullscreen"><i class="fa fa-plus"></i></span>
-	            <img src="img/blog/road-trip-las-vegas-to-nevada.jpg" alt="">
-	            </a>
-	        </div>
+	       
+	        <img src="img/blog/road-trip-las-vegas-to-nevada.jpg" alt="">
+			<br/><br/>
 	        <div class="post-content">
-	            <p>
-	               	트립 호스트가 될 준비가 되셨나요?
-	            </p>
+	            <h4>트립 호스트가 될 준비가 되셨나요?</h4>
 	            <p>
 	                	원하는 트립을 디자인 해보세요. 
 	            </p>

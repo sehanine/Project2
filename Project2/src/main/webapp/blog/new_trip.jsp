@@ -8,7 +8,8 @@
 <title>새글</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <jsp:include page="${css_components }"></jsp:include>
-
+<link href="css_add/dropzone.css" rel="stylesheet">
+<script src="js_add/dropzone.js"></script>
 </head>
 <body class="home">
      <div class="page-mask">
@@ -245,7 +246,16 @@
 <jsp:include page="${scripts_main }"></jsp:include>
 <script type="text/javascript">
 	function change(mode) {
-		var xhttp = new XMLHttpRequest();
+		$(document).ready(function(){
+	        $.ajax({   
+	        	url: "trip_content.do?mode=" + mode, 
+	        	success: function(result){
+	           		$("#change").html(result);
+	           		Dropzone.discover();
+	        	}
+	        });
+		});
+		/* var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange =
             function(){
                 if(this.readyState == 4 && this.status == 200){
@@ -255,11 +265,13 @@
         xhttp.open(
         		"GET", 
         		"trip_content.do?mode=" + mode, 
-        		false
+        		true
         );
-        xhttp.send(); 
+        xhttp.send();  */
+//        $("#input-id").fileinput();
     };
     window.onload = change(1);
+   
 </script>	
 </body>
 </html>

@@ -9,24 +9,16 @@
 <body>
 	<div class="posts-block col-lg-8 col-md-8 col-sm-8 col-xs-12">
 	    <article class="post hentry">
-	        <div class="post-image">
-	            <a href="img/blog/road-trip-las-vegas-to-nevada.jpg" data-rel="prettyPhoto">
-	            <span class="img-hover"></span>
-	            <span class="fullscreen"><i class="fa fa-plus"></i></span>
-	            <img src="img/blog/road-trip-las-vegas-to-nevada.jpg" alt="">
-	            </a>
-	        </div>
-	        <div class="post-content">
-	            <p>
-	               	post 9
-	            </p>
-	            <p>
-	                	원하는 트립을 디자인 해보세요. 
-	            </p>
-	            <p>
-	                	회원님의 트립이 기준에 만족되면 게시글이 등록됩니다.
-	            </p>
-	        </div>
+	      	<div class="container col-lg-12">
+				<form>
+					<div class="form-group">
+						<label for="">호스트가 제공하는 목록을 작성해 주세요.</label>
+						<p>예) 식사, 차량, 숙소</p>
+						<textarea class="form-control" id="host_serve"/>
+						
+					</div>
+				</form>
+			</div> 
 	        <div class="pull-right">
 	        	<a href="javascript:change(10);" class="btn btn-success" role="button">다음</a>
 	        </div>

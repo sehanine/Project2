@@ -9,24 +9,17 @@
 <body>
 	<div class="posts-block col-lg-8 col-md-8 col-sm-8 col-xs-12">
 	    <article class="post hentry">
-	        <div class="post-image">
-	            <a href="img/blog/road-trip-las-vegas-to-nevada.jpg" data-rel="prettyPhoto">
-	            <span class="img-hover"></span>
-	            <span class="fullscreen"><i class="fa fa-plus"></i></span>
-	            <img src="img/blog/road-trip-las-vegas-to-nevada.jpg" alt="">
-	            </a>
-	        </div>
-	        <div class="post-content">
-	            <p>
-	               	post 4
-	            </p>
-	            <p>
-	                	원하는 트립을 디자인 해보세요. 
-	            </p>
-	            <p>
-	                	회원님의 트립이 기준에 만족되면 게시글이 등록됩니다.
-	            </p>
-	        </div>
+	       
+	        <img src="img/blog/road-trip.jpg" alt="road-trip"><br/><br/>
+	        
+	        <div class="container">
+			    <h4>회원님이 속한 기관의 소개를 입력해 주세요</h4>
+			    <div class="input-group col-lg-4">
+			        <span class="input-group-addon">기관</span>
+			        <input id="org" type="text" class="form-control" name="org" placeholder="Organization">
+			    </div>
+			</div>
+			
 	        <div class="pull-right">
 	        	<a href="javascript:change(5);" class="btn btn-success" role="button">다음</a>
 	        </div>
