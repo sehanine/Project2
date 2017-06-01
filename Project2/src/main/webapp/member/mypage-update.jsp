@@ -2,4 +2,4 @@
     pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<c:redirect url="main.do"/>
+<c:redirect url="mypage.do"/>

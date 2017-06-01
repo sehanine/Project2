@@ -40,7 +40,7 @@
                                         <ul>
                                             <li>현재 위치</li>
                                             <li><a href="index.jsp">메인</a></li>
-                                            <li>마이페이지</li>
+                                            <li>마이페이지 </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -89,11 +89,10 @@
                                     <li><i class="fa fa-check"></i> Iaculis vulputate id quis nisl.</li>
                                     <li><i class="fa fa-check"></i> Iaculis vulputate id.</li>
                                 </ul>
-                                <!-- <button type="button" class="btn btn-success">Success</button> -->
-                                <button class="btn btn-success" size="5" id="btn">자기소개 작성/수정</button>
+                                <button class="btn btn-success" size="5" id="btn">자기소개 작성</button>
                                 <form action="#" method="post" id="toggle">
                                 <div class="form-group">
-								  <textarea class="form-control" rows="5" id="comment"></textarea>
+								  <textarea class="form-control" rows="5" id="comment" name="tex"></textarea>
 								  <input type="submit" class="btn btn-success" value="입력">
 								</div>
                                 </form>
@@ -101,14 +100,20 @@
                                 <c:if test="${sessionScope.check !=null }">
                                 <p>
                                 	${sessionScope.content }
-                                	${email }
                                 </p>
                                 <ul class="list icons list-unstyled">
                                     <li><i class="fa fa-check"></i>성별</li>
                                     <li><i class="fa fa-check"></i>거주도시</li>
                                     <li><i class="fa fa-check"></i> Iaculis vulputate id quis nisl.</li>
                                     <li><i class="fa fa-check"></i> Iaculis vulputate id.</li>
-                                </ul></c:if>
+                                </ul>
+                                <button class="btn btn-success" size="5" id="btn">자기소개 수정</button>
+                                <form action="mypage-update.do" method="post" id="toggle">
+                                <div class="form-group">
+								  <textarea class="form-control" rows="5" id="comment"></textarea>
+								  <input type="submit" class="btn btn-success" value="입력">
+								</div>
+                                </c:if>
                             </div>
                         </div>
                     </div>
