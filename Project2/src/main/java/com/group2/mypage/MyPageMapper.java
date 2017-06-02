@@ -12,10 +12,10 @@ public interface MyPageMapper {
 	public String ContentCheck(String email); // content불러오기
 	
 	@Insert("INSERT INTO mypage "
-			+ "VALUES(#{content},#{email})")
+			+ "VALUES(#{content,jdbcType=VARCHAR},#{email,jdbcType=VARCHAR})")
 	public void ContentInsert(@Param("content")String content,@Param("email")String email);
 	
 	@Update("UPDATE mypage SET content=#{content} "
 			+ "WHERE email=#{email, jdbcType=VARCHAR}")
-	public String ContentUpdate(@Param("email")String email);
+	public void ContentUpdate(@Param("content")String content,@Param("email")String email);
 }

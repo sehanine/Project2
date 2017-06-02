@@ -12,7 +12,12 @@ public class MyPgaeDAO implements MyPageService{
 		return mapper.ContentCheck(email);
 	}
 	@Override
-	public String ContentUpdate(String email) {
-		return mapper.ContentUpdate(email);
+	public void ContentUpdate(String email,String content) {
+		mapper.ContentUpdate(email, content);
 	}
+	@Override
+	public void ContentInsert(String content, String email) {
+		mapper.ContentInsert(content, email);
+	}
+	
 }

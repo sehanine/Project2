@@ -1,5 +1,7 @@
 package com.group2.contoller;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
@@ -7,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.group2.mypage.MyPageService;
 import com.group2.mypage.MyPageVO;
@@ -39,9 +43,23 @@ public class MyPageController {
 		return "member/mypage";
 	}
 	@RequestMapping("mypage-update.do")
-	public String mypageUpdate(Model model,HttpSession session){
+	public String mypageUpdate(String content,Model model,HttpSession session){
 		String email = (String) session.getAttribute("email");
-		service.ContentUpdate(email);
+		String res = "";
+		if(content.length() >=300){
+			 res = null;
+			 return "member/mypage-update";	 
+		}else{
+			res = content;
+		}
+		service.ContentUpdate(content,email);
+		model.addAttribute("res", res);
 		return "member/mypage-update";
+	}
+	@RequestMapping("mypage-insert.do")
+	public String mypageInsert(String content,Model model,HttpSession session){
+		String email = (String) session.getAttribute("email");
+		service.ContentInsert(content, email);
+		return "member/mypage-insert";
 	}
 }

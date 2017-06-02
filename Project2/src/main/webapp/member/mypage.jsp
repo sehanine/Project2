@@ -89,10 +89,10 @@
                                     <li><i class="fa fa-check"></i> Iaculis vulputate id quis nisl.</li>
                                     <li><i class="fa fa-check"></i> Iaculis vulputate id.</li>
                                 </ul>
-                                <button class="btn btn-success" size="5" id="btn">자기소개 작성</button>
-                                <form action="#" method="post" id="toggle">
+                                <button class="btn btn-info" size="5" id="btn" style="margin-bottom: 15px">자기소개 작성</button>
+                                <form action="mypage-insert.do" method="post" id="toggle" name="content">
                                 <div class="form-group">
-								  <textarea class="form-control" rows="5" id="comment" name="tex"></textarea>
+								  <textarea class="form-control" rows="5" id="comment" name="content"></textarea>
 								  <input type="submit" class="btn btn-success" value="입력">
 								</div>
                                 </form>
@@ -107,10 +107,10 @@
                                     <li><i class="fa fa-check"></i> Iaculis vulputate id quis nisl.</li>
                                     <li><i class="fa fa-check"></i> Iaculis vulputate id.</li>
                                 </ul>
-                                <button class="btn btn-success" size="5" id="btn">자기소개 수정</button>
-                                <form action="mypage-update.do" method="post" id="toggle">
+                                <button class="btn btn-info" size="5" id="btn" style="margin-bottom: 15px">자기소개 수정</button>
+                                <form action="mypage-update.do" method="post" id="toggle" name="content">
                                 <div class="form-group">
-								  <textarea class="form-control" rows="5" id="comment"></textarea>
+								  <textarea class="form-control" rows="5" id="comment" name="content"></textarea>
 								  <input type="submit" class="btn btn-success" value="입력">
 								</div>
                                 </c:if>
