@@ -246,15 +246,14 @@
 <jsp:include page="${scripts_main }"></jsp:include>
 <script type="text/javascript">
 	function change(mode) {
-		$(document).ready(function(){
-	        $.ajax({   
-	        	url: "trip_content.do?mode=" + mode, 
-	        	success: function(result){
-	           		$("#change").html(result);
-	           		Dropzone.discover();
-	        	}
-	        });
-		});
+        $.ajax({   
+        	url: "trip_content.do?mode=" + mode, 
+        	success: function(result){
+           		$("#change").html(result);
+           		Dropzone.discover();
+        	}
+        });
+	};
 		/* var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange =
             function(){
@@ -269,7 +268,7 @@
         );
         xhttp.send();  */
 //        $("#input-id").fileinput();
-    };
+    
     window.onload = change(1);
    
 </script>	

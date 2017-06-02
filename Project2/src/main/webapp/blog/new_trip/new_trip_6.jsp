@@ -14,7 +14,8 @@
 	        <br/><br/>
 	       
 	        <div class="container">
-			    <h4>기억하기 쉬운 키워드로 트립을 표현해 보세요.</h4>
+			    <h4>6. 기억하기 쉬운 키워드로 트립을 표현해 보세요.</h4>
+			    <p>키워드 앞에 해시태그를 꼭 붙혀주세요.</p>
 			    <div class="input-group col-lg-4">
 			        <span class="input-group-addon">태그</span>
 			        <input id="hash" type="text" class="form-control" name="hash" placeholder="#">

@@ -10,7 +10,7 @@
 	<div class="posts-block col-lg-8 col-md-8 col-sm-8 col-xs-12">
 	    <article class="post hentry">
 	    	<div class="container">
-		    	<h4>트립 장소를 정확히 입력해 주세요.</h4>
+		    	<h4>12. 트립 장소나 주소를 정확히 입력해 주세요.</h4>
 		    	<a href="javascript:void();">
 		    		<i class="fa fa-plus fa-4x" aria-hidden="true" id="add_button"></i>주소 추가
 		    	</a>

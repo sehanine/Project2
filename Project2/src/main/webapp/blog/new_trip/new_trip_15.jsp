@@ -10,7 +10,7 @@
 	<div class="posts-block col-lg-8 col-md-8 col-sm-8 col-xs-12">
 	    <article class="post hentry">
 	        <div class="container">
-			    <h4>게스트 1인당 요금 책정</h4>
+			    <h4>15. 게스트 1인당 요금 책정</h4>
 			    <div class="input-group col-lg-4">
 			        <span class="input-group-addon">$</span>
 			        <input id="cost" type="text" class="form-control" name="cost" placeholder="Per person">

@@ -12,7 +12,8 @@
 	    <article class="post hentry">
 	    	<div class="container col-lg-12">
 	    		<h4>7. 포스터 이미지 추가</h4>
-	    		<form action="#" class="dropzone" id="my-awesome-dropzone"></form>
+	    		<p>메인 페이지에 노출되는 사진이니 한장만 올려주세요.</p>
+	    		<form action="#" class="dropzone" id="poster"></form>
 	    	</div>
 	        <div class="pull-right" style="margin-top:10px">
 	        	<a href="javascript:change(8);" class="btn btn-success" role="button">다음</a>

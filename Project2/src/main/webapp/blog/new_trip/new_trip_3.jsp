@@ -13,7 +13,7 @@
 	        <img src="img/blog/site-categories.png" alt="categories"><br/><br/>
 	       
 	      	<div class="container">
-				<h4>트립에 가장 어울리는 카테고리를 선택해 주세요</h4>
+				<h4>3. 트립에 가장 어울리는 카테고리를 선택해 주세요</h4>
 				
 			    <div class="col-lg-3">
 				    <select class="form-control" id="category">

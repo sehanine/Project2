@@ -11,6 +11,7 @@
 	    <article class="post hentry">
 			<div class="container col-lg-12">
 			  	<h4>13. 주의사항 입력</h4>
+			  	<p>트립에 필요한 사전지식, 금지사항 등등을 입력해 주세요.</p>
 				<form>
 					<div class="form-group">
 						<textarea class="form-control" id="cautions"/>

@@ -13,7 +13,8 @@
 	        <img src="img/blog/road-trip.jpg" alt="road-trip"><br/><br/>
 	        
 	        <div class="container">
-			    <h4>회원님이 속한 기관의 소개를 입력해 주세요</h4>
+			    <h4>4. 회원님이 속한 기관 이름을 입력해 주세요.</h4>
+			    <p>개인 호스트면 생략하셔도 됩니다.</p>
 			    <div class="input-group col-lg-4">
 			        <span class="input-group-addon">기관</span>
 			        <input id="org" type="text" class="form-control" name="org" placeholder="Organization">
@@ -21,7 +22,7 @@
 			</div>
 			
 	        <div class="pull-right">
-	        	<a href="javascript:change(5);" class="btn btn-success" role="button">다음</a>
+	        	<a href="javascript:change(5);" class="btn btn-success" role="button" style="margin-top:10px">다음</a>
 	        </div>
 		</article>
 	</div>

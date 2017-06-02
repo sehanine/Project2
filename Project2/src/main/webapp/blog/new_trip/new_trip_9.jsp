@@ -12,7 +12,7 @@
 	      	<div class="container col-lg-12">
 				<form>
 					<div class="form-group">
-						<label for="">호스트가 제공하는 목록을 작성해 주세요.</label>
+						<label for="">9. 호스트가 게스트에게 제공하는 목록을 작성해 주세요.</label>
 						<p>예) 식사, 차량, 숙소</p>
 						<textarea class="form-control" id="host_serve"/>
 						

@@ -13,7 +13,7 @@
 	        <img src="img/blog/travel_changes.jpg" alt="road-trip"><br/><br/>
 	       
 	        <div class="container">
-			    <h4>영화와 같은 트립의 제목을 만들어주세요.</h4>
+			    <h4>5. 영화와 같은 트립의 제목을 만들어주세요.</h4>
 			    <div class="input-group col-lg-4">
 			        <span class="input-group-addon">제목</span>
 			        <input id="title" type="text" class="form-control" name="title" placeholder="Title">

@@ -12,7 +12,8 @@
 	      	<div class="container col-lg-12">
 				<form>
 					<div class="form-group">
-						<label for="">트립 설명 작성.</label>
+						<label for="">11. 트립에 대해 자세한 설명을 작성해주세요.</label>
+						<p>업로드될 사진과 연관지어 설명하면 더욱 좋습니다.</p>
 						<textarea class="form-control" id="about_program"/>
 						
 					</div>

@@ -12,7 +12,7 @@
 	       
 	        <img src="img/blog/languages.jpg" alt="language">
 	       	<div class="container">
-			    <h4>트립에 사용되는 언어를 입력해 주세요</h4>
+			    <h4>2. 트립에 사용되는 언어를 입력해 주세요</h4>
 			    <div class="input-group col-lg-4">
 			        <span class="input-group-addon">언어</span>
 			        <input id="lang" type="text" class="form-control" name="lang" placeholder="Language">
