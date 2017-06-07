@@ -1,17 +1,61 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>       
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>     
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>게시판</title>
+<title>글쓰기</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+var fileIndex=0;
+$(function(){
+ $('#addBtn').click(function(){
+  $('.fileView').append(
+   '<tr id=f'+fileIndex+'>'
+   +'<td width=20%>파일'+(fileIndex+1)+"</td>"
+   +'<td width=80% align=left>'
+   +'<input type=file name=files['+fileIndex+'] size=30>'
+   +'</td></tr>'
+  );
+  fileIndex=fileIndex+1;
+ });
+ $('#removeBtn').click(function(){
+  $('#f'+(fileIndex-1)).remove();
+  fileIndex=fileIndex-1;
+ });
+});
+
+	function send(){
+	 var f = document.frm
+	 if(f.name.value==""){
+	  alert("이름을 입력하세요.");
+	  f.name.focus();
+	  return;
+	 }
+	 if(f.subject.value==""){
+	  alert("제목을 입력하세요.");
+	  f.subject.focus();
+	  return;
+	 }
+	 if(f.content.value==""){
+	  alert("내용을 입력하세요.");
+	  f.content.focus();
+	  return;
+	 }  
+	 if(f.pwd.value==""){
+	  alert("비밀번호를 입력하세요.");
+	  f.pwd.focus();
+	  return;
+	 }
+	 f.submit();
+	};
+</script>
 <!--    <script src="/resources/bootstrap/js/respond.js"></script>
         <script src="/resources/bootstrap/js/jquery.number.min.js"></script>
         <script src="/resources/bootstrap/js/jssor.slider.mini.js"></script> -->
 <!-- css import see /web_contents/css_components.jsp -->
-	<jsp:include page="${css_blog }"></jsp:include>
+ <jsp:include page="${css_blog }"></jsp:include>
 <!-- css import see /web_contents/css_components.jsp -->
 </head>
 <body>
@@ -25,8 +69,8 @@
         <!-- Wrap -->
         <div class="wrap">
             <!-- Header -->
-			
-			<jsp:include page="${nav_bar }"></jsp:include>
+   
+   <jsp:include page="${nav_bar }"></jsp:include>
             <!-- /Header --> 
             <!-- Main Section -->
             <section id="main">
@@ -36,14 +80,14 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                                    <h2 class="title">게시판</h2>
+                                    <h2 class="title">글쓰기</h2>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
                                     <div class="breadcrumbs pull-right">
                                         <ul>
                                             <li>현재 위치</li>
                                             <li><a href="../index.jsp">메인</a></li>
-                                            <li><a href="#">게시판</a></li>
+                                            <li><a href="board.do">게시판</a></li>
                                             <li>상세 보기</li>
                                         </ul>
                                     </div>
@@ -54,60 +98,91 @@
                 </div>
                 
         <!-- Main Content(BoardList) -->
-        <p>
-        <p>
-        <p>
-		<center>
-		<table  width="700" class="table table-hover" style="width: 70% ">
-			<tr>
-				<th width="10%">번호</th>
-				<th width="45%">제목</th>
-				<th width="15%">이름</th>
-				<th width="20%">작성일</th>
-				<th width="10%">조회수</th>
-			</tr>
-			
-			<!-- model.addAttribute("list", list); -->
-			<c:forEach var="vo" items="${list }">
-				<tr id="dataTr">
-					<td width="10%" align="center">${vo.no }</td> 
-					<td width="45%" align="left">
-						<a href="board-content.do?no=${vo.no }">${vo.subject }</a>
-					</td> 
-					<td width="15%" align="center">${vo.name }</td>
-					<td width="20%" align="center">
-						<fmt:formatDate value="${vo.regdate }"
-							pattern="yyyy-MM-dd"
-						/>
-					</td>
-					<td width="10%" align="center">${vo.hit }</td>
-				</tr>		
-			</c:forEach>
-		</table>
-	
-		<table border="0" width="700">
-			<tr>
-				<td align="right">
-				 <div class="form-group" style="">
-                     <ul class="pagination">
-                     	<li class="pagination"><a href="board.do?page=${curpage>1 ? curpage-1:curpage }"><</a></li>
-                     		<c:forEach begin="${start }" end="${totalpage }" step="1" var="i">
-                     			<c:if test=""></c:if>
-							<li class="pagination"><a href="board.do?page=${i }">${i }</a></li>
-							</c:forEach>
-                     	<li class="pagination"><a href="board.do?page=${curpage<totalpage ? curpage+1:curpage }">></a></li>
-                     	 &nbsp;&nbsp;&nbsp;<a href="board-insert.do"><input type="button" class="btn btn-success" value="글쓰기"></a>
-                     </ul>
-                  </div>
-					<!-- model.addAttribute("curpage", curpage) 이전 페이지-->
-					<!-- model.addAttribute("totalpage", totalpage); -->
-		
-			<%-- 		${curpage } page / ${totalpage } pages --%>
-				</td>
-			</tr>	
-		</table>
-	</center>
-	<!-- Main Content End -->
+   <!-- Contact Section -->
+     <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+     <div class="star-divider">
+                         <div class="star-divider-icon">
+                             <i class=" fa fa-star"></i>
+                         </div>
+                     </div>                   
+                </div>
+            </div>
+         
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <form:form method="post" action="insert_ok.do" name="frm"
+      									enctype="multipart/form-data"
+      											modelAttribute="uploadForm">
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="name">이름</label>
+                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name." name="name">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                     <!--    <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="email">이메일</label>
+                                <input type="email" class="form-control" name="email" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div> -->
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="phone">제목</label>
+                                <input type="tel" class="form-control" name="subject" placeholder="Subject" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="message">내용</label>
+                                <textarea rows="6" class="form-control" name="content" placeholder="Content" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="phone">비밀번호</label>
+                                <input type="password" class="form-control" name="pwd" placeholder="Password" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="phone">첨부파일</label>
+                                <div id="table_content" width="560">
+         <td colspan="2" align="right">
+          <input type="button" class="btn btn-default" value="추가" id="addBtn">
+                                  <input type="button" class="btn btn-default" value="취소" id="removeBtn">
+         </td>
+        </div>
+      <table id="table_content" width="560" class="fileView">
+       
+      </table>
+                            </div>
+                        </div>
+                        <div id="success"></div>
+                         <center>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <input type="button" class="btn btn-success" value="글쓰기" onclick="send()">
+    						    <input type="button" class="btn btn-success" value="취소" onclick="javascript:history.back()">
+                            </div>
+                        </div>
+                         </center>
+                    </form:form>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- Main Content End -->
+ 
             <!-- Footer -->
             <footer id="footer">
                 <div class="pattern-overlay">
@@ -327,6 +402,6 @@
         </section>
         <!-- /Style Switcher -->
         <!-- The Scripts -->
-	<jsp:include page="${scripts_blog }"></jsp:include>
+ <jsp:include page="${scripts_blog }"></jsp:include>
 </body>
-</html>
+</html> 

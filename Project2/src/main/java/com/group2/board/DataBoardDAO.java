@@ -22,4 +22,15 @@ public class DataBoardDAO {
 		mapper.boardHitIncrement(no);
 		return mapper.boardContentData(no);
 	}
+	public void databoardInsert(DataBoardVO vo){
+		mapper.boardInsert(vo);
+	}
+	
+	public DataBoardVO databoardDeleteData(int no){
+		return mapper.databoardDeleteData(no);
+	}
+	
+	public void databoardDelete(int no){
+		mapper.databoardDelete(no);
+	}
 }

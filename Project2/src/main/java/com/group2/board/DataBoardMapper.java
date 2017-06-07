@@ -3,8 +3,13 @@ package com.group2.board;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.SelectKey;
 import org.apache.ibatis.annotations.Update;
+
+
 
 
 public interface DataBoardMapper {
@@ -27,4 +32,22 @@ public interface DataBoardMapper {
 			+"FROM multiBoard "
 			+"WHERE no=#{no}")
 	public DataBoardVO boardContentData(int no);
+	
+	@SelectKey(keyProperty="no",resultType=int.class,before=true,
+			statement="SELECT NVL(MAX(no)+1,1) as no FROM multiBoard")
+	@Insert("INSERT INTO multiBoard VALUES("
+			+"#{no},#{name},#{subject},#{content},"
+			+"#{pwd},SYSDATE,0,"
+			+"#{filename},#{filesize},#{filecount})")
+	public void boardInsert(DataBoardVO vo);
+	
+	
+	@Select("SELECT pwd,filename,filecount "
+			+"FROM multiBoard "
+			+"WHERE no=#{no}")
+	public DataBoardVO databoardDeleteData(int no);
+	@Delete("DELETE FROM multiBoard "
+			+"WHERE no=#{no}")
+	public void databoardDelete(int no);
+	
 }
