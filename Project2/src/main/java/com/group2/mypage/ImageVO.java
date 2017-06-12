@@ -6,8 +6,7 @@ import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
 
-public class MyPageVO {
-	private String content;
+public class ImageVO {
 	private String email;
 	private Date regdate;
 	private String filename;
@@ -22,7 +21,12 @@ public class MyPageVO {
 	private String dbday;
 	
 	
-	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public Date getRegdate() {
 		return regdate;
 	}
@@ -70,18 +74,5 @@ public class MyPageVO {
 	}
 	public void setDbday(String dbday) {
 		this.dbday = dbday;
-	}
-	
-	public String getContent() {
-		return content;
-	}
-	public void setContent(String content) {
-		this.content = content;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
 	}
 }

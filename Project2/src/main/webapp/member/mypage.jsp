@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
 <!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
@@ -11,6 +12,22 @@
 
         <meta charset="UTF-8">
         <title>My Page</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+function send(){
+   var f=document.image;
+   
+   if(f.uploadForm.value==""){
+      alert("파일을 선택하세요.");
+      return;
+   }else{
+	   alert("파일이 선택되었습니다.")
+   }
+   
+   f.submit();
+};
+
+</script>
         <jsp:include page="${css_mypage }"></jsp:include>
     </head>
     <body class="page">
@@ -59,9 +76,13 @@
                                             <img alt="" src="img/team/team-member-1.jpg">
                                             <div class="team-member-links">
                                                 <div class="team-member-links-list">
-                                                    <a target="_blank" class="facebook team-member-links-item" href="#"><i class="fa fa-facebook"></i></a>
-                                                    <a target="_blank" class="twitter team-member-links-item" href="#"><i class="fa fa-twitter"></i></a>
-                                                    <a target="_blank" class="linkedin team-member-links-item" href="#"><i class="fa fa-linkedin"></i></a>
+                                                  <form method="post" name="image" 
+                                                  action="myPageImages/mypageImageInsert_ok.do" 
+                                                  enctype="multipart/form-data"
+                                                  modelAttribute="uploadForm">
+                                                    <input type="file" class="btn btn-success" name="uploadForm">
+                                                    <input type="button" class="btn btn-success" value="수정/입력 " onclick="send()">
+                                                  </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -72,7 +93,7 @@
                             <!-- welcome Section Start -->
                             <div class="welcome col-lg-8 col-md-8 col-sm-8 col-xs-12">
                                 <h2 class="shorter">${sessionScope.lastName } <span>${sessionScope.firstName }</span></h2>
-                                <h4 class="color" >${sessionScope.email }</h4>
+                                <h4 class="color" >${sessionScope.email }</h4>  
                                 <input type="hidden" name="email" value="abcd">
                                 <div class="star-divider star-divider-small">
                                     <div class="star-divider-icon">
