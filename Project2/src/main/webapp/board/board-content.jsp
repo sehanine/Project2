@@ -62,8 +62,7 @@
 				<td width="30%" align="center">${vo.no }</td>
 				<th width="20%">작성일</th>
 				<td width="30%" align="center">
-					<fmt:formatDate value="${vo.regdate }" 
-								pattern="yyyy-MM-dd"/>
+					<fmt:formatDate value="${vo.regdate }" pattern="yyyy-MM-dd"/>
 				</td>				
 			</tr>
 			<tr>
@@ -77,11 +76,6 @@
 				<td colspan="3">${vo.subject }</td>
 			</tr>
 			
-			<tr>
-				<td colspan="4" valign="top" align="left" height="200">
-					${vo.content }
-				</td>
-			</tr>
 			<c:if test="${vo.filecount !=0 }">
 			 <tr>
 			 	<th width="20%">첨부파일</th>
@@ -91,7 +85,14 @@
 			 		</c:forEach>
 			 	</td>
 			 </tr>	
-			</c:if>										
+			</c:if>
+			
+			<tr>
+				<td colspan="4" valign="top" align="left" height="200">
+					${vo.content }
+				</td>
+			</tr>
+											
 		</table>
 		
 		<table id="table_content" width="700">

@@ -9,28 +9,32 @@
 <script type="text/javascript"
 	src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
-var fileIndex=0;
-$(function(){
-	$('#addBtn').click(function(){
-		$('.fileView').append(
-			'<tr id=f'+fileIndex+'>'
-			+'<td width=20%>파일'+(fileIndex+1)+"</td>"
-			+'<td width=80% align=left>'
-			+'<input type=file name=files['+fileIndex+'] size=30>'
-			+'</td></tr>'
-		);
-		fileIndex=fileIndex+1;
+	var fileIndex = 0;
+	$(function() {
+		$('#addBtn')
+				.click(
+						function() {
+							$('.fileView')
+									.append(
+											'<tr id=f'+fileIndex+'>'
+													+ '<td width=20%>파일'
+													+ (fileIndex + 1)
+													+ "</td>"
+													+ '<td width=80% align=left>'
+													+ '<input type=file name=files['+fileIndex+'] size=30>'
+													+ '</td></tr>');
+							fileIndex = fileIndex + 1;
+						});
+		$('#removeBtn').click(function() {
+			$('#f' + (fileIndex - 1)).remove();
+			fileIndex = fileIndex - 1;
+		});
 	});
-	$('#removeBtn').click(function(){
-		$('#f'+(fileIndex-1)).remove();
-		fileIndex=fileIndex-1;
-	});
-});
 
 	function send() {
-		var f = document.frm
+		var f = document.frm;
 		if (f.name.value == "") {
-			alert("로그인을 하세요.");
+			alert("이름을 입력하세요.");
 			f.name.focus();
 			return;
 		}
@@ -80,7 +84,7 @@ $(function(){
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-							<h2 class="title">글쓰기</h2>
+							<h2 class="title">글 수정</h2>
 						</div>
 						<div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
 							<div class="breadcrumbs pull-right">
@@ -97,8 +101,8 @@ $(function(){
 			</div>
 		</div>
 
-		<!-- Main Content(BoardList) --> <!-- Contact Section --> 
-		<section id="contact">
+		<!-- Main Content(BoardList) --> <!-- Contact Section --> <section
+			id="contact">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
@@ -114,14 +118,16 @@ $(function(){
 				<div class="col-lg-8 col-lg-offset-2">
 					<!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
 					<!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-					<form:form method="post" action="insert_ok.do" name="frm"
+					<form:form method="post" action="update_ok.do" name="frm"
 						enctype="multipart/form-data" modelAttribute="uploadForm">
 						<div class="row control-group">
 							<div
 								class="form-group col-xs-12 floating-label-form-group controls">
 								<label for="name">이름</label> <input type="text"
-									class="form-control" placeholder="Name" id="name" 
-									name="name"  readonly value="${sessionScope.lastName }${sessionScope.firstName }">
+									class="form-control" placeholder="Name" id="name" required
+									data-validation-required-message="Please enter your name."
+									name="name" value="${vo.name }"> <input type="hidden"
+									class="form-control" name="no" value="${vo.no }">
 								<p class="help-block text-danger"></p>
 							</div>
 						</div>
@@ -135,10 +141,11 @@ $(function(){
 						<div class="row control-group">
 							<div
 								class="form-group col-xs-12 floating-label-form-group controls">
-								<label for="phone">제목</label> <input type="tel"
+								<label for="phone">제목</label> <input type="text"
 									class="form-control" name="subject" placeholder="Subject"
 									id="phone" required
-									data-validation-required-message="Please enter your phone number.">
+									data-validation-required-message="Please enter your phone number."
+									value="${vo.subject }">
 								<p class="help-block text-danger"></p>
 							</div>
 						</div>
@@ -148,7 +155,7 @@ $(function(){
 								<label for="message">내용</label>
 								<textarea rows="6" class="form-control" name="content"
 									placeholder="Content" id="message" required
-									data-validation-required-message="Please enter a message."></textarea>
+									data-validation-required-message="Please enter a message.">${vo.content }</textarea>
 								<p class="help-block text-danger"></p>
 							</div>
 						</div>
@@ -162,15 +169,14 @@ $(function(){
 								<p class="help-block text-danger"></p>
 							</div>
 						</div>
-						
 						<div class="row control-group">
 							<div
 								class="form-group col-xs-12 floating-label-form-group controls">
 								<label for="phone">첨부파일</label>
 								<div id="table_content" width="560">
-									<td colspan="2" align="right">
-									<input type="button" class="btn btn-default" value="추가" id="addBtn"> 
-										<input type="button" class="btn btn-default" value="취소"
+									<td colspan="2" align="right"><input type="button"
+										class="btn btn-default" value="추가" id="addBtn"> <input
+										type="button" class="btn btn-default" value="취소"
 										id="removeBtn"></td>
 								</div>
 								<table id="table_content" width="560" class="fileView">
@@ -178,12 +184,11 @@ $(function(){
 								</table>
 							</div>
 						</div>
-						
 						<div id="success"></div>
 						<center>
 							<div class="row">
 								<div class="form-group col-xs-12">
-									<input type="button" class="btn btn-success" value="확인"
+									<input type="button" class="btn btn-success" value="수정하기"
 										onclick="send()"> <input type="button"
 										class="btn btn-success" value="취소"
 										onclick="javascript:history.back()">

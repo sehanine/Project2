@@ -55,10 +55,10 @@
                                 <!--  Single Post -->
                                 <article class="post hentry">
                                     <div class="post-image">
-                                        <a href="img/blog/blog-post1.jpg" data-rel="prettyPhoto">
+                                        <a href="img/main_img/main1.jpg" data-rel="prettyPhoto">
                                         <span class="img-hover"></span>
                                         <span class="fullscreen"><i class="fa fa-plus"></i></span>
-                                        <img src="img/blog/blog-post1.jpg" alt="">
+                                        <img src="img/main_img/main1.jpg" alt="">
                                         </a>
                                     </div>
                                     <header class="post-header">

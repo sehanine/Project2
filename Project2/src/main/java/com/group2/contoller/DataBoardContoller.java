@@ -1,10 +1,16 @@
 package com.group2.contoller;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -70,6 +76,31 @@ public class DataBoardContoller {
 		DataBoardVO vo = dao.boardContentData(no);
 		model.addAttribute("vo",vo);
 		return "board/board-content";
+	}
+	
+	@RequestMapping("download.do")
+	public void databoard_download(String fn,HttpServletResponse response){
+		try{
+			response.setHeader("Content-Disposition", 
+					"attachment;filename="+URLEncoder.encode(fn,"EUC-KR"));
+			File file=new File("c:\\download\\"+fn);
+			response.setContentLength((int)file.length());
+			BufferedInputStream bis=
+					new BufferedInputStream(new FileInputStream(file));
+			BufferedOutputStream bos=
+					new BufferedOutputStream(response.getOutputStream());
+			int i=0;
+			byte[] buffer=new byte[1024];
+			while((i=bis.read(buffer,0,1024))!=-1){
+				bos.write(buffer, 0, i);
+			}
+			bis.close();
+			bos.close();
+			
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+//			ex.printStackTrace();
+		}	
 	}
 	
 	@RequestMapping("board-insert.do")
@@ -141,6 +172,66 @@ public class DataBoardContoller {
 		}
 		model.addAttribute("bCheck", bCheck);
 		return "board/delete_ok";
+	}
+	
+	@RequestMapping("board-update.do")
+	public String databoardUpdate(int no,Model model){
+		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
+		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
+		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
+		
+		DataBoardVO vo=dao.databoardUpdateData(no);
+		model.addAttribute("vo", vo);
+		return "board/board-update";
+	}
+	@RequestMapping("update_ok.do")
+	public String databoardUpdateOk(DataBoardVO uploadForm,Model model)
+	throws Exception{
+		DataBoardVO vo=dao.databoardDeleteData(uploadForm.getNo());
+		boolean bCheck=false;
+		
+		if(vo.getPwd().equals(uploadForm.getPwd())){
+			bCheck=true;
+			List<MultipartFile> list=uploadForm.getFiles();
+			if(list!=null && list.size()>0){
+				if(vo.getFilecount()!=0){
+					StringTokenizer st=
+							new StringTokenizer(vo.getFilename(), ",");
+					while(st.hasMoreTokens()){
+						File file=new File("c:\\download\\"+st.nextToken());
+						file.delete();
+					}
+				}
+				String temp="",temp1="";
+				for(MultipartFile mf:list){
+					String fn=mf.getOriginalFilename();
+					String ext=fn.substring(fn.lastIndexOf('.')+1);
+					String save=fn.substring(0, fn.lastIndexOf('.'))
+							+System.currentTimeMillis()+"."+ext;
+					File file=new File("c:\\download\\"+save);
+					mf.transferTo(file);
+					temp+=save+",";
+					temp1+=file.length()+",";
+				}
+				uploadForm.setFilename(temp.substring(0, temp.lastIndexOf('.')));
+				uploadForm.setFilesize(temp1.substring(0, temp1.lastIndexOf(',')));
+				uploadForm.setFilecount(list.size());
+			}else{
+				if(vo.getFilecount() !=0){
+					uploadForm.setFilename(vo.getFilename());
+					uploadForm.setFilesize(vo.getFilesize());
+					uploadForm.setFilecount(vo.getFilecount());
+				}else{
+					uploadForm.setFilename("");
+					uploadForm.setFilesize("");
+					uploadForm.setFilecount(0);
+				}
+			}
+			dao.databoardUpdate(uploadForm);
+		}
+		model.addAttribute("no", uploadForm.getNo());
+		model.addAttribute("bCheck", bCheck);
+		return "board/update_ok";
 	}
 	
 }

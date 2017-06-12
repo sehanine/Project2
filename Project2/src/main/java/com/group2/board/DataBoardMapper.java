@@ -12,6 +12,7 @@ import org.apache.ibatis.annotations.Update;
 
 
 
+
 public interface DataBoardMapper {
 	@Select("SELECT no,subject,name,regdate,hit,num "
 			+"FROM (SELECT no,subject,name,regdate,hit,rownum as num "
@@ -49,5 +50,14 @@ public interface DataBoardMapper {
 	@Delete("DELETE FROM multiBoard "
 			+"WHERE no=#{no}")
 	public void databoardDelete(int no);
+	
+	@Update("UPDATE multiBoard SET "
+			+"name=#{name},subject=#{subject},"
+			+"content=#{content},"
+			+"filename=#{filename,jdbcType=VARCHAR},"
+			+"filesize=#{filesize,jdbcType=VARCHAR},"
+			+"filecount=#{filecount,jdbcType=INTEGER} "
+			+"WHERE no=#{no}")
+	public void databoardUpdate(DataBoardVO vo);
 	
 }
