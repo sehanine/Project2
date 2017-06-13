@@ -339,10 +339,9 @@
 								</div>
 							</div>
 							<div class="content-box-info">
-								<h3>Responsive Design</h3>
-								<p>Lorem Ipsum is simply dummy text of Lorem the printing
-									and typesettings industry.</p>
-								<a href="#">Read More <i class="fa fa-angle-right"></i><i
+								<h3>숙소</h3>
+								<p>숙소 예약 또는 등록을 해보세요.</p>
+								<a href="accomodation.do">숙소 보러가기 <i class="fa fa-angle-right"></i><i
 									class="fa fa-angle-right"></i></a>
 							</div>
 							<div class="border-bottom margin-top30"></div>
@@ -362,10 +361,9 @@
 								</div>
 							</div>
 							<div class="content-box-info">
-								<h3>Retina Ready</h3>
-								<p>Lorem Ipsum is simply dummy text of Lorem the printing
-									and typesettings industry.</p>
-								<a href="#">Read More <i class="fa fa-angle-right"></i><i
+								<h3>여행</h3>
+								<p>여행 예약 또는 등록을 해보세요.</p>
+								<a href="trip.do">여행 보러가기 <i class="fa fa-angle-right"></i><i
 									class="fa fa-angle-right"></i></a>
 							</div>
 							<div class="border-bottom margin-top30"></div>
@@ -385,10 +383,9 @@
 								</div>
 							</div>
 							<div class="content-box-info">
-								<h3>Premium Design</h3>
-								<p>Lorem Ipsum is simply dummy text of Lorem the printing
-									and typesettings industry.</p>
-								<a href="#">Read More <i class="fa fa-angle-right"></i><i
+								<h3>모임</h3>
+								<p>모임 예약 또는 등록을 해보세요.</p>
+								<a href="meet-up.do">모임 보러가기 <i class="fa fa-angle-right"></i><i
 									class="fa fa-angle-right"></i></a>
 							</div>
 							<div class="border-bottom margin-top30"></div>
@@ -405,23 +402,18 @@
 					<div class="row">
 						<div
 							class="col-md-6 col-sm-12 col-xs-12 text-center wow fadeInLeft">
-							<img class="app-img" src="img/iphone5c.png" alt="iPhone5c">
+							<img class="app-img" src="img/plane.png" alt="iPhone5c">
 						</div>
 						<div class="col-md-6 col-sm-12 col-xs-12 wow fadeInRight">
 							<div class="app-service padding-bottom50">
-								<h2 class="light">Gallaxy App Services</h2>
-								<h4>We provide all kinds of iPhone application design and
-									development services.</h4>
-								<p>Lorem Ipsum is simply dummy text of the printing and
-									typesetting industry. Lorem Ipsum has been the industry's
-									standard dummy text ever since the 1500s, when an unknown
-									printer took a galley of type.Vivamus diam diam, fermentum sed
-									dapibus eget, egestas sed eros. Lorem fermentum ipsum dolor sit
-									amet.Lorem fermentum diam diam.</p>
+								<h2 class="light">갤럭시 소개</h2>
+								<h4>갤럭시는 2017년 5월에 창립되어 서울시 마포구에 본사를 두고 있으며, 온라인 및 모바일, 태블릿에서 전국의 독특한 숙소들을 올리고, 발견하고, 예약할 수 있는 믿을만한 커뮤니티 플랫폼입니다.</h4>
+								<p>
+갤럭시는 특별한 여행 경험을 가능하게 합니다. 하룻밤 지낼 아파트, 일주일 동안 지낼 수 있는 성, 한 달 동안 지낼 수 있는 빌라 등 다양한 가격대의 숙소가 전국 77개 도시에서 여러분을 기다리고 있습니다. 갤럭시는 세계적인 수준의 고객 서비스를 제공하며 사용자 커뮤니티가 지속적으로 성장하고 있습니다. 갤럭시는 남는 공간을 통해 수익을 창출하고 이를 수백만의 사람들에게 보여줄 수 있는 가장 쉬운 방법입니다.</p>
 								<div class="divider"></div>
-								<div class="learnmore">
+<!-- 버튼 걍 뺴겠음					<div class="learnmore">
 									<a class="btn-special btn-grey" href="#">Learn More</a>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
@@ -435,11 +427,10 @@
 					<div class="portfolio-content">
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							<div class="portfolio-title text-center">
-								<h2 class="wow fadeIn">Creative Portfolio Showcasse</h2>
+								<h2 class="wow fadeIn">갤럭시 활동 사진</h2>
 								<h4 class="wow fadeInRight">
-									Gallaxy provides you to show your portfolio contents in
-									beautiful layout. <br /> Make a cool and colorful showcase for
-									your site...
+									갤럭시와 함께한 소중한 추억들입니다. <br /> 
+									당신도 아름다운 추억의 주인공이 되어 보세요.
 								</h4>
 							</div>
 						</div>
@@ -448,104 +439,98 @@
 							<div class="grid">
 								<!-- Item 1 -->
 								<figure class="effect-zoe portfolio-border web jquery item">
-								<a href="img/portfolio/01.jpg" class="portfolio-item-link"
-									data-rel="prettyPhoto"><img src="img/portfolio/01.jpg"
+								<a href="img/item1.jpg" class="portfolio-item-link"
+									data-rel="prettyPhoto"><img src="img/item1.jpg"
 									alt="img1" /></a> <figcaption>
 								<h2>
 									Creative <span>Zoe</span>
 								</h2>
 								<span><a href="portfolio-single.html"><i
 										class="fa fa-share"></i></a></span> <span><a
-									href="img/portfolio/01.jpg" class="portfolio-item-link"
+									href="img/item1.jpg" class="portfolio-item-link"
 									data-rel="prettyPhoto"><i class="fa fa-paperclip"></i></a></span> <span><a
 									href="#"><i class="fa fa-heart"></i></a></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and
-									typesetting industry.</p>
+								<p>부천 호수공원에서 한컷! 찰칵! 여행가이드분이 너무 유쾌하고 재밌어서 돈이 안아까웠어요.</p>
 								</figcaption> </figure>
 								<!-- /Item 1 -->
 								<!-- Item 2 -->
 								<figure class="effect-zoe portfolio-border wp css item">
-								<a href="img/portfolio/02.jpg" class="portfolio-item-link"
-									data-rel="prettyPhoto"><img src="img/portfolio/02.jpg"
+								<a href="img/item2.jpg" class="portfolio-item-link"
+									data-rel="prettyPhoto"><img src="img/item2.jpg"
 									alt="img2" /></a> <figcaption>
 								<h2>
 									Marchant <span>Mogul</span>
 								</h2>
 								<span><a href="portfolio-single.html"><i
 										class="fa fa-share"></i></a></span> <span><a
-									href="img/portfolio/02.jpg" class="portfolio-item-link"
+									href="img/item2.jpg" class="portfolio-item-link"
 									data-rel="prettyPhoto"><i class="fa fa-paperclip"></i></a></span> <span><a
 									href="#"><i class="fa fa-heart"></i></a></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and
-									typesetting industry.</p>
+								<p>인천 앞바다!!! 갤럭시에서 여행가이드분이랑 같이 놀았어요. 너무 좋은 추억이었습니다.</p>
 								</figcaption> </figure>
 								<!-- /Item 2 -->
 								<!-- Item 3 -->
 								<figure class="effect-zoe portfolio-border php jquery wp item">
-								<a href="img/portfolio/03.jpg" class="portfolio-item-link"
-									data-rel="prettyPhoto"><img src="img/portfolio/03.jpg"
+								<a href="img/item3.jpg" class="portfolio-item-link"
+									data-rel="prettyPhoto"><img src="img/item3.jpg"
 									alt="img3" /></a> <figcaption>
 								<h2>
 									Pedaling <span>Tavern</span>
 								</h2>
 								<span><a href="portfolio-single.html"><i
 										class="fa fa-share"></i></a></span> <span><a
-									href="img/portfolio/03.jpg" class="portfolio-item-link"
+									href="img/item3.jpg" class="portfolio-item-link"
 									data-rel="prettyPhoto"><i class="fa fa-paperclip"></i></a></span> <span><a
 									href="#"><i class="fa fa-heart"></i></a></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and
-									typesetting industry.</p>
+								<p>서울대공원에서 가이드분이 찍어주셨어요. 넘나 잘나온고~~ 앞으로 갤럭시 많이 이용할 것 같아요. 짱짱굿!</p>
 								</figcaption> </figure>
 								<!-- /Item 3 -->
 								<!-- Item 4 -->
 								<figure class="effect-zoe portfolio-border wp jquery css item">
-								<a href="img/portfolio/04.jpg" class="portfolio-item-link"
-									data-rel="prettyPhoto"><img src="img/portfolio/04.jpg"
+								<a href="img/item4.jpg" class="portfolio-item-link"
+									data-rel="prettyPhoto"><img src="img/item4.jpg"
 									alt="img4" /></a> <figcaption>
 								<h2>
 									Create <span>Smart</span>
 								</h2>
 								<span><a href="portfolio-single.html"><i
 										class="fa fa-share"></i></a></span> <span><a
-									href="img/portfolio/04.jpg" class="portfolio-item-link"
+									href="img/item4.jpg" class="portfolio-item-link"
 									data-rel="prettyPhoto"><i class="fa fa-paperclip"></i></a></span> <span><a
 									href="#"><i class="fa fa-heart"></i></a></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and
-									typesetting industry.</p>
+								<p>한강의 어느 다리에서... 날씨도 너무 좋고 가이드도 너무 잘해주시고 즐거운 여행이었습니다.</p>
 								</figcaption> </figure>
 								<!-- /Item 4 -->
 								<!-- Item 5 -->
 								<figure class="effect-zoe portfolio-border web css wp item">
-								<a href="img/portfolio/05.jpg" class="portfolio-item-link"
-									data-rel="prettyPhoto"><img src="img/portfolio/05.jpg"
+								<a href="img/item5.jpg" class="portfolio-item-link"
+									data-rel="prettyPhoto"><img src="img/item5.jpg"
 									alt="img5" /></a> <figcaption>
 								<h2>
 									Back to <span>Zen</span>
 								</h2>
 								<span><a href="portfolio-single.html"><i
 										class="fa fa-share"></i></a></span> <span><a
-									href="img/portfolio/05.jpg" class="portfolio-item-link"
+									href="img/item5.jpg" class="portfolio-item-link"
 									data-rel="prettyPhoto"><i class="fa fa-paperclip"></i></a></span> <span><a
 									href="#"><i class="fa fa-heart"></i></a></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and
-									typesetting industry.</p>
+								<p>제주도에서 특별한 숙소를 구하다가 갤럭시에 왔는데 왕궁같은 별장을 싼 가격에 얻어서 잘 쉬다 왔습니다. 갤럭시 너무 좋아요.</p>
 								</figcaption> </figure>
 								<!-- /Item 5 -->
 								<!-- Item 6 -->
 								<figure class="effect-zoe portfolio-border web php item">
-								<a href="img/portfolio/06.jpg" class="portfolio-item-link"
-									data-rel="prettyPhoto"><img src="img/portfolio/06.jpg"
+								<a href="img/item6.png" class="portfolio-item-link"
+									data-rel="prettyPhoto"><img src="img/item6.png"
 									alt="img6" /></a> <figcaption>
 								<h2>
 									Dynamic <span>Wins</span>
 								</h2>
 								<span><a href="portfolio-single.html"><i
 										class="fa fa-share"></i></a></span> <span><a
-									href="img/portfolio/06.jpg" class="portfolio-item-link"
+									href="img/item6.png" class="portfolio-item-link"
 									data-rel="prettyPhoto"><i class="fa fa-paperclip"></i></a></span> <span><a
 									href="#"><i class="fa fa-heart"></i></a></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and
-									typesetting industry.</p>
+								<p>수영장 딸린 숙소 얻어서 수영  실컷하고 왔습니다.ㅋㅋㅋ 너무 신나~~</p>
 								</figcaption> </figure>
 								<!-- /Item 6 -->
 							</div>
@@ -557,7 +542,7 @@
 			</div>
 		</div>
 		<!-- /Portfolio work --> <!-- Services -->
-		<div id="services" class="margin-top80">
+<!-- 		<div id="services" class="margin-top80">
 			<div class="pattern-overlay">
 				<div class="container">
 					<div class="row">
@@ -621,7 +606,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- /Services --> <!-- Testimonials -->
+		/Services Testimonials
 		<div id="testimonials" class="padding-top100">
 			<div class="container">
 				<div class="row">
@@ -636,7 +621,7 @@
 				<div class="row">
 					<div
 						class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wow fadeInRight">
-						<!-- Testimonials Widget -->
+						Testimonials Widget
 						<div class="row margin-top25">
 							<div class="testimonials widget">
 								<div class="clearfix"></div>
@@ -710,11 +695,11 @@
 							</div>
 						</div>
 					</div>
-					<!-- /Testimonials Widget -->
+					/Testimonials Widget
 				</div>
 			</div>
 		</div>
-		<!-- /Testimonials --> <!-- Random Facts -->
+		/Testimonials Random Facts
 		<div id="random-facts" class=" margin-top70">
 			<div class="pattern-overlay">
 				<div class="container">
@@ -780,7 +765,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- /Random Facts --> <!-- Latest Posts -->
+		/Random Facts Latest Posts
 		<div id="latest-posts" class=" margin-top100">
 			<div class="container">
 				<div class="row">
@@ -792,7 +777,7 @@
 				</div>
 				<div class="row">
 					<div class="padding-top40">
-						<!-- post item -->
+						post item
 						<div class="col-lg-3 col-md-3 col-sm-6 post-item wow fadeInUp">
 							<div class="post-img">
 								<a href="single-post.html"><img alt="" src="img/blog/01.jpg"></a>
@@ -820,8 +805,8 @@
 								</div>
 							</div>
 						</div>
-						<!-- /post item -->
-						<!-- post item -->
+						/post item
+						post item
 						<div class="col-lg-3 col-md-3 col-sm-6 post-item wow fadeInUp">
 							<div class="post-img">
 								<a href="single-post.html"><img alt="" src="img/blog/02.jpg"></a>
@@ -849,8 +834,8 @@
 								</div>
 							</div>
 						</div>
-						<!-- /post item -->
-						<!-- post item -->
+						/post item
+						post item
 						<div class="col-lg-3 col-md-3 col-sm-6 post-item wow fadeInUp">
 							<div class="post-img">
 								<a href="single-post.html"><img alt="" src="img/blog/03.jpg"></a>
@@ -878,8 +863,8 @@
 								</div>
 							</div>
 						</div>
-						<!-- /post item -->
-						<!-- post item -->
+						/post item
+						post item
 						<div class="col-lg-3 col-md-3 col-sm-6 post-item wow fadeInUp">
 							<div class="post-img">
 								<a href="single-post.html"><img alt="" src="img/blog/04.jpg"></a>
@@ -907,12 +892,12 @@
 								</div>
 							</div>
 						</div>
-						<!-- /post item -->
+						/post item
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- /Latest Posts --> <!-- Slogan -->
+		/Latest Posts Slogan
 		<div class="slogan margin-top100 bottom-pad-small">
 			<div class="pattern-overlay">
 				<div class="container">
@@ -933,7 +918,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- /Slogan --> <!-- Our Clients -->
+		/Slogan Our Clients
 		<div class="our-clients">
 			<div class="container">
 				<div class="row">
@@ -1029,7 +1014,8 @@
 				</div>
 			</div>
 		</div>
-		<!-- /Our Clients --> </section>
+		/Our Clients </section>
+ -->		
 		<!-- /Main Section -->
 		<!-- Footer -->
 		<footer id="footer">
@@ -1041,9 +1027,7 @@
 						<section
 							class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-one wow fadeIn">
 						<h3 class="light">About</h3>
-						<p>Lorem Ipsum is simply dummy text of the printing and
-							typesetting industry. Lorem Ipsum has been the industry's
-							standard dummy text ever since the 1500s.</p>
+						<p>갤럭시는 2017년 5월에 창립되어 서울시 마포구에 본사를 두고 있으며, 온라인 및 모바일, 태블릿에서 전국의 독특한 숙소들을 올리고, 발견하고, 예약할 수 있는 믿을만한 커뮤니티 플랫폼입니다.</p>
 						</section>
 						<section
 							class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-two wow fadeIn">
