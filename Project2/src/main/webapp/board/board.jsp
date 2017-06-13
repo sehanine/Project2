@@ -36,7 +36,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                                    <h2 class="title">게시판</h2>
+                                    <h2 class="title">자유 게시판</h2>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
                                     <div class="breadcrumbs pull-right">
@@ -60,11 +60,11 @@
 		<center>
 		<table  width="700" class="table table-hover" style="width: 70% ">
 			<tr>
-				<th width="10%">번호</th>
-				<th width="45%">제목</th>
-				<th width="15%">이름</th>
-				<th width="20%">작성일</th>
-				<th width="10%">조회수</th>
+				<th width="10%" bgcolor="#f1f8e9">번호</th>
+				<th width="45%" bgcolor="#f1f8e9">제목</th>
+				<th width="15%" bgcolor="#f1f8e9">이름</th>
+				<th width="20%" bgcolor="#f1f8e9">작성일</th>
+				<th width="10%" bgcolor="#f1f8e9">조회수</th>
 			</tr>
 			
 			<!-- model.addAttribute("list", list); -->

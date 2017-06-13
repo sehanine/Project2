@@ -129,7 +129,7 @@ public class DataBoardContoller {
 		return "board/board-content";
 	}
 	
-	@RequestMapping("databoard/download.do")
+	@RequestMapping("download.do")
 	public void databoard_download(String fn,HttpServletResponse response){
 		try{
 			response.setHeader("Content-Disposition", 
@@ -160,9 +160,9 @@ public class DataBoardContoller {
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
 		
 		model.addAttribute("no", no);
-		return "board/delete";
+		return "board/board-delete";
 	}
-	@RequestMapping("databoard/delete_ok.do")
+	@RequestMapping("delete_ok.do")
 	public String databoardDeleteOk(int no,String pwd,Model model){
 		DataBoardVO vo=dao.databoardDeleteData(no);
 		
