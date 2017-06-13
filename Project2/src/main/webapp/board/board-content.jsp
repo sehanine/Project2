@@ -89,7 +89,8 @@
 			
 			<tr>
 				<td colspan="4" valign="top" align="left" height="200">
-					${vo.content }
+				<img alt="image" src="${vo.filename }">
+					<pre>${vo.content }${vo.fname }</pre>
 				</td>
 			</tr>
 											

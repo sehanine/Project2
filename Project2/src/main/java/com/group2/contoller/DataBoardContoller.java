@@ -5,6 +5,7 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -44,19 +45,19 @@ public class DataBoardContoller {
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
 		if(page==null)
 			page="1";
-
-		int curpage = Integer.parseInt(page);
 		
-		Map map = new HashMap();
+		int curpage=Integer.parseInt(page);
+		
+		Map map=new HashMap();
 		int rowSize=10;
-		int start = (curpage*rowSize)-(rowSize-1);
-		int end = curpage*rowSize;
+		int start=(curpage*rowSize)-(rowSize-1);
+		int end=curpage*rowSize;
 		
 		map.put("start", start);
 		map.put("end", end);
 		
-		List<DataBoardVO> list = dao.databoardListData(map);
-		int totalpage = dao.databoardTotalPage();
+		List<DataBoardVO> list=dao.databoardListData(map);
+		int totalpage=dao.databoardTotalPage();
 		
 		model.addAttribute("list", list);
 		model.addAttribute("curpage", curpage);
@@ -68,46 +69,12 @@ public class DataBoardContoller {
 		return "board/board";
 	}
 	
-	@RequestMapping("board-content.do")
-	public String board_content(int no,Model model){
-		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
-		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
-		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
-		DataBoardVO vo = dao.boardContentData(no);
-		model.addAttribute("vo",vo);
-		return "board/board-content";
-	}
-	
-	@RequestMapping("download.do")
-	public void databoard_download(String fn,HttpServletResponse response){
-		try{
-			response.setHeader("Content-Disposition", 
-					"attachment;filename="+URLEncoder.encode(fn,"EUC-KR"));
-			File file=new File("c:\\download\\"+fn);
-			response.setContentLength((int)file.length());
-			BufferedInputStream bis=
-					new BufferedInputStream(new FileInputStream(file));
-			BufferedOutputStream bos=
-					new BufferedOutputStream(response.getOutputStream());
-			int i=0;
-			byte[] buffer=new byte[1024];
-			while((i=bis.read(buffer,0,1024))!=-1){
-				bos.write(buffer, 0, i);
-			}
-			bis.close();
-			bos.close();
-			
-		}catch(Exception ex){
-			System.out.println(ex.getMessage());
-//			ex.printStackTrace();
-		}	
-	}
-	
 	@RequestMapping("board-insert.do")
 	public String databoard_insert(Model model){
 		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
+		
 		return "board/board-insert";
 	}
 	
@@ -137,9 +104,53 @@ public class DataBoardContoller {
 			uploadForm.setFilesize("");
 			uploadForm.setFilecount(0);
 		}
-		
 		dao.databoardInsert(uploadForm);
 		return "redirect:board.do";
+	}
+	
+	@RequestMapping("board-content.do")
+	public String databoard_content(int no,Model model){
+		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
+		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
+		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
+		DataBoardVO vo=dao.databoardContentData(no);
+		
+		if(vo.getFilecount()!=0){
+			StringTokenizer st=
+					new StringTokenizer(vo.getFilename(), ",");
+			List<String> list=new ArrayList<String>();
+			while(st.hasMoreTokens()){
+				list.add(st.nextToken());
+			}
+			vo.setNameList(list);
+		}
+		model.addAttribute("vo", vo);
+		
+		return "board/board-content";
+	}
+	
+	@RequestMapping("databoard/download.do")
+	public void databoard_download(String fn,HttpServletResponse response){
+		try{
+			response.setHeader("Content-Disposition", 
+					"attachment;filename="+URLEncoder.encode(fn,"EUC-KR"));
+			File file=new File("c:\\download\\"+fn);
+			response.setContentLength((int)file.length());
+			BufferedInputStream bis=
+					new BufferedInputStream(new FileInputStream(file));
+			BufferedOutputStream bos=
+					new BufferedOutputStream(response.getOutputStream());
+			int i=0;
+			byte[] buffer=new byte[1024];
+			while((i=bis.read(buffer,0,1024))!=-1){
+				bos.write(buffer, 0, i);
+			}
+			bis.close();
+			bos.close();
+			
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}	
 	}
 	
 	@RequestMapping("board-delete.do")
@@ -149,9 +160,9 @@ public class DataBoardContoller {
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
 		
 		model.addAttribute("no", no);
-		return "board/board-delete";
+		return "board/delete";
 	}
-	@RequestMapping("delete_ok.do")
+	@RequestMapping("databoard/delete_ok.do")
 	public String databoardDeleteOk(int no,String pwd,Model model){
 		DataBoardVO vo=dao.databoardDeleteData(no);
 		
@@ -176,6 +187,7 @@ public class DataBoardContoller {
 	
 	@RequestMapping("board-update.do")
 	public String databoardUpdate(int no,Model model){
+		
 		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
@@ -184,6 +196,7 @@ public class DataBoardContoller {
 		model.addAttribute("vo", vo);
 		return "board/board-update";
 	}
+	
 	@RequestMapping("update_ok.do")
 	public String databoardUpdateOk(DataBoardVO uploadForm,Model model)
 	throws Exception{
