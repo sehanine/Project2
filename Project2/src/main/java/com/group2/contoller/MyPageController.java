@@ -61,6 +61,7 @@ public class MyPageController {
 		model.addAttribute("css_mypage", "../web_components/css/css_mypage.jsp");
 		model.addAttribute("scripts_mypage", "../web_components/scripts/scripts_mypage.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
+		model.addAttribute("footer", "../web_components/footer.jsp");
 		return "member/mypage";
 	}
 	@RequestMapping("mypage-update.do")

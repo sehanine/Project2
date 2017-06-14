@@ -24,6 +24,7 @@ public class NavBarController {
 	private void add_attributes(Model model){
 		model.addAttribute("css_components", "../web_components/css/css_components.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
+		model.addAttribute("footer", "../web_components/footer.jsp");
 	}	
 	
 	private void add_cate_attributes(Model model){
@@ -61,12 +62,14 @@ public class NavBarController {
 	public String login(Model model){
 		add_attributes(model);
 		add_main_attributes(model);
+		
 		return "member/page-login";
 	}
 	@RequestMapping("page-register.do")
 	public String register(Model model){
 		add_attributes(model);
 		add_main_attributes(model);
+		
 		return "member/page-register";
 	}
 	/*
@@ -75,7 +78,18 @@ public class NavBarController {
 	@RequestMapping("single-post.do")
 	public String blog(int no, Model model, HttpSession session){
 		
+
+		
 		String email = (String) session.getAttribute("email");
+		model.addAttribute("footer", "../web_components/footer.jsp");
+		if(email == null){
+			model.addAttribute("css_components", "../web_components/css/css_components.jsp");
+			model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
+			model.addAttribute("scripts_main", "../web_components/scripts/scripts_main.jsp");
+			
+			return "main/NOT_FOUND";
+		}
+		
 		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");

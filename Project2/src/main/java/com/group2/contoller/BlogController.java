@@ -17,6 +17,7 @@ public class BlogController {
 		model.addAttribute("css_components", "../web_components/css/css_components.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
+		model.addAttribute("footer", "../web_components/footer.jsp");
 		return "blog/new_post";
 	}
 
@@ -25,6 +26,7 @@ public class BlogController {
 		model.addAttribute("css_components", "../web_components/css/css_components.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		model.addAttribute("scripts_main", "../web_components/scripts/scripts_main.jsp");
+		model.addAttribute("footer", "../web_components/footer.jsp");
 		return "blog/new_trip";
 	}
 

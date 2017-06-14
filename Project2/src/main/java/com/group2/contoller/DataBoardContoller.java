@@ -43,6 +43,7 @@ public class DataBoardContoller {
 		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
+		model.addAttribute("footer", "../web_components/footer.jsp");
 		if(page==null)
 			page="1";
 		
@@ -74,7 +75,7 @@ public class DataBoardContoller {
 		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
-		
+		model.addAttribute("footer", "../web_components/footer.jsp");
 		return "board/board-insert";
 	}
 	
@@ -113,6 +114,7 @@ public class DataBoardContoller {
 		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
+		model.addAttribute("footer", "../web_components/footer.jsp");
 		DataBoardVO vo=dao.databoardContentData(no);
 		
 		if(vo.getFilecount()!=0){
@@ -158,7 +160,7 @@ public class DataBoardContoller {
 		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
-		
+		model.addAttribute("footer", "../web_components/footer.jsp");
 		model.addAttribute("no", no);
 		return "board/board-delete";
 	}
@@ -187,7 +189,7 @@ public class DataBoardContoller {
 	
 	@RequestMapping("board-update.do")
 	public String databoardUpdate(int no,Model model){
-		
+		model.addAttribute("footer", "../web_components/footer.jsp");
 		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
