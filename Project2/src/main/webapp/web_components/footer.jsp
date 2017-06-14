@@ -87,6 +87,5 @@
 				</div>
 			</div>
 			<!-- /Footer Bottom -->
-			<!-- /Footer Bottom -->
 		</div>
 		</footer>

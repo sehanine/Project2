@@ -51,9 +51,9 @@
                                     <h3>숙소<strong> 소개하기</strong> <small>나만의 숙소를 소개해 보세요</small></h3>
                                     <div class="the_price"><span>$</span>150<small>/박</small></div>
                                     <div class="the_offerings">
-                                        <p> <strong>1</strong> Design Template </p>
-                                        <p> <strong>2</strong> Revisions </p>
-                                        <p> <strong>5</strong> HTML Pages </p>
+                                        <p> <strong>1</strong> 대물 보험 지원</p>
+                                        <p> <strong>2</strong> 화재 보험 지원 </p>
+                                        <p> <strong>3</strong> 사망 보험 지원</p>
                                     </div>
                                     <a href="#" class="btn btn-color">소개하기</a> 
                                 </div>
@@ -99,60 +99,7 @@
                             </div>
                         </div>
                         <!-- Star --> 
-                        <div class="row">
-                        	임의로 남겨둔 박스
-                        </div>
-                        <!-- 4 Column Pricing Table -->
-                        <div class="row">
-                            <div class="col-sm-3 col-md-3">
-                                <div class="pricing_plan bottom-pad-small wow fadeInUp">
-                                    <h3>Lite<strong>Plan</strong> <small>this is where you start</small></h3>
-                                    <div class="the_price"><span>$</span>150<small>/year</small></div>
-                                    <div class="the_offerings">
-                                        <p> <strong>1</strong> Design Template </p>
-                                        <p> <strong>2</strong> Revisions </p>
-                                        <p> <strong>5</strong> HTML Pages </p>
-                                    </div>
-                                    <a href="#" class="btn btn-color">Get it Now!</a> 
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-md-3">
-                                <div class="pricing_plan bottom-pad-small special wow fadeInUp">
-                                    <h3>Medium<strong>Plan</strong> <small>this is what you should choose</small></h3>
-                                    <div class="the_price"><span>$</span>250<small>/year</small></div>
-                                    <div class="the_offerings">
-                                        <p> <strong>1</strong> Design Template </p>
-                                        <p> <strong>2</strong> Revisions </p>
-                                        <p> <strong>5</strong> HTML Pages </p>
-                                    </div>
-                                    <a href="#" class="btn btn-color">Get it Now!</a> 
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-md-3">
-                                <div class="pricing_plan bottom-pad-small wow fadeInUp">
-                                    <h3>Pro<strong>Plan</strong> <small>this is what you really need</small></h3>
-                                    <div class="the_price"><span>$</span>350<small>/year</small></div>
-                                    <div class="the_offerings">
-                                        <p> <strong>1</strong> Design Template </p>
-                                        <p> <strong>2</strong> Revisions </p>
-                                        <p> <strong>5</strong> HTML Pages </p>
-                                    </div>
-                                    <a href="#" class="btn btn-color">Get it Now!</a> 
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-md-3">
-                                <div class="pricing_plan wow fadeInUp">
-                                    <h3>Pro<strong>Plan</strong> <small>this is what you really need</small></h3>
-                                    <div class="the_price"><span>$</span>350<small>/year</small></div>
-                                    <div class="the_offerings">
-                                        <p> <strong>1</strong> Design Template </p>
-                                        <p> <strong>2</strong> Revisions </p>
-                                        <p> <strong>5</strong> HTML Pages </p>
-                                    </div>
-                                    <a href="#" class="btn btn-color">Get it Now!</a> 
-                                </div>
-                            </div>
-                        </div>
+  
                         <!-- /4 Column Pricing Table -->
                     </div>
                 </div>
