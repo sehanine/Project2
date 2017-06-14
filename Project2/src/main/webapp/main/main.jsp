@@ -438,7 +438,7 @@
 					<div class="row">
 						<div
 							class="col-md-6 col-sm-12 col-xs-12 text-center wow fadeInLeft">
-							<img class="app-img" src="img/airplanes.png" alt="iPhone5c">
+							<img class="app-img" src="img/plane.png" alt="iPhone5c">
 
 						</div>
 						<div class="col-md-6 col-sm-12 col-xs-12 wow fadeInRight">

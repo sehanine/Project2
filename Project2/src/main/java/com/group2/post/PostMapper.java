@@ -6,10 +6,11 @@ import org.apache.ibatis.annotations.Select;
 
 public interface PostMapper {
 	
-	@Insert("INSERT INTO trip_table(email, lang, category, organization, "
+	@Insert("INSERT INTO trip_table(trip_no, email, lang, category, organization, "
 			+ "title, hash, poster, itinerary, host_serve, trip_pictures, about_program, " 
 			+ "addr, cautions, participants, cost) "
-		    + "VALUES(#{email}, #{lang}, #{category}, "
+		    + "VALUES((SELECT NVL(MAX(trip_no)+1,1) FROM trip_table), "
+		    + "#{email}, #{lang}, #{category}, "
 		    + "#{organization}, #{title}, "
 		    + "#{hash}, #{poster}, #{itinerary}, "
 		    + "#{host_serve}, #{trip_pictures}, "
