@@ -166,7 +166,7 @@
                 </div>
                 <!-- /Star -->
                 <!-- Expertise -->
-                <div class="expertise">
+                <!-- <div class="expertise">
                     <div class="container">
                         <div class="row text-center">
                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -208,7 +208,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- /Expertise -->
+                 --><!-- /Expertise -->
                 <!-- Slogan Start-->
                 <div class="slogan margin-top70 margin-bottom100">
                     <div class="pattern-overlay">
@@ -220,7 +220,7 @@
                                     </div>
                                     <div class="col-lg-3 col-md-3">
                                         <div class="get-started">
-                                            <a class="btn-special btn-grey pull-right" href="#">BUY NOW</a>
+                                            <a class="btn-special btn-grey pull-right" href="board.do">게시판으로</a>
                                         </div>
                                     </div>
                                     <div class="clearfix"></div>
@@ -333,7 +333,7 @@
                                                 <div class="carousel-inner">
                                                     <div class="item active">
                                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 item animate_afc d1">
-                                                            <div class="item-inner"><a href="#"><img alt="Upportdash" src="img/clientslogo/01.png"></a></div>
+                                                            <div class="item-inner"><a href=""><img alt="Upportdash" src="img/clientslogo/01.png"></a></div>
                                                         </div>
                                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 item animate_afc d2">
                                                             <div class="item-inner"><a href="#"><img alt="Upportdash" src="img/clientslogo/02.png"></a></div>
@@ -389,40 +389,44 @@
                         <div class="container">
                             <div class="row">
                                 <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-one">
-                                    <h3 class="light">About</h3>
+                                    <h3 class="light">TeamProject2</h3>
                                     <p> 
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. 
+                                        airbnb를 참고하여 만든  숙소,여행,모임 공유를 하는 커뮤니티사이트입니다.  
                                     </p>
                                 </section>
                                 <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-two">
-                                    <h3 class="light">Twitter Stream</h3>
+                                    <h3 class="light">사용 프로그램 및 조원</h3>
                                     <ul id="tweets">
+                                    		조원 : 신명덕, 김경철, 김현나, 정우삼
+                                    		Front Form : Bootstrap <br>
+                                    		사용 프로그램 : STS , DataGrip
+                                    		사용 언어 : Java,JavaScript,MySQL,Ajax
                                     </ul>
                                 </section>
                                 <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-three">
-                                    <h3 class="light">Contact Us</h3>
+                                    <h3 class="light">쌍용 교육센터</h3>
                                     <ul class="contact-us">
                                         <li>
                                             <i class="fa fa-map-marker"></i>
                                             <p> 
-                                                <strong class="contact-pad">Address:</strong> House: 325, Road: 2,<br> Mirpur DOHS <br>
-                                                Dhaka, Bangladesh 
+                                                <strong class="contact-pad">Address:</strong> 서울특별시 마포구 백범로18(노고산동) 미화빌딩 2,3층 쌍용 강북교육센터
                                             </p>
                                         </li>
                                         <li>
                                             <i class="fa fa-phone"></i>
-                                            <p><strong>Phone:</strong> +880 111-111-111</p>
+                                            <p><strong>Tel:</strong>02)336 - 8546 ~8</p>
                                         </li>
                                         <li>
                                             <i class="fa fa-envelope"></i>
-                                            <p><strong>Email:</strong><a href="mailto:support@fifothemes.com">support@fifothemes.com</a></p>
+                                            <p><strong>Fax:</strong><a href="mailto:support@fifothemes.com">02)224 - 5405</a></p>
                                         </li>
                                     </ul>
                                 </section>
                                 <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-four">
-                                    <h3 class="light">Subscribe</h3>
+                                    <h3 class="light">수료 D-2</h3>
                                     <p>
-                                        Subscribe to our email newsletter to receive our news, updates and awesome free files.
+                                        		고생하셨습니다.<br>
+                                        		
                                     </p>
                                     <form method="get" action="#">
                                         <div class="input-group">
