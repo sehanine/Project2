@@ -52,6 +52,13 @@ public class NavBarController {
 		add_cate_attributes(model);
 		return "categories/trip";
 	}
+	@RequestMapping("festi.do")
+	public String festi(Model model){
+		add_attributes(model);
+		add_cate_attributes(model);
+		return "categories/festi";
+	}
+	
 	/*
 	 * main
 	 */

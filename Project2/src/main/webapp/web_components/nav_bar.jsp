@@ -114,7 +114,7 @@
 						</a>
 						<ul>
 							<li><a href="single-post.do" class="sf-with-ul">블로그1</a></li>
-							<li><a href="components.html" class="sf-with-ul">블로그2</a></li>
+							<li><a href="festi.do" class="sf-with-ul">축제정보</a></li>
 						</ul>
 					</li>
 					<li><a href="board.do" class="sf-with-ul"> 게시판 <span
@@ -135,7 +135,7 @@
 							<li><a href="portfolio-single-big.html" class="sf-with-ul">Single
 									Large Item Page</a></li>
 						</ul></li>
-					<li><a href="#" class="sf-with-ul"> 블로그2 <span
+					<li><a href="festi.do" class="sf-with-ul"> 축제정보 <span
 							class="sf-sub-indicator"> <i class="fa fa-angle-down "></i>
 						</span>
 					</a>
