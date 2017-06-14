@@ -29,6 +29,10 @@ public class MyPageController {
 
 		String check = "";
 		
+		/*String poster = service.mypageImageData(email);
+		String pCheck = null;
+		System.out.println("poster:"+poster);
+		*/
 		
 		if(con==null){
 			check = null;
@@ -39,7 +43,18 @@ public class MyPageController {
 			session.setAttribute("check", check);
 			
 		}
-	
+		
+		/*if(poster == null){
+			pCheck = null;
+			session.setAttribute("pCheck", pCheck);
+		}else{
+			pCheck = "OK";
+			session.setAttribute("poster", poster);
+			session.setAttribute("pCheck", pCheck);
+		}
+		
+		System.out.println("pCheck:"+pCheck);
+		model.addAttribute("pCheck", pCheck);*/
 		
 		model.addAttribute("check", check);
 		
@@ -76,7 +91,7 @@ public class MyPageController {
 		
 		String poster = service.mypageImageData(email);
 		String pCheck = null;
-		
+		System.out.println("poster:"+poster);
 		int mode_ = 1; 
 		
 		if(poster == null){
@@ -84,7 +99,6 @@ public class MyPageController {
 		}else{
 			mode_ = 2;
 		}
-		System.out.println("mode"+ mode_);
 		session.setAttribute("poster", poster);
 		
 		return "member/myPageImages/mypageImageInsert_"+mode_;

@@ -44,7 +44,7 @@
 				"poster": "https://arthurhovinc.files.wordpress.com/2015/04/roadtriplarge.png"
 			};
 			$.ajax({   
-	        	url: "mypageImageInsert_ok.do", 
+	        	url: "mypageImageInsertUpdate_ok.do", 
 	        	data: vo,
 	        	success: function(result){
 	        		$("#change").html(result);
