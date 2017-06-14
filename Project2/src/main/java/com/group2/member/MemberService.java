@@ -1,7 +1,5 @@
 package com.group2.member;
 
-import java.util.List;
-
 import com.group2.mypage.MyPageVO;
 
 public interface MemberService {
