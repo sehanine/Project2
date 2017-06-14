@@ -39,7 +39,7 @@
 			    <!-- Wrapper for slides -->
 			    <div class="carousel-inner">
 			      <div class="item active">
-			        <img src="img/main_img/main2.png" alt="Los Angeles" style="width:100%;">
+			        <img src="img/main_img/main3.jpg" alt="Los Angeles" style="width:100%;">
 			      </div>
 			
 			      <div class="item">
