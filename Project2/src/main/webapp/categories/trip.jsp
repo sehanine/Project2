@@ -197,25 +197,24 @@
                                                 <div class="image ">
                                                     <!-- Swap image -->
                                                     <div class="flip">
-                                                        <a href="product-view.html" class="swap-image">
-                                                        <img src="img/shop/product_03.jpg" title="Small TV Box" alt="Small TV Box" class="front">
+                                                        <a href="single-post.do?no=6" class="swap-image">
+                                                        <img src="https://a0.muscache.com/im/pictures/b7b034c4-b90f-4413-b8d2-2c09d5be1a04.jpg?aki_policy=xl_poster" title="Small TV Box" alt="Small TV Box" class="front">
                                                         </a>
                                                     </div>
-                                                    <a href="product-view.html" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
+                                                    <a href="single-post.do?no=6" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
                                                 </div>
                                                 <div class="product-meta">
                                                     <div class="left">
-                                                        <h3 class="name"><a href="product-view.html">Small TV Box</a></h3>
+                                                        <h3 class="name"><a href="single-post.do?no=6">Barcelona Sunset</a></h3>
                                                         <div class="price">
-                                                            <span class="special-price">$589.50</span>
-                                                            <span class="price-tax">Ex Tax: $500.00</span>
+                                                            <span class="special-price">$90</span>
                                                         </div>
                                                     </div>
                                                     <div class="right">
                                                         <div class="rating">
                                                         </div>
                                                         <p class="description">
-                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                                            9 years ago I quit my job to start living my dream; to buy a wooden sailing boat and live on the sea. Now I spend my time sailing, exploring new places & meeting people.
                                                         </p>
                                                         <div class="action">
                                                             <div class="cart">
@@ -249,18 +248,17 @@
                                                 <div class="image ">
                                                     <!-- Swap image -->
                                                     <div class="flip">
-                                                        <a href="product-view.html" class="swap-image">
-                                                        <img src="img/shop/product_04.jpg" title="Box Stereo Remote" alt="Box Stereo Remote" class="front">
+                                                        <a href="single-post.do?no=7" class="swap-image">
+                                                        <img src="https://a0.muscache.com/ac/pictures/a357914a-eadb-4d19-856d-89f99aa77c32.jpg?interpolation=lanczos-none&size=large&output-format=jpg&output-quality=70" title="Box Stereo Remote" alt="Box Stereo Remote" class="front">
                                                         </a>
                                                     </div>
-                                                    <a href="product-view.html" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
+                                                    <a href="single-post.do?no=7" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
                                                 </div>
                                                 <div class="product-meta">
                                                     <div class="left">
-                                                        <h3 class="name"><a href="product-view.html">Box Stereo Remote</a></h3>
+                                                        <h3 class="name"><a href="single-post.do?no=7">Box Stereo Remote</a></h3>
                                                         <div class="price">
-                                                            <span class="special-price">$589.50</span>
-                                                            <span class="price-tax">Ex Tax: $500.00</span>
+                                                            <span class="special-price">$30</span>
                                                         </div>
                                                     </div>
                                                     <div class="right">
@@ -268,7 +266,7 @@
                                                             <img src="img/shop/stars-3.png" alt="Based on 1 reviews.">
                                                         </div>
                                                         <p class="description">
-                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                                            겨울에는 송은아트상이 개최됩니다. 4명의 파이널 리스트 작가들이 선정되어 전시를 열게 되고, 전시 후에 우승자가 선별돼요.
                                                         </p>
                                                         <div class="action">
                                                             <div class="cart">
@@ -307,19 +305,17 @@
                                                     </span>
                                                     <!-- Swap image -->
                                                     <div class="flip">
-                                                        <a href="product-view.html" class="swap-image">
-                                                        <img src="img/shop/product_05.jpg" title="iPhone 5s 16 GB" alt="iPhone 5s 16 GB" class="front">
+                                                        <a href="single-post.do?no=8" class="swap-image">
+                                                        <img src="http://static.barcelonaovertime.com/image/cache/data/Routes/Barcelona%20sea/COLONdef-960x410.jpg" title="iPhone 5s 16 GB" alt="iPhone 5s 16 GB" class="front">
                                                         </a>
                                                     </div>
-                                                    <a href="product-view.html" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
+                                                    <a href="single-post.do?no=8" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
                                                 </div>
                                                 <div class="product-meta">
                                                     <div class="left">
-                                                        <h3 class="name"><a href="product-view.html">iPhone 5s 16 GB</a></h3>
+                                                        <h3 class="name"><a href="single-post.do?no=8"></a></h3>
                                                         <div class="price">
-                                                            <span class="price-old">$54.88</span>
-                                                            <span class="price-new">$96.00</span>
-                                                            <span class="price-tax">Ex Tax: $80.00</span>
+                                                            <span class="price-new">$26</span>
                                                         </div>
                                                     </div>
                                                     <div class="right">
@@ -327,7 +323,7 @@
                                                             <img src="img/shop/stars-5.png" alt="Based on 2 reviews.">
                                                         </div>
                                                         <p class="description">
-                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                                            There are a few ways to get to the Port Olimpic on public transportation: metro (Line L4), bus (V21, V27, 45, 59, and 92), as well as a taxi.
                                                         </p>
                                                         <div class="action">
                                                             <div class="cart">
@@ -364,19 +360,19 @@
                                                     </span>
                                                     <!-- Swap image -->
                                                     <div class="flip">
-                                                        <a href="product-view.html" class="swap-image">
-                                                        <img src="img/shop/product_06.jpg" title="Huawei Smart Mobile" alt="Huawei Smart Mobile" class="front">
+                                                        <a href="single-post.do?no=9" class="swap-image">
+                                                        <img src="https://a0.muscache.com/im/pictures/8fd84859-8712-468b-9a7f-338dab1761da.jpg?aki_policy=xl_poster" title="Huawei Smart Mobile" alt="Huawei Smart Mobile" class="front">
                                                         </a>
                                                     </div>
-                                                    <a href="product-view.html" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
+                                                    <a href="single-post.do?no=9" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
                                                 </div>
                                                 <div class="product-meta">
                                                     <div class="left">
-                                                        <h3 class="name"><a href="product-view.html">Huawei Smart Mobile</a></h3>
+                                                        <h3 class="name"><a href="single-post.do?no=9">Jazz Hands</a></h3>
                                                         <div class="price">
-                                                            <span class="price-old">$119.50</span>
-                                                            <span class="price-new">$107.75</span>
-                                                            <span class="price-tax">Ex Tax: $90.00</span>
+                                                          
+                                                            <span class="price-new">$30</span>
+                                                          
                                                         </div>
                                                     </div>
                                                     <div class="right">
@@ -384,7 +380,7 @@
                                                             <img src="img/shop/stars-4.png" alt="Based on 1 reviews.">
                                                         </div>
                                                         <p class="description">
-                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                                            We’ll welcome you into a beautiful private apartment in one of the most artistic neighbourhoods of Barcelona. The exact address will be provided upon booking.
                                                         </p>
                                                         <div class="action">
                                                             <div class="cart">
@@ -418,18 +414,18 @@
                                                 <div class="image ">
                                                     <!-- Swap image -->
                                                     <div class="flip">
-                                                        <a href="product-view.html" class="swap-image">
-                                                        <img src="img/shop/product_07.jpg" title="LG G-Flex 16 GB" alt="LG G-Flex 16 GB" class="front">
+                                                        <a href="single-post.do?no=10" class="swap-image">
+                                                        <img src="http://tong.visitkorea.or.kr/cms/resource/26/1815126_image2_1.jpg" title="LG G-Flex 16 GB" alt="LG G-Flex 16 GB" class="front">
                                                         </a>
                                                     </div>
                                                     <a class="pav-colorbox btn btn-theme-default cboxElement" href="product-view.html"><em class="fa fa-plus"></em><span>View Product</span></a>
                                                 </div>
                                                 <div class="product-meta">
                                                     <div class="left">
-                                                        <h3 class="name"><a href="product-view.html">LG G-Flex 16 GB</a></h3>
+                                                        <h3 class="name"><a href="single-post.do?no=10">굴구지 피래미 축제</a></h3>
                                                         <div class="price">
-                                                            <span class="special-price">$96.00</span>
-                                                            <span class="price-tax">Ex Tax: $80.00</span>
+                                                            <span class="special-price">$100</span>
+                                                            
                                                         </div>
                                                     </div>
                                                     <div class="right">
@@ -437,7 +433,7 @@
                                                             <img src="img/shop/stars-4.png" alt="Based on 1 reviews.">
                                                         </div>
                                                         <p class="description">
-                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                                            물 맑고 인심 좋은 천혜의 고장 굴구지산촌마을에서 제10회 굴구지 피래미축제를 개최한다. 울진의 젖줄 왕피천이 굽이굽이 흘러가는 굴구지산촌마을은 40세대 70여명이 옹기종기 모여 사는 곳이다. 아름다운 자연경관을 지닌 곳으로 우리나라 최고의 트래킹 코스로 각광받는 곳이기도 하다. 산촌생태마을 조성사업 및 테마형 체험시범관광마을인 굴구지 산촌마을에서 펼쳐지는 피래미축제를 통해 마음과 몸에 쌓인 스트레스를 날리고 가족과 함께 동심으로 돌아가 보자.
                                                         </p>
                                                         <div class="action">
                                                             <div class="cart">
@@ -474,19 +470,18 @@
                                                     </span>
                                                     <!-- Swap image -->
                                                     <div class="flip">
-                                                        <a href="product-view.html" class="swap-image">
-                                                        <img src="img/shop/product_08.jpg" title="iMac 27" alt="iMac 27" class="front">
+                                                        <a href="single-post.do?no=11" class="swap-image">
+                                                        <img src="https://a0.muscache.com/im/pictures/984bce40-1488-4243-baaa-04e4a17a5caf.jpg?aki_policy=xl_poster" title="iMac 27" alt="iMac 27" class="front">
                                                         </a>
                                                     </div>
-                                                    <a href="product-view.html" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
+                                                    <a href="single-post.do?no=11" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
                                                 </div>
                                                 <div class="product-meta">
                                                     <div class="left">
-                                                        <h3 class="name"><a href="product-view.html">iMac 27"</a></h3>
+                                                        <h3 class="name"><a href="single-post.do?no=11">Organic Cooking</a></h3>
                                                         <div class="price">
-                                                            <span class="price-old">$1,175.83</span>
-                                                            <span class="price-new">$107.75</span>
-                                                            <span class="price-tax">Ex Tax: $90.00</span>
+                                                            <span class="price-old">$100</span>
+                                                            <span class="price-new">$75</span>
                                                         </div>
                                                     </div>
                                                     <div class="right">
@@ -494,7 +489,8 @@
                                                             <img src="img/shop/stars-3.png" alt="Based on 1 reviews.">
                                                         </div>
                                                         <p class="description">
-                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                                           
+                                                        	Dinner ？？We'll cook a 3 course meal using seasonal organic products from local farms - some from our own gardenWine ？？Everything organic.Coffee/tea & cake ？？
                                                         </p>
                                                         <div class="action">
                                                             <div class="cart">
@@ -531,18 +527,18 @@
                                                 <div class="image ">
                                                     <!-- Swap image -->
                                                     <div class="flip">
-                                                        <a href="product-view.html" class="swap-image">
-                                                        <img src="img/shop/product_09.jpg" title="Smart TV Box" alt="Smart TV Box" class="front">
+                                                        <a href="single-post.do?no=12" class="swap-image">
+                                                        <img src="https://a0.muscache.com/im/pictures/19e2bbd9-69f7-48b8-896f-421679a6aff7.jpg?aki_policy=xl_poster" title="Smart TV Box" alt="Smart TV Box" class="front">
                                                         </a>
                                                     </div>
-                                                    <a href="product-view.html" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
+                                                    <a href="single-post.do?no=12" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
                                                 </div>
                                                 <div class="product-meta">
                                                     <div class="left">
-                                                        <h3 class="name"><a href="product-view.html">Smart TV Box</a></h3>
+                                                        <h3 class="name"><a href="single-post.do?no=12">Bike ride</a></h3>
                                                         <div class="price">
-                                                            <span class="special-price">$1,177.00</span>
-                                                            <span class="price-tax">Ex Tax: $1,000.00</span>
+                                                            <span class="special-price">$70</span>
+
                                                         </div>
                                                     </div>
                                                     <div class="right">
@@ -550,7 +546,7 @@
                                                             <img src="img/shop/stars-4.png" alt="Based on 1 reviews.">
                                                         </div>
                                                         <p class="description">
-                                                            Unprecedented power. The next generation of processing technology has arrived. Built into the newest.....
+                                                            From my studio in Sasazuka we will cross Kanana Steet and explore the temple area of Eifuku and the young town of Meidaimae
                                                         </p>
                                                         <div class="action">
                                                             <div class="cart">
@@ -587,19 +583,18 @@
                                                     </span>
                                                     <!-- Swap image -->
                                                     <div class="flip">
-                                                        <a href="product-view.html" class="swap-image">
-                                                        <img src="img/shop/product_10.jpg" title="LG Monitor 32 Inch" alt="LG Monitor 32 Inch" class="front">
+                                                        <a href="single-post.do?no=13" class="swap-image">
+                                                        <img src="http://tong.visitkorea.or.kr/cms/resource/70/2493870_image2_1.jpg" title="LG Monitor 32 Inch" alt="LG Monitor 32 Inch" class="front">
                                                         </a>
                                                     </div>
-                                                    <a href="product-view.html" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
+                                                    <a href="single-post.do?no=13" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
                                                 </div>
                                                 <div class="product-meta">
                                                     <div class="left">
-                                                        <h3 class="name"><a href="product-view.html">LG Monitor 32 Inch</a></h3>
+                                                        <h3 class="name"><a href="single-post.do?no=13">진안국 마을축제 2017</a></h3>
                                                         <div class="price">
-                                                            <span class="price-old">$119.50</span>
-                                                            <span class="price-new">$107.75</span>
-                                                            <span class="price-tax">Ex Tax: $90.00</span>
+                                                            <span class="price-old">$100</span>
+                                                            <span class="price-new">$80</span>
                                                         </div>
                                                     </div>
                                                     <div class="right">
@@ -607,7 +602,8 @@
                                                             <img src="img/shop/stars-2.png" alt="Based on 1 reviews.">
                                                         </div>
                                                         <p class="description">
-                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                                            올해로 10회째를 맞이하는 진안군마을축제는, 침체되어가는 농촌에 활력을 불어넣는 일을 하는 마을만들기의 과정으로서 주민의 역량을 강화하고 자율적, 생산적 공동체 형성을 위하여 주민스스로가 학습하며 만들어가는 ‘주민
+축제 이다
                                                         </p>
                                                         <div class="action">
                                                             <div class="cart">
@@ -641,18 +637,18 @@
                                                 <div class="image ">
                                                     <!-- Swap image -->
                                                     <div class="flip">
-                                                        <a href="product-view.html" class="swap-image">
-                                                        <img src="img/shop/product_01.jpg" title="iPhone 5s 32 GB" alt="iPhone 5s 32 GB" class="front">
+                                                        <a href="single-post.do?no=14" class="swap-image">
+                                                        <img src="https://a0.muscache.com/im/pictures/d5453178-6dc4-4641-9f7c-bef2021ebb95.jpg?aki_policy=xl_poster" title="iPhone 5s 32 GB" alt="iPhone 5s 32 GB" class="front">
                                                         </a>
                                                     </div>
-                                                    <a href="product-view.html" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
+                                                    <a href="single-post.do?no=14" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
                                                 </div>
                                                 <div class="product-meta">
                                                     <div class="left">
-                                                        <h3 class="name"><a href="product-view.html">iPhone 5s 32 GB</a></h3>
+                                                        <h3 class="name"><a href="single-post.do?no=14">Shibuya Street Style</a></h3>
                                                         <div class="price">
-                                                            <span class="special-price">$237.00</span>
-                                                            <span class="price-tax">Ex Tax: $200.00</span>
+                                                            <span class="special-price">$71</span>
+                                                            
                                                         </div>
                                                     </div>
                                                     <div class="right">
@@ -660,7 +656,7 @@
                                                             <img src="img/shop/stars-5.png" alt="Based on 1 reviews.">
                                                         </div>
                                                         <p class="description">
-                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                                            Going to Pizza Slice! ？？We end our travels in Minami-Aoyama and get a bite at Pizza Slice and talk style, wardrobe, or anything! Whole pie on me!
                                                         </p>
                                                         <div class="action">
                                                             <div class="cart">
@@ -697,19 +693,19 @@
                                                     </span>
                                                     <!-- Swap image -->
                                                     <div class="flip">
-                                                        <a href="product-view.html" class="swap-image">
-                                                        <img src="img/shop/product_02.jpg" title="iPhone 4 16 GB" alt="iPhone 4 16 GB" class="front">
+                                                        <a href="single-post.do?no=15" class="swap-image">
+                                                        <img src="https://a0.muscache.com/im/pictures/e4809c9d-0dcd-4cc5-9b50-248845c77c61.jpg?aki_policy=xl_poster" title="iPhone 4 16 GB" alt="iPhone 4 16 GB" class="front">
                                                         </a>
                                                     </div>
-                                                    <a href="product-view.html" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
+                                                    <a href="single-post.do?no=15" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
                                                 </div>
                                                 <div class="product-meta">
                                                     <div class="left">
-                                                        <h3 class="name"><a href="product-view.html">iPhone 4 16 GB</a></h3>
+                                                        <h3 class="name"><a href="single-post.do?no=15">Legends & Mysteries</a></h3>
                                                         <div class="price">
-                                                            <span class="price-old">$119.50</span>
-                                                            <span class="price-new">$107.75</span>
-                                                            <span class="price-tax">Ex Tax: $90.00</span>
+                                                            <span class="price-old">$95</span>
+                                                            <span class="price-new">$80</span>
+                                                            
                                                         </div>
                                                     </div>
                                                     <div class="right">

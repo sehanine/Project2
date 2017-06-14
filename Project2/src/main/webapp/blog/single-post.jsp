@@ -126,9 +126,9 @@
                                         <div class="blog-entry-meta">
                                             <div class="blog-entry-meta-date">
                                                 <i class="fa fa-clock-o"></i>
-                                                <span class="blog-entry-meta-date-month">August</span>
+                                                <span class="blog-entry-meta-date-month">June</span>
                                                 <span class="blog-entry-meta-date-day">23,</span>
-                                                <span class="blog-entry-meta-date-year">2014</span>
+                                                <span class="blog-entry-meta-date-year">2017</span>
                                             </div>
                                             <div class="blog-entry-meta-author">
                                                 <i class="fa fa-user"></i>
@@ -161,10 +161,6 @@
                                         <br>
                                         <p>
             	기관명: ${sessionScope.postVO.organization }
-                                        </p>
-                                        <br>
-                                        <p>
-                                        주소: ${sessionScope.postVO.addr }
                                         </p>
                                         <br>
                                         <p>
@@ -541,5 +537,13 @@
 
         <!-- The Scripts -->
 	<jsp:include page="${scripts_blog }"></jsp:include>
+	<script type="text/javascript">
+		$("#favorite").click(function () {
+			alert("즐겨찾기에 추가 되었습니다.");
+		});
+		$("#purchase").click(function () {
+			alert("구매 페이지로 이동 합니다.");
+		});
+	</script>
 </body>
 </html>

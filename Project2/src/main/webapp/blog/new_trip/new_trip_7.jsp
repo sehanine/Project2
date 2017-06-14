@@ -19,7 +19,7 @@
 	        </div>
 	        <div class="input-group col-lg-4">
 			        <span class="input-group-addon">사진</span>
-			        <input id="poster" type="text" class="form-control" name="trip_pictures" placeholder="pictures">
+			        <input id="poster" type="hidden" class="form-control" name="trip_pictures" placeholder="pictures">
 			</div>
 	    </article>
 	</div>

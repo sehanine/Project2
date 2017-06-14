@@ -49,7 +49,7 @@
                             <div class="col-sm-4 col-md-4">
                                 <div class="pricing_plan bottom-pad-small wow fadeInUp">
                                     <h3>숙소<strong> 소개하기</strong> <small>나만의 숙소를 소개해 보세요</small></h3>
-                                    <div class="the_price"><span>$</span>150<small>/박</small></div>
+                                    <div class="the_price"><small>AVG of $32/Night</small></div>
                                     <div class="the_offerings">
                                         <p> <strong>1</strong> 대물 보험 지원</p>
                                         <p> <strong>2</strong> 화재 보험 지원 </p>
@@ -61,11 +61,11 @@
                             <div class="col-sm-4 col-md-4">
                                 <div class="pricing_plan bottom-pad-small special wow fadeInUp">
                                     <h3>여행 <strong> 소개하기</strong> <small>새로운 여행을 공유해 보세요</small></h3>
-                                    <div class="the_price"><span>$</span>250<small>/year</small></div>
+                                    <div class="the_price"><span>$</span>TBA<small>/trip</small></div>
                                     <div class="the_offerings">
-                                        <p> <strong>1</strong> Design Template </p>
-                                        <p> <strong>2</strong> Revisions </p>
-                                        <p> <strong>5</strong> HTML Pages </p>
+                                        <p> <strong>1</strong> 여행자 보험 가입 가능 </p>
+                                        <p> <strong>2</strong> 인지도로 파트너 호스트 제공</p>
+                                        <p> <strong>3</strong> 저렴한 중계 수수료 </p>
                                     </div>
                                     <a href="new_trip.do" class="btn btn-color">글쓰기</a> 
                                 </div>
@@ -73,13 +73,13 @@
                             <div class="col-sm-4 col-md-4">
                                 <div class="pricing_plan wow fadeInUp">
                                     <h3>모임<strong> 만들기</strong> <small>모임을 만들어 새로운 사람을 만나보세요</small></h3>
-                                    <div class="the_price"><span>$</span>350<small>/year</small></div>
+                                    <div class="the_price"><span>$</span>TBA<small>/MeetUp</small></div>
                                     <div class="the_offerings">
-                                        <p> <strong>1</strong> Design Template </p>
-                                        <p> <strong>2</strong> Revisions </p>
-                                        <p> <strong>5</strong> HTML Pages </p>
+                                        <p> <strong>1</strong> 불건전 모임 밴 기능 </p>
+                                        <p> <strong>2</strong> 참석인원 프로필 확인 가능 </p>
+                                        <p> <strong>3</strong> 회사 비상연락망 제공 </p>
                                     </div>
-                                    <a href="#" class="btn btn-color">Get it Now!</a> 
+                                    <a href="#" class="btn btn-color">모임 만들기</a> 
                                 </div>
                             </div>
                         </div>
