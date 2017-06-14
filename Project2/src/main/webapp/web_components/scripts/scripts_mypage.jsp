@@ -7,6 +7,9 @@
 		        $("#toggle").toggle();
 		    });
 		});
+		$(document).ready(function () {
+			$("#toggle").hide();
+		})
 </script>
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery-migrate-1.0.0.js"></script>

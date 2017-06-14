@@ -4,6 +4,8 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
+import com.group2.mypage.MyPageVO;
+
 public interface MemberMapper {
 
 	@Select("Select COUNT(*) FROM tripMember "
@@ -26,6 +28,7 @@ public interface MemberMapper {
 			+ "WHERE email=#{email,jdbcType=VARCHAR}")
 	public String memberLastNameData(String email);
 	
-	
+	@Select("SELECT content, email FROM mypage WHERE email=#{email, jdbcType=VARCHAR}")
+	public MyPageVO getMypageVO(String email);
 }
 

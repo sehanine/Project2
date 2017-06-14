@@ -8,6 +8,62 @@
 <!-- css import see /web_contents/css_components.jsp -->
 	<jsp:include page="${css_blog }"></jsp:include>
 <!-- css import see /web_contents/css_components.jsp -->
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALLMohZAbxWMtIL3--4x6C4ctVBxG7lc4&callback=initMap"
+  type="text/javascript"></script>
+<!-- GoogoleMap Asynchronously Loading the API ********************************************* -->
+<script type="text/javascript">
+    function initialize() {
+     
+        var mapOptions = {
+                            zoom: 16, // 지도를 띄웠을 때의 줌 크기
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+         
+         
+        var map = new google.maps.Map(document.getElementById("map-canvas"), // div의 id과 값이 같아야 함. "map-canvas"
+                                    mapOptions);
+         
+        var size_x = 40; // 마커로 사용할 이미지의 가로 크기
+        var size_y = 40; // 마커로 사용할 이미지의 세로 크기
+     
+        // 마커로 사용할 이미지 주소
+        var image = new google.maps.MarkerImage( '주소 여기에 기입!',
+                                                    new google.maps.Size(size_x, size_y),
+                                                    '',
+                                                    '',
+                                                    new google.maps.Size(size_x, size_y));
+         
+        // Geocoding *****************************************************
+        var address= "${sessionScope.postVO.addr }";
+        var marker = null;
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode( { 'address': address}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                map.setCenter(results[0].geometry.location);
+                marker = new google.maps.Marker({
+                                map: map,
+                                icon: image, // 마커로 사용할 이미지(변수)
+                                title: '${sessionScope.postVO.addr }', // 마커에 마우스 포인트를 갖다댔을 때 뜨는 타이틀
+                                position: results[0].geometry.location
+                            });
+ 
+                var content = "${sessionScope.postVO.addr }"; // 말풍선 안에 들어갈 내용
+             
+                // 마커를 클릭했을 때의 이벤트.
+                var infowindow = new google.maps.InfoWindow({ content: content});
+                google.maps.event.addListener(marker, "click", function() {infowindow.open(map,marker);});
+            } else {
+                alert("Geocode was not successful for the following reason: " + status);
+            }
+        });
+        // Geocoding // *****************************************************
+         
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
 </head>
 <body>
     <body class="blog">
@@ -55,14 +111,18 @@
                                 <!--  Single Post -->
                                 <article class="post hentry">
                                     <div class="post-image">
-                                        <a href="img/blog/blog-post1.jpg" data-rel="prettyPhoto">
+
+                                        <a href="${sessionScope.postVO.trip_pictures }" data-rel="prettyPhoto">
+
                                         <span class="img-hover"></span>
                                         <span class="fullscreen"><i class="fa fa-plus"></i></span>
-                                        <img src="img/blog/blog-post1.jpg" alt="">
+
+                                        <img src="${sessionScope.postVO.trip_pictures }" alt="">
+
                                         </a>
                                     </div>
                                     <header class="post-header">
-                                        <h2>Nobis at incidunt nisi consequatur cum</h2>
+                                        <h2>${sessionScope.postVO.title }</h2>
                                         <div class="blog-entry-meta">
                                             <div class="blog-entry-meta-date">
                                                 <i class="fa fa-clock-o"></i>
@@ -72,36 +132,51 @@
                                             </div>
                                             <div class="blog-entry-meta-author">
                                                 <i class="fa fa-user"></i>
-                                                <a href="#" class="blog-entry-meta-author">John Doe</a>
+                                                <a href="#" class="blog-entry-meta-author">${sessionScope.postVO.email }</a>
                                             </div>
                                             <div class="blog-entry-meta-tags">
                                                 <i class="fa fa-tags"></i>
-                                                <a href="#">Web Design</a>,
-                                                <a href="#">Branding</a>
+                                                <a href="#">${sessionScope.postVO.hash }</a>,
+                                                <a href="#">${sessionScope.postVO.hash }</a>
                                             </div>
                                             <div class="blog-entry-meta-comments">
-                                                <i class="fa fa-comments"></i>
-                                                <a href="#" class="blog-entry-meta-comments">3 comments</a>
+                                                <i class="fa fa-usd"></i>
+                                                <a href="#" class="blog-entry-meta-comments">${sessionScope.postVO.cost } /person  &nbsp;</a>
+                                            </div>
+                                            
+                                            <div class="blog-entry-meta-comments">
+                                                <i class="fa fa-users"></i>
+                                                <a href="#" class="blog-entry-meta-comments">max ${sessionScope.postVO.participants } </a>
                                             </div>
                                         </div>
                                     </header>
                                     <div class="post-content">
                                         <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                           언어: ${sessionScope.postVO.lang }
                                         </p>
                                         <br>
                                         <p>
-                                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                                        카테고리: ${sessionScope.postVO.category }
                                         </p>
                                         <br>
                                         <p>
-                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+            	기관명: ${sessionScope.postVO.organization }
+                                        </p>
+                                        <br>
+                                        <p>
+                                        주소: ${sessionScope.postVO.addr }
+                                        </p>
+                                        <br>
+                                        <p>
+                                        주의사항: ${sessionScope.postVO.cautions }
                                         </p>
                                         <br>
                                         <blockquote>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus enim veritatis, suscipit sapiente similique delectus perferendis natus praesentium, sunt quisquam eos. Fugit aut nisi dolores blanditiis fuga, soluta velit repudiandae.</p>
+                                            <p>일정표: ${sessionScope.postVO.itinerary }</p>
                                         </blockquote>
                                     </div>
+                                    <button id="favorite" type="button" class="btn btn-success">즐겨찾기</button>
+                                    <button id="purchase" type="button" class="btn btn-success">구매하기</button>
                                 </article>
                                 <!--  /Single Post -->
                                 <!-- Star -->
@@ -265,7 +340,7 @@
                                 </div>
                                 <!-- /Search Widget  -->
                                 <!-- Tab -->
-                                <div class="widget tabs">
+<!--                                 <div class="widget tabs">
                                     <div id="horizontal-tabs">
                                         <ul class="tabs">
                                             <li id="tab1" class="current">Popular</li>
@@ -317,8 +392,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- /Tab -->
+                                <!-- Google Map -->
+                                <div>
+                                <h3 class="title">주소</h3>
+                               		 <div id="map-canvas" style="width: 100%; height: 500px" title="여행 위치"></div>
+                                </div></br></br>
+                                <!-- /Google Map -->
                                 <!-- Testimonials Widget -->
                                 <div class="row">
                                     <div class="testimonials widget">

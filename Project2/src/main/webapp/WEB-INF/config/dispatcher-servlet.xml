@@ -68,11 +68,18 @@
 		p:sqlSessionFactory-ref="ssf"
 		p:mapperInterface="com.group2.mypage.MyPageMapper"
 	/>
+	<bean id="PostMapper" class="org.mybatis.spring.mapper.MapperFactoryBean"
+		p:sqlSessionFactory-ref="ssf"
+		p:mapperInterface="com.group2.post.PostMapper"
+	/>
 	<!-- ViewResolver:JSP 찾기 -->
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/"
 		p:suffix=".jsp"
+	/>
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
 	/>
 
 </beans>

@@ -12,13 +12,14 @@ import org.springframework.web.context.request.SessionScope;
 
 import com.group2.member.MemberService;
 //import com.group2.member.MemberVO;
+import com.group2.mypage.MyPageService;
 
 
 @Controller
 public class MemberController {
 	@Resource(name="md")
 	private MemberService service;
-	
+
 	@RequestMapping("login.do")
 	public String member_login(String email,String pwd,Model model,HttpSession session){
 		int count=service.memberIdCheck(email);
@@ -38,6 +39,7 @@ public class MemberController {
 				session.setAttribute("email", email);
 				session.setAttribute("firstName", firstName);
 				session.setAttribute("lastName", lastName);
+				
 				
 			}else{
 				res="nopwd";

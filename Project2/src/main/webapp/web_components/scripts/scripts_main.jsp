@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- The Scripts -->
-<script src="js/jquery.min.js"></script>
+<!-- <script src="js/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/jquery-migrate-1.0.0.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/bootstrap.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script> -->
 <script src="js/revolution-slider/js/jquery.themepunch.plugins.min.js"></script>
 <script src="js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
 <script src="js/jquery.parallax.js"></script>

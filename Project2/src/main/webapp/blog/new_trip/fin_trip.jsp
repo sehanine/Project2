@@ -23,11 +23,12 @@
 	            <p>
 	            	제출 완료!
 	            </p>
+	            <p>트립이 정상적으로 등록될때 까지 24~48시간의 시간이 소요 됩니다.</p>
 	            <br/>
 	            <br/>
 	        </div>
 	        <div class="pull-right"> 
-            	<a href="#" class="btn btn-success" role="button">확인</a>
+            	<a href="main.do" class="btn btn-success" role="button">메인으로</a>
 	        </div>
 	    </article>
 	</div>

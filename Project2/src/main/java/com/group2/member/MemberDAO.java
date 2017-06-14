@@ -3,6 +3,8 @@ package com.group2.member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.group2.mypage.MyPageVO;
+
 @Repository("md")
 public class MemberDAO implements MemberService{
 	@Autowired
@@ -29,6 +31,11 @@ public class MemberDAO implements MemberService{
 	@Override
 	public String memberLastNameData(String email) {
 		return mapper.memberLastNameData(email);
+	}
+	
+	@Override
+	public MyPageVO getMypageVO(String email) {
+		return mapper.getMypageVO(email);
 	}
 	
 	

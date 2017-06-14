@@ -7,6 +7,9 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,700,800,900' rel='stylesheet' type='text/css'>
 <!-- Library CSS -->
 <link rel="stylesheet" href="css/bootstrap.css">
+<!-- Theme CSS -->
+<link rel="stylesheet" href="css/style.css">
+<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
 <link rel="stylesheet" href="css/bootstrap-theme.css">
 <link rel="stylesheet" href="css/fonts/font-awesome/css/font-awesome.css">
 <link rel="stylesheet" href="css/animations.css" media="screen">
@@ -14,8 +17,7 @@
 <link rel="stylesheet" href="css/revolution-slider/css/settings.css" media="screen">
 <link rel="stylesheet" href="css/revolution-slider/css/extralayers.css" media="screen">
 <link rel="stylesheet" href="css/prettyPhoto.css" media="screen">
-<!-- Theme CSS -->
-<link rel="stylesheet" href="css/style.css">
+
 <!-- Skin  -->
 <link rel="stylesheet" href="css/colors/green.css" class="colors">
 <!-- Responsive CSS  -->

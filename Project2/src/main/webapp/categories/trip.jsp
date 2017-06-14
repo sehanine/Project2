@@ -85,16 +85,16 @@
                                                     </span>
                                                     <!-- Swap image -->
                                                     <div class="flip">
-                                                        <a href="product-view.html" class="swap-image">
-                                                        <img src="img/shop/product_01.jpg" title="iPhone 5s 64 GB" alt="iPhone 5s 64 GB" class="front">
+                                                        <a href="single-post.do" class="swap-image">
+                                                        <img src="img/trip/roadtripposter.png" title="iPhone 5s 64 GB" alt="iPhone 5s 64 GB" class="front">
                                                         </a>
                                                     </div>
                                                     <!-- /Swap image -->
-                                                    <a href="product-view.html" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
+                                                    <a href="img/trip/roadtripposter.png" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
                                                 </div>
                                                 <div class="product-meta">
                                                     <div class="left">
-                                                        <h3 class="name"><a href="product-view.html">iPhone 5s 64 GB</a></h3>
+                                                        <h3 class="name"><a href="single-post.do">iPhone 5s 64 GB</a></h3>
                                                         <div class="price">
                                                             <span class="price-old">$119.50</span>
                                                             <span class="price-new">$107.75</span>

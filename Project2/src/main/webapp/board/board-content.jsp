@@ -56,8 +56,57 @@
         <!-- Main Content(BoardList) -->
         <p><p><p>
 		<center>
-			<h1>내용보기</h1>
-		</center>
+		<table class="table table-bordered" width="700" style="width: 50%">
+			<tr>
+				<th width="20%">번호</th>
+				<td width="30%" align="center">${vo.no }</td>
+				<th width="20%">작성일</th>
+				<td width="30%" align="center">
+					<fmt:formatDate value="${vo.regdate }" pattern="yyyy-MM-dd"/>
+				</td>				
+			</tr>
+			<tr>
+				<th width="20%">이름</th>
+				<td width="30%" align="center">${vo.name }</td>
+				<th width="20%">조회수</th>
+				<td width="30%" align="center">${vo.hit }</td>				
+			</tr>
+			<tr>
+				<th width="20%">제목</th>
+				<td colspan="3">${vo.subject }</td>
+			</tr>
+			
+			<c:if test="${vo.filecount !=0 }">
+			 <tr>
+			 	<th width="20%">첨부파일</th>
+			 	<td colspan="3" align="left">
+			 		<c:forEach var="fname" items="${vo.nameList }">
+			 			<a href="download.do?fn=${fname }">${fname }</a>&nbsp;
+			 		</c:forEach>
+			 	</td>
+			 </tr>	
+			</c:if>
+			
+			<tr>
+				<td colspan="4" valign="top" align="left" height="200">
+				<img alt="image" src="${vo.filename }">
+					<pre>${vo.content }</pre>
+				</td>
+			</tr>
+											
+		</table>
+		
+		<table id="table_content" width="700">
+			<tr>
+				<td align="right">
+					<a href="board-update.do?no=${vo.no }"><input type="button" class="btn btn-success" value="수정"></a>&nbsp;
+					<a href="board-delete.do?no=${vo.no }"><input type="button" class="btn btn-success" value="삭제"></a>&nbsp;
+					<a href="board.do"><input type="button" class="btn btn-success" value="목록"></a>&nbsp;
+					<p><p><p><p>
+				</td>
+			</tr>
+		</table>
+	</center>
 	<!-- Main Content End -->
             <!-- Footer -->
             <footer id="footer">
