@@ -54,19 +54,34 @@
                                  <ul class="category-list slide">
                                      <li><a href="javascript:change(1);">1. 시작</a></li>
                                      <li><a href="javascript:change(2);">2. 언어</a></li>
+                                     <input id="lang_copy" type="hidden" readonly>
                                      <li><a href="javascript:change(3);">3. 카테고리</a></li>
+                                     <!-- 작업중 -->
+                                     <input id="cate_copy" type="hidden" readonly>
                                      <li><a href="javascript:change(4);">4. 기관 설명</a></li>
+                                     <input id="org_copy" type="hidden" readonly>
                                      <li><a href="javascript:change(5);">5. 여행 제목</a></li>
+                                     <input id="title_copy" type="hidden" readonly>
                                      <li><a href="javascript:change(6);">6. 태그 설정</a></li>
+                                     <input id="hash_copy" type="hidden" readonly>
                                      <li><a href="javascript:change(7);">7. 포스터 이미지 추가</a></li>
+                                     <input id="poster_copy" type="hidden" readonly>
                                      <li><a href="javascript:change(8);">8. 일정표 작성</a></li>
+                                     <input id="itinerary_copy" type="hidden" readonly>
                                      <li><a href="javascript:change(9);">9. 제공 항목</a></li>
+                                     <input id="host_serve_copy" type="hidden" readonly>
                                      <li><a href="javascript:change(10);">10. 관련 사진 추가</a></li>
+                                     <input id="trip_pictures_copy" type="hidden" readonly> 
                                      <li><a href="javascript:change(11);">11. 프로그램 소개</a></li>
+                                     <input id="about_program_copy" type="hidden" readonly>
                                      <li><a href="javascript:change(12);">12. 여행 장소 입력</a></li>
+                                     <input id="addr_copy" type="hidden" readonly>
                                      <li><a href="javascript:change(13);">13. 주의사항</a></li>
+                                     <input id="cautions_copy" type="hidden" readonly>
                                      <li><a href="javascript:change(14);">14. 게스트 설정</a></li>
+                                     <input id="participants_copy" type="hidden" readonly>
                                      <li><a href="javascript:change(15);">15. 요금 책정</a></li>
+                                     <input id="cost_copy" type="hidden" readonly>
                                      <li><a href="javascript:change(16);">16. 제출</a></li>
                                  </ul>
                              </div>
@@ -245,7 +260,9 @@
      </div>
 <jsp:include page="${scripts_main }"></jsp:include>
 <script type="text/javascript">
+	
 	function change(mode) {
+		
         $.ajax({   
         	url: "trip_content.do?mode=" + mode, 
         	success: function(result){
@@ -253,24 +270,12 @@
            		Dropzone.discover();
         	}
         });
-	};
-		/* var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange =
-            function(){
-                if(this.readyState == 4 && this.status == 200){
-					document.getElementById("change").innerHTML = this.responseText;
-                }
-            };
-        xhttp.open(
-        		"GET", 
-        		"trip_content.do?mode=" + mode, 
-        		true
-        );
-        xhttp.send();  */
-//        $("#input-id").fileinput();
+        
+	}
+	window.onload = change(1);
     
-    window.onload = change(1);
-   
+    //$('html').keyup(function(e){if(e.keyCode == 8)alert('backspace trapped')})
+		
 </script>	
 </body>
 </html>

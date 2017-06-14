@@ -14,7 +14,7 @@
 				<p>최대 몇명까지 참여 가능한가요?</p>
 				
 			    <div class="col-lg-3">
-				    <select class="form-control" id="participant">
+				    <select class="form-control" id="participants">
 					    <option>1</option>
 					    <option>2</option>
 					    <option>3</option>
@@ -29,9 +29,23 @@
 			    </div>
 			</div>
 	        <div class="pull-right">
-	        	<a href="javascript:change(15);" class="btn btn-success" role="button">다음</a>
+	        	<a href="javascript:next(15);" class="btn btn-success" role="button">다음</a>
 	        </div>
 	    </article>
 	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#participants').val($('#participants_copy').val());
+		});
+		function next(mode) {
+			$('#participants_copy').val($('#participants').val());
+	       	$.ajax({   
+	        	url: "trip_content.do?mode=" + mode, 
+	        	success: function(result){
+	           		$("#change").html(result);
+	        	}
+	        });
+		};
+	</script>	
 </body>
 </html>

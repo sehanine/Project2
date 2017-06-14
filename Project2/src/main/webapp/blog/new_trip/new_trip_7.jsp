@@ -19,6 +19,20 @@
 	        	<a href="javascript:change(8);" class="btn btn-success" role="button">다음</a>
 	        </div>
 	    </article>
-	</div>	
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			Dropzone.discover();
+		});
+		function next(mode) {
+			//파일 추가
+	       	$.ajax({   
+	        	url: "trip_content.do?mode=" + mode, 
+	        	success: function(result){
+	           		$("#change").html(result);
+	        	}
+	        });
+		};
+	</script>	
 </body>	
 </html>

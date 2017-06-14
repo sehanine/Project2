@@ -15,9 +15,22 @@
 	    		<form action="#" class="dropzone" id="trip_pictures"></form>
 	    	</div>
 	        <div class="pull-right" style="margin-top:10px">
-	        	<a href="javascript:change(11);" class="btn btn-success" role="button">다음</a>
+	        	<a href="javascript:next(11);" class="btn btn-success" role="button">다음</a>
 	        </div>
 	    </article>
 	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			Dropzone.discover();
+		})
+		function next(mode) {
+	       	$.ajax({   
+	        	url: "trip_content.do?mode=" + mode, 
+	        	success: function(result){
+	           		$("#change").html(result);
+	        	}
+	        });
+		};
+	</script>	
 </body>
 </html>

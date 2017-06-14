@@ -20,20 +20,24 @@
 					<div class="form-group">
 					
 						<div><label for="comment1">1일차</label>
-						<textarea class="form-control" id="comment"/>
+						<textarea class="form-control" id="addr1"/>
 						</div>
 						<div class="input_fields_wrap"></div>
 					</div>
 				</form>
 			</div> 
 	    	<div class="pull-right">
-	        	<a href="javascript:change(13);" class="btn btn-success" role="button">다음</a>
+	        	<a href="javascript:next(13);" class="btn btn-success" role="button">다음</a>
 	        </div>
 	    </article>
 	</div>
 </body>
 <script type="text/javascript">
 $(document).ready(function() {
+	/*
+	array handling
+	*/
+	$('#addr1').val($('#addr_copy').val());
     var max_fields      = 8; //maximum input boxes allowed
     var wrapper         = $(".input_fields_wrap"); //Fields wrapper
     var add_button      = $("#add_button"); //Add button ID
@@ -43,7 +47,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
              //text box increment
-            $(wrapper).append('<div><label for="comment1">' + x + '일차</label><textarea class="form-control" id="comment' + x + '"/><a href="#" class="remove_field">삭제하기</a></div>' ); //add input box
+            $(wrapper).append('<div><label for="addr">' + x + '일차</label><textarea class="form-control" id="addr' + x + '"/><a href="#" class="remove_field">삭제하기</a></div>' ); //add input box
             x++;
            // '<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'
            
@@ -54,5 +58,15 @@ $(document).ready(function() {
         e.preventDefault(); $(this).parent('div').remove(); x--;
     })
 });
+
+function next(mode) {
+	$('#addr_copy').val($('#addr1').val());
+   	$.ajax({   
+    	url: "trip_content.do?mode=" + mode, 
+    	success: function(result){
+       		$("#change").html(result);
+    	}
+    });
+};
 </script>
 </html>

@@ -22,9 +22,23 @@
 			</div>
 			
 	        <div class="pull-right">
-	        	<a href="javascript:change(5);" class="btn btn-success" role="button" style="margin-top:10px">다음</a>
+	        	<a href="javascript:next(5);" class="btn btn-success" role="button" style="margin-top:10px">다음</a>
 	        </div>
 		</article>
 	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#org').val($('#org_copy').val());
+		});
+		function next(mode) {
+			$('#org_copy').val($('#org').val());
+	       	$.ajax({   
+	        	url: "trip_content.do?mode=" + mode, 
+	        	success: function(result){
+	           		$("#change").html(result);
+	        	}
+	        });
+		};
+	</script>
 </body>
 </html>

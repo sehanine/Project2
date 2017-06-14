@@ -16,7 +16,7 @@
 				<h4>3. 트립에 가장 어울리는 카테고리를 선택해 주세요</h4>
 				
 			    <div class="col-lg-3">
-				    <select class="form-control" id="category">
+				    <select class="form-control" id="category" placeholder="카테고리">
 					    <option>예술 및 디자인</option>
 					    <option>엔터테인먼트</option>
 					    <option>스포츠</option>
@@ -31,9 +31,23 @@
 			    </div>
 			</div>
 	        <div class="pull-right">
-	        	<a href="javascript:change(4);" class="btn btn-success" role="button">다음</a>
+	        	<a href="javascript:next(4);" class="btn btn-success" role="button">다음</a>
 	        </div>
 	    </article>
 	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#category').val($('#cate_copy').val());
+		});
+		function next(mode) {
+			$('#cate_copy').val($('#category').val());
+	       	$.ajax({   
+	        	url: "trip_content.do?mode=" + mode, 
+	        	success: function(result){
+	           		$("#change").html(result);
+	        	}
+	        });
+		};
+	</script>
 </body>
 </html>

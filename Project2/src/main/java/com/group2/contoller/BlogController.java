@@ -1,13 +1,17 @@
 package com.group2.contoller;
 
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.group2.post.PostService;
+import com.group2.post.PostVO;
 
 @Controller
 public class BlogController {
+
 	@RequestMapping("new_post.do")
 	public String new_post(Model model){
 		model.addAttribute("css_components", "../web_components/css/css_components.jsp");
