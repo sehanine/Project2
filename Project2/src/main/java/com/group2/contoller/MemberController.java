@@ -21,7 +21,7 @@ public class MemberController {
 	private MemberService service;
 
 	@RequestMapping("login.do")
-	public String member_login(String email,String pwd,Model model,HttpSession session){
+	public String member_login(String email, String pwd, Model model,HttpSession session){
 		int count=service.memberIdCheck(email);
 		String res="";
 		String firstName="";

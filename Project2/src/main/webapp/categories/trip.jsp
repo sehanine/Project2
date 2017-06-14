@@ -85,7 +85,7 @@
                                                     </span>
                                                     <!-- Swap image -->
                                                     <div class="flip">
-                                                        <a href="single-post.do" class="swap-image">
+                                                        <a href="single-post.do?no=2" class="swap-image">
                                                         <img src="img/trip/roadtripposter.png" title="iPhone 5s 64 GB" alt="iPhone 5s 64 GB" class="front">
                                                         </a>
                                                     </div>
@@ -94,7 +94,7 @@
                                                 </div>
                                                 <div class="product-meta">
                                                     <div class="left">
-                                                        <h3 class="name"><a href="single-post.do">iPhone 5s 64 GB</a></h3>
+                                                        <h3 class="name"><a href="single-post.do?no=2">iPhone 5s 64 GB</a></h3>
                                                         <div class="price">
                                                             <span class="price-old">$119.50</span>
                                                             <span class="price-new">$107.75</span>
@@ -143,15 +143,15 @@
                                                     </span>
                                                     <!-- Swap image -->
                                                     <div class="flip">
-                                                        <a href="product-view.html" class="swap-image">
-                                                        <img src="img/shop/product_02.jpg" title="iPhone 4 16 GB" alt="iPhone 4 16 GB" class="front">
+                                                        <a href="single-post.do?no=3" class="swap-image">
+                                                        <img src="http://www.cjry.ca/wp-content/uploads/2016/09/Movie-night-clipart.png" title="iPhone 4 16 GB" alt="iPhone 4 16 GB" class="front">
                                                         </a>
                                                     </div>
-                                                    <a href="product-view.html" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
+                                                    <a href="single-post.do?no=3" class="pav-colorbox btn btn-theme-default cboxElement"><em class="fa fa-plus"></em><span>View Product</span></a>
                                                 </div>
                                                 <div class="product-meta">
                                                     <div class="left">
-                                                        <h3 class="name"><a href="product-view.html">iPhone 4 16 GB</a></h3>
+                                                        <h3 class="name"><a href="single-post.do?no=3">Movie night</a></h3>
                                                         <div class="price">
                                                             <span class="price-old">$589.50</span>
                                                             <span class="price-new">$107.75</span>

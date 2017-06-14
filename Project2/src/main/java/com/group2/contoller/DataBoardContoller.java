@@ -109,7 +109,7 @@ public class DataBoardContoller {
 	}
 	
 	@RequestMapping("board-content.do")
-	public String databoard_content(int no,Model model){
+	public String databoard_content(int no, Model model){
 		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");

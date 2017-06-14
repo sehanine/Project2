@@ -16,8 +16,9 @@ public class PostDAO implements PostService{
 	}
 
 	@Override
-	public PostVO getPostData(String email) {
-		return mapper.getPostData(email);
+	public PostVO getPostData(String email, int trip_no) {
+		System.out.println("PostDAO: " + trip_no);
+		return mapper.getPostData(email, trip_no);
 	}
 	
 

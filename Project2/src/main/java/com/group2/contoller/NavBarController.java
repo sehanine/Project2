@@ -1,5 +1,7 @@
 package com.group2.contoller;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.request;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
@@ -71,12 +73,16 @@ public class NavBarController {
 	 * blog
 	 */
 	@RequestMapping("single-post.do")
-	public String blog(Model model, HttpSession session){
+	public String blog(int no, Model model, HttpSession session){
+		
 		String email = (String) session.getAttribute("email");
 		model.addAttribute("css_blog", "../web_components/css/css_blog.jsp");
 		model.addAttribute("nav_bar", "../web_components/nav_bar.jsp");
 		model.addAttribute("scripts_blog", "../web_components/scripts/scripts_blog.jsp");
-		PostVO vo = postService.getPostData(email);
+		
+		PostVO vo = postService.getPostData(email, no);
+		
+		System.out.println("int no: " + no);
 		System.out.println("owner: " + vo.getEmail());
 		System.out.println("lang: " + vo.getLang());
 		System.out.println("cate: " + vo.getCategory());

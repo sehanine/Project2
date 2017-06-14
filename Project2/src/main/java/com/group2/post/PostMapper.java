@@ -34,6 +34,6 @@ public interface PostMapper {
 			@Param("cost")String cost);
 	
 	@Select("SELECT * FROM trip_table "
-			+ "WHERE email=#{email,jdbcType=VARCHAR}")
-	public PostVO getPostData(String email);
+			+ "WHERE email=#{email,jdbcType=VARCHAR} AND trip_no=#{trip_no}")
+	public PostVO getPostData(@Param("email")String email, @Param("trip_no")int trip_no);
 }

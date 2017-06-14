@@ -10,5 +10,5 @@ public interface PostService {
 			String about_program, String addr,
 			String cautions, String participants,
 			String cost);
-	public PostVO getPostData(String email);
+	public PostVO getPostData(String email, int trip_no);
 }

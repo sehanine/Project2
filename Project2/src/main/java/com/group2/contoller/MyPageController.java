@@ -17,7 +17,6 @@ import com.group2.mypage.MyPgaeDAO;
 public class MyPageController {
 	@Resource(name="myd")
 	private MyPageService service;
-	private MyPgaeDAO dao;
 	
 	@RequestMapping("mypage.do")
 	public String mypage(Model model, HttpSession session){
