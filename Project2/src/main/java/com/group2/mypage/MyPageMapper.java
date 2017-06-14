@@ -29,6 +29,4 @@ public interface MyPageMapper {
 			+ "WHERE email=#{email,jdbcType=VARCHAR}")
 	public String mypageImageData(String email);
 	
-	/*@Update("UPDATE imageUpload WHERE email=#{email, jdbcType=VARCHAR")
-	public void myPageImageUpdate(@Param("email")String email,@Param)*/
 }
