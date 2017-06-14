@@ -27,21 +27,57 @@
 		<jsp:include page="${nav_bar }"></jsp:include>
 		<!-- 네이게이션 오브젝트 불러오기 --> <!-- /Header -->
 		<!-- Main Section -->
-		<section id="main"> <!-- Slider -->
+		<div class="container">
+			  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+			    <!-- Indicators -->
+			    <ol class="carousel-indicators">
+			      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			      <li data-target="#myCarousel" data-slide-to="1"></li>
+			      <li data-target="#myCarousel" data-slide-to="2"></li>
+			    </ol>
+			
+			    <!-- Wrapper for slides -->
+			    <div class="carousel-inner">
+			      <div class="item active">
+			        <img src="img/main_img/main3.jpg" alt="Los Angeles" style="width:100%;">
+			      </div>
+			
+			      <div class="item">
+			        <img src="img/main_img/main3.jpg" alt="Chicago" style="width:100%;">
+			      </div>
+			    
+			      <div class="item">
+			        <img src="img/main_img/main3.jpg" alt="New york" style="width:100%;">
+			      </div>
+			    </div>
+			
+			    <!-- Left and right controls -->
+			    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			      <span class="glyphicon glyphicon-chevron-left"></span>
+			      <span class="sr-only">Previous</span>
+			    </a>
+			    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+			      <span class="glyphicon glyphicon-chevron-right"></span>
+			      <span class="sr-only">Next</span>
+			    </a>
+			  </div>
+			</div>
+					
+		<!-- <section id="main"> Slider
 		<div class="fullwidthbanner-container tp-banner-container">
 			<div class="fullwidthbanner rslider tp-banner">
 				<ul>
-					<!-- THE FIRST SLIDE -->
+					THE FIRST SLIDE
 					<li data-transition="fade" data-slotamount="7"
 						data-masterspeed="2000" data-thumb="img/homeslider_thumb2.png"
 						data-delay="10000" data-saveperformance="on">
-						<!-- MAIN IMAGE --> <img src="img/dummy.png"
+						MAIN IMAGE <img src="img/dummy.png"
 						alt="laptopmockup_sliderdy"
 						data-lazyload="img/slider/slider-bg-1.jpg"
 						data-bgposition="right top" data-kenburns="on"
 						data-duration="12000" data-ease="Power0.easeInOut"
 						data-bgfit="115" data-bgfitend="100"
-						data-bgpositionend="center bottom"> <!-- LAYERS --> <!-- LAYER NR. 1 -->
+						data-bgpositionend="center bottom"> LAYERS LAYER NR. 1
 						<div class="tp-caption customin fadeout rs-parallaxlevel-10"
 							data-x="783" data-y="146"
 							data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
@@ -49,7 +85,7 @@
 							data-elementdelay="0.1" data-endelementdelay="0.1"
 							data-endspeed="300" style="z-index: 2;">
 							<img src="img/dummy.png" alt="" data-lazyload="img/redbg_big.png">
-						</div> <!-- LAYER NR. 2 -->
+						</div> LAYER NR. 2
 						<div
 							class="tp-caption light_heavy_50 customin fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="797" data-y="154"
@@ -58,7 +94,7 @@
 							data-splitin="none" data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">Bootstrap
-						</div> <!-- LAYER NR. 3 -->
+						</div> LAYER NR. 3
 						<div
 							class="tp-caption black_heavy_70 skewfromleftshort fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="550" data-y="83" data-speed="500" data-start="2400"
@@ -66,7 +102,7 @@
 							data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">Multipurpose
-						</div> <!-- LAYER NR. 4 -->
+						</div> LAYER NR. 4
 						<div
 							class="tp-caption black_bold_40 skewfromrightshort fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="900" data-y="232" data-speed="500" data-start="3200"
@@ -74,7 +110,7 @@
 							data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Theme!
-						</div> <!-- LAYER NR. 5 -->
+						</div> LAYER NR. 5
 						<div
 							class="tp-caption black_bold_bg_20 sfr fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="933" data-y="300" data-speed="300" data-start="4000"
@@ -82,7 +118,7 @@
 							data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">RETINA
-							READY</div> <!-- LAYER NR. 6 -->
+							READY</div> LAYER NR. 6
 						<div
 							class="tp-caption greenbox30 customin fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="902" data-y="300"
@@ -91,7 +127,7 @@
 							data-splitin="none" data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
-						</div> <!-- LAYER NR. 7 -->
+						</div> LAYER NR. 7
 						<div
 							class="tp-caption arrowicon customin fadeout rs-parallaxlevel-10"
 							data-x="911" data-y="306"
@@ -101,7 +137,7 @@
 							data-endspeed="300" style="z-index: 8;">
 							<img src="img/dummy.png" alt="" data-ww="17" data-hh="17"
 								data-lazyload="img/check.png">
-						</div> <!-- LAYER NR. 8 -->
+						</div> LAYER NR. 8
 						<div
 							class="tp-caption black_bold_bg_20 sfr fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="933" data-y="340" data-speed="300" data-start="4500"
@@ -109,7 +145,7 @@
 							data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">SUPER
-							CUSTOMIZABLE</div> <!-- LAYER NR. 9 -->
+							CUSTOMIZABLE</div> LAYER NR. 9
 						<div
 							class="tp-caption greenbox30 customin fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="902" data-y="340"
@@ -118,7 +154,7 @@
 							data-splitin="none" data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
-						</div> <!-- LAYER NR. 10 -->
+						</div> LAYER NR. 10
 						<div
 							class="tp-caption arrowicon customin fadeout rs-parallaxlevel-10"
 							data-x="911" data-y="347"
@@ -128,7 +164,7 @@
 							data-endspeed="300" style="z-index: 11;">
 							<img src="img/dummy.png" alt="" data-ww="17" data-hh="17"
 								data-lazyload="img/check.png">
-						</div> <!-- LAYER NR. 11 -->
+						</div> LAYER NR. 11
 						<div
 							class="tp-caption black_bold_bg_20 sfr fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="933" data-y="380" data-speed="300" data-start="5000"
@@ -136,7 +172,7 @@
 							data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;">EASY
-							TO USE</div> <!-- LAYER NR. 12 -->
+							TO USE</div> LAYER NR. 12
 						<div
 							class="tp-caption greenbox30 customin fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="902" data-y="380"
@@ -145,7 +181,7 @@
 							data-splitin="none" data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 13; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
-						</div> <!-- LAYER NR. 13 -->
+						</div> LAYER NR. 13
 						<div
 							class="tp-caption arrowicon customin fadeout rs-parallaxlevel-10"
 							data-x="911" data-y="386"
@@ -157,8 +193,8 @@
 								data-lazyload="img/check.png">
 						</div>
 					</li>
-					<!-- /THE FIRST SLIDE -->
-					<!-- THE RESPONSIVE SLIDE -->
+					/THE FIRST SLIDE
+					THE RESPONSIVE SLIDE
 					<li data-transition="fade" data-slotamount="1"
 						data-masterspeed="300"><img src="img/slider/slider-bg-2.jpg"
 						data-fullwidthcentering="on" alt="">
@@ -170,7 +206,7 @@
 						<div class="caption large_text sfr" data-x="738" data-y="88"
 							data-speed="300" data-start="1100" data-easing="easeOutExpo">
 							<span class="dblue">RESPONSIVE</span>
-						</div> <!-- LAYER NR. 5 1 -->
+						</div> LAYER NR. 5 1
 						<div
 							class="tp-caption black_bold_bg_20 sfr fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="691" data-y="220" data-speed="300" data-start="1000"
@@ -178,7 +214,7 @@
 							data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">Unique
-							Design</div> <!-- LAYER NR. 6 1 -->
+							Design</div> LAYER NR. 6 1
 						<div
 							class="tp-caption greenbox30 customin fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="660" data-y="220"
@@ -187,7 +223,7 @@
 							data-splitin="none" data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
-						</div> <!-- LAYER NR. 7 1 -->
+						</div> LAYER NR. 7 1
 						<div
 							class="tp-caption arrowicon customin fadeout rs-parallaxlevel-10"
 							data-x="669" data-y="232"
@@ -197,7 +233,7 @@
 							data-endspeed="300" style="z-index: 8;">
 							<img src="img/dummy.png" alt="" data-ww="17" data-hh="17"
 								data-lazyload="img/check.png">
-						</div> <!-- LAYER NR. 5 1 -->
+						</div> LAYER NR. 5 1
 						<div
 							class="tp-caption black_bold_bg_20 sfr fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="691" data-y="260" data-speed="300" data-start="1500"
@@ -205,7 +241,7 @@
 							data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">Responsive
-							Pricing Tables</div> <!-- LAYER NR. 6 1 -->
+							Pricing Tables</div> LAYER NR. 6 1
 						<div
 							class="tp-caption greenbox30 customin fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="660" data-y="260"
@@ -214,7 +250,7 @@
 							data-splitin="none" data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
-						</div> <!-- LAYER NR. 7 1 -->
+						</div> LAYER NR. 7 1
 						<div
 							class="tp-caption arrowicon customin fadeout rs-parallaxlevel-10"
 							data-x="669" data-y="272"
@@ -224,7 +260,7 @@
 							data-endspeed="300" style="z-index: 8;">
 							<img src="img/dummy.png" alt="" data-ww="17" data-hh="17"
 								data-lazyload="img/check.png">
-						</div> <!-- LAYER NR. 5 -->
+						</div> LAYER NR. 5
 						<div
 							class="tp-caption black_bold_bg_20 sfr fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="691" data-y="300" data-speed="300" data-start="2000"
@@ -232,7 +268,7 @@
 							data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">Crossbrowser
-							Compatible</div> <!-- LAYER NR. 6 -->
+							Compatible</div> LAYER NR. 6
 						<div
 							class="tp-caption greenbox30 customin fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="660" data-y="300"
@@ -241,7 +277,7 @@
 							data-splitin="none" data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
-						</div> <!-- LAYER NR. 7 -->
+						</div> LAYER NR. 7
 						<div
 							class="tp-caption arrowicon customin fadeout rs-parallaxlevel-10"
 							data-x="669" data-y="306"
@@ -251,7 +287,7 @@
 							data-endspeed="300" style="z-index: 8;">
 							<img src="img/dummy.png" alt="" data-ww="17" data-hh="17"
 								data-lazyload="img/check.png">
-						</div> <!-- LAYER NR. 8 -->
+						</div> LAYER NR. 8
 						<div
 							class="tp-caption black_bold_bg_20 sfr fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="691" data-y="340" data-speed="300" data-start="2500"
@@ -259,7 +295,7 @@
 							data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">Twitter
-							1.1 API Support</div> <!-- LAYER NR. 9 -->
+							1.1 API Support</div> LAYER NR. 9
 						<div
 							class="tp-caption greenbox30 customin fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="660" data-y="340"
@@ -268,7 +304,7 @@
 							data-splitin="none" data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
-						</div> <!-- LAYER NR. 10 -->
+						</div> LAYER NR. 10
 						<div
 							class="tp-caption arrowicon customin fadeout rs-parallaxlevel-10"
 							data-x="669" data-y="347"
@@ -278,7 +314,7 @@
 							data-endspeed="300" style="z-index: 11;">
 							<img src="img/dummy.png" alt="" data-ww="17" data-hh="17"
 								data-lazyload="img/check.png">
-						</div> <!-- LAYER NR. 11 -->
+						</div> LAYER NR. 11
 						<div
 							class="tp-caption black_bold_bg_20 sfr fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="691" data-y="380" data-speed="300" data-start="3000"
@@ -286,7 +322,7 @@
 							data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;">Bootstrap
-							Framework</div> <!-- LAYER NR. 12 -->
+							Framework</div> LAYER NR. 12
 						<div
 							class="tp-caption greenbox30 customin fadeout tp-resizeme rs-parallaxlevel-10"
 							data-x="660" data-y="380"
@@ -295,7 +331,7 @@
 							data-splitin="none" data-splitout="none" data-elementdelay="0.1"
 							data-endelementdelay="0.1" data-endspeed="300"
 							style="z-index: 13; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
-						</div> <!-- LAYER NR. 13 -->
+						</div> LAYER NR. 13
 						<div
 							class="tp-caption arrowicon customin fadeout rs-parallaxlevel-10"
 							data-x="669" data-y="386"
@@ -321,7 +357,7 @@
 						</div></li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 		<!-- Slider --> <!-- Main Content -->
 		<div class="main-content">
 			<div class="container">
@@ -402,7 +438,8 @@
 					<div class="row">
 						<div
 							class="col-md-6 col-sm-12 col-xs-12 text-center wow fadeInLeft">
-							<img class="app-img" src="img/plane.png" alt="iPhone5c">
+							<img class="app-img" src="img/airplanes.png" alt="iPhone5c">
+
 						</div>
 						<div class="col-md-6 col-sm-12 col-xs-12 wow fadeInRight">
 							<div class="app-service padding-bottom50">
@@ -560,7 +597,7 @@
 							<div class="service-box padding-top30 padding-bottom40">
 								<div class="service-box-icon">
 									<a href="#"><img alt="Web Design"
-										src="img/icons/web-design.png"></a>
+										src="img/trip.png"></a>
 								</div>
 								<div class="service-box-info">
 									<a href="#">

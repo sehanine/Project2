@@ -55,10 +55,14 @@
                                 <!--  Single Post -->
                                 <article class="post hentry">
                                     <div class="post-image">
+
                                         <a href="${sessionScope.postVO.trip_pictures }" data-rel="prettyPhoto">
+
                                         <span class="img-hover"></span>
                                         <span class="fullscreen"><i class="fa fa-plus"></i></span>
+
                                         <img src="${sessionScope.postVO.trip_pictures }" alt="">
+
                                         </a>
                                     </div>
                                     <header class="post-header">
@@ -115,6 +119,8 @@
                                             <p>일정표: ${sessionScope.postVO.itinerary }</p>
                                         </blockquote>
                                     </div>
+                                    <button id="favorite" type="button" class="btn btn-success">즐겨찾기</button>
+                                    <button id="purchase" type="button" class="btn btn-success">구매하기</button>
                                 </article>
                                 <!--  /Single Post -->
                                 <!-- Star -->

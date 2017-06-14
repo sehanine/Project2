@@ -16,10 +16,32 @@ public class DataBoardDAO {
 	}
 	
 	public int databoardTotalPage(){
-		return mapper.databoardTotalPage();   
+		return mapper.databoardTotalPage();
 	}
-	public DataBoardVO boardContentData(int no){
-		mapper.boardHitIncrement(no);
-		return mapper.boardContentData(no);
+	
+	public void databoardInsert(DataBoardVO vo){
+		mapper.databoardInsert(vo);
 	}
+	
+	public DataBoardVO databoardContentData(int no){
+		mapper.databoardHitIncreament(no);
+		return mapper.databoardContentData(no);
+	}
+	
+	public DataBoardVO databoardDeleteData(int no){
+		return mapper.databoardDeleteData(no);
+	}
+	public void databoardDelete(int no){
+		mapper.databoardDelete(no);
+	}
+	
+	public DataBoardVO databoardUpdateData(int no){
+		return mapper.databoardContentData(no);
+	}
+	public void databoardUpdate(DataBoardVO vo){
+		mapper.databoardUpdate(vo);
+	}
+	
+	
+	
 }

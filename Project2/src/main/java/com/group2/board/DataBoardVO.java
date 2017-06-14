@@ -18,9 +18,12 @@ public class DataBoardVO {
 	private String filesize;
 	private int filecount;
 	
-	private List<MultipartFile> files = new ArrayList<MultipartFile>();
-	private List<String> nameList = new ArrayList<String>();
-	private List<String> sizeList = new ArrayList<String>();
+	private List<MultipartFile> files=
+			new ArrayList<MultipartFile>();
+	private List<String> nameList=
+			new ArrayList<String>();
+	private List<String> sizeList=
+			new ArrayList<String>();
 	private String dbday;
 	public int getNo() {
 		return no;
