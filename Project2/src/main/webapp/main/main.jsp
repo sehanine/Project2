@@ -43,11 +43,11 @@
 			      </div>
 			
 			      <div class="item">
-			        <img src="img/main_img/main3.jpg" alt="Chicago" style="width:100%;">
+			        <img src="img/main_img/img_resort.jpg" alt="Chicago" style="width:100%;">
 			      </div>
 			    
 			      <div class="item">
-			        <img src="img/main_img/main3.jpg" alt="New york" style="width:100%;">
+			        <img src="img/main_img/brisbanemeetup.jpg" alt="New york" style="width:100%;">
 			      </div>
 			    </div>
 			
