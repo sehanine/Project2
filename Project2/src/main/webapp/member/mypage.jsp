@@ -12,23 +12,27 @@
 
         <meta charset="UTF-8">
         <title>My Page</title>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript">
-function send(){
-   var f=document.image;
-   
-   if(f.uploadForm.value==""){
-      alert("파일을 선택하세요.");
-      return;
-   }else{
-	   alert("파일이 선택되었습니다.")
-   }
-   
-   f.submit();
-};
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <jsp:include page="${css_mypage }"></jsp:include>
+    <link href="css_add/dropzone.css" rel="stylesheet">
+	<script src="js_add/dropzone.js"></script>
+	<script type="text/javascript">
+	
+	function change(mode) {
+			
+        $.ajax({   
+        	url: "mypageImageInsert.do?mode=" + mode, 
+        	success: function(result){
+           		$("#change").html(result);
+           		Dropzone.discover();
+        	}
+        });
+        
+	}
+		  window.onload = change(1);
 
-</script>
-        <jsp:include page="${css_mypage }"></jsp:include>
+</script> 
+	
     </head>
     <body class="page">
         <div class="page-mask">
@@ -71,19 +75,24 @@ function send(){
                         <div class="row">
                             <div class="posts-block col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                 <div class="team-member">
-                                    <div class="team-member-holder">
-                                        <div class="team-member-image">
-                                            <img alt="" src="img/team/team-member-1.jpg">
-                                            <div class="team-member-links">
-                                                <div class="team-member-links-list">
-                                                  <form method="post" name="image" 
-                                                  action="myPageImages/mypageImageInsert_ok.do" 
-                                                  enctype="multipart/form-data"
-                                                  modelAttribute="uploadForm">
-                                                    <input type="file" class="btn btn-success" name="uploadForm">
-                                                    <input type="button" class="btn btn-success" value="수정/입력 " onclick="send()">
-                                                  </form>
-                                                </div>
+                                    <div class="team-member-holder" id="change">
+                                        <div class="team-member-image" >
+                                        	<div class="team-member-links">
+                                                <!-- <div class="team-member-links-list"> -->
+                                                <c:choose>
+					                                <c:when test="${sessionScope.pCheck==null }">
+	                                                  <li><a href="javascript:change(1);">이미지 추가 </a></li>
+	                                     				<input type="button" class="btn btn-success" value="입력 " href="javascript:change(1);">
+	                                        			<input id="poster_copy" type="hidden" readonly>
+	                                        		</c:when>
+	                                        		<c:otherwise>
+<%-- 	                                                  	<img src="${sessionScope.poster }">
+ --%>	                                                  	<li><a href="javascript:change(2);">이미지 추가 </a></li>
+	                                                  	<input type="button" class="btn btn-success" value="수정 " href="javascript:change(2);">
+	                                        			<input id="poster_copy" type="hidden" readonly>
+	                                        		</c:otherwise>
+	                                        	</c:choose>   
+                                        		<!-- </div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -121,6 +130,7 @@ function send(){
                                 <c:if test="${sessionScope.check !=null }">
                                 <p>
                                 	${sessionScope.content }
+                                	${sessionScope.pCheck }
                                 </p>
                                 <ul class="list icons list-unstyled">
                                     <li><i class="fa fa-check"></i>성별</li>
@@ -536,56 +546,6 @@ function send(){
             <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
         </div>
         <!-- Wrap End -->
-        <section id="style-switcher">
-            <h2>Style Switcher <a href="#"><i class="fa fa-cogs"></i></a></h2>
-            <div>
-                <h3>Predefined Colors</h3>
-                <ul class="colors">
-                    <li><a title="Green" class="green" href="#"></a></li>
-                    <li><a title="Blue" class="blue" href="#"></a></li>
-                    <li><a title="Orange" class="orange" href="#"></a></li>
-                    <li><a title="Purple" class="purple" href="#"></a></li>
-                    <li><a title="Red" class="red" href="#"></a></li>
-                    <li><a title="Magenta" class="magenta" href="#"></a></li>
-                    <li><a title="Brown" class="brown" href="#"></a></li>
-                    <li><a title="Gray" class="gray" href="#"></a></li>
-                    <li><a title="Golden" class="golden" href="#"></a></li>
-                    <li><a title="Teal" class="teal" href="#"></a></li>
-                </ul>
-                <h3>Layout Style</h3>
-                <div class="layout-style">
-                    <select id="layout-style">
-                        <option value="1">Wide</option>
-                        <option value="2">Boxed</option>
-                    </select>
-                </div>
-                <h3>Header Color</h3>
-                <div class="header-color">
-                    <input type='text' class="header-bg" />
-                </div>
-                <h3>Footer Top Color</h3>
-                <div class="header-color">
-                    <input type='text' class="footer-bg" />
-                </div>
-                <h3>Footer Bottom Color</h3>
-                <div class="header-color">
-                    <input type='text' class="footer-bottom" />
-                </div>
-                <h3>Background Image</h3>
-                <ul id="bg" class="colors bg">
-                    <li><a class="bg1" href="#"></a></li>
-                    <li><a class="bg2" href="#"></a></li>
-                    <li><a class="bg3" href="#"></a></li>
-                    <li><a class="bg4" href="#"></a></li>
-                    <li><a class="bg5" href="#"></a></li>
-                    <li><a class="bg6" href="#"></a></li>
-                    <li><a class="bg7" href="#"></a></li>
-                    <li><a class="bg8" href="#"></a></li>
-                    <li><a class="bg9" href="#"></a></li>
-                    <li><a class="bg10" href="#"></a></li>
-                </ul>
-            </div>
-        </section>
         <jsp:include page="${scripts_mypage }"></jsp:include>
     </body>
 </html>

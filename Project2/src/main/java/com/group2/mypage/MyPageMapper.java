@@ -20,14 +20,15 @@ public interface MyPageMapper {
 			+ "WHERE email=#{email, jdbcType=VARCHAR}")
 	public void ContentUpdate(@Param("content")String content,@Param("email")String email);
 	
-	//mypage Image Insert
-	@Insert("INSERT INTO ImageUpload "
-			+ "VALUES(#{email, jdbcType=VARCHAR},SYSDATE,#{filename, jdbcType=VARCHAR},#{filesize, jdbcType=VARCHAR},#{filecount, jdbcType=VARCHAR})")
-	public void mypageImageInsert(MyPageVO uploadForm);
+	@Insert("INSERT INTO imageUpload(email,poster) "
+			+ "VALUES(#{email, jdbcType=VARCHAR},"
+			+ 		 "#{poster ,jdbcType=VARCHAR})")
+	public void insertImage(@Param("email")String email,@Param("poster")String poster);
 	
-	//mypage Image ContentData
-	@Select("SELECT email,regdate,filename,filesize,filecount "
-			+ "FROM ImageUpload "
-			+ "WHERE email=#{email, jdbcType=VARCHAR}")
-	public ImageVO mypageImagecontentData(String email);
+	@Select("SELECT poster FROM imageUpload "
+			+ "WHERE email=#{email,jdbcType=VARCHAR}")
+	public String mypageImageData(String email);
+	
+	/*@Update("UPDATE imageUpload WHERE email=#{email, jdbcType=VARCHAR")
+	public void myPageImageUpdate(@Param("email")String email,@Param)*/
 }

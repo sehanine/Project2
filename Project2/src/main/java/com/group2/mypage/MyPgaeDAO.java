@@ -21,15 +21,12 @@ public class MyPgaeDAO implements MyPageService{
 		mapper.ContentInsert(content, email);
 	}
 	@Override
-	public void mypageImageInsert(MyPageVO vo) {
-		mapper.mypageImageInsert(vo);
-		
+	public void mypageInsertImage(String email,String poster){
+		mapper.insertImage(email, poster);
 	}
 	@Override
-	public ImageVO mypageImagecontentData(String email) {
-		return mapper.mypageImagecontentData(email);
-		
-		
+	public String mypageImageData(String email) {
+		return mapper.mypageImageData(email);
 	}
 	
 }
