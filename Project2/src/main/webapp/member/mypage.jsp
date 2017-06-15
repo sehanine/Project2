@@ -132,10 +132,10 @@
                                 	${sessionScope.pCheck }
                                 </p>
                                 <ul class="list icons list-unstyled">
-                                    <li><i class="fa fa-check"></i>성별</li>
-                                    <li><i class="fa fa-check"></i>거주도시</li>
-                                    <li><i class="fa fa-check"></i> Iaculis vulputate id quis nisl.</li>
-                                    <li><i class="fa fa-check"></i> Iaculis vulputate id.</li>
+                                    <li><i class="fa fa-check"></i>성별: 남자</li>
+                                    <li><i class="fa fa-check"></i>거주도시: 한국 수도권</li>
+                                    <li><i class="fa fa-check"></i>활동분야: 여행 호스트</li>
+                                    <li><i class="fa fa-check"></i>장점: 5개국어 가능 (한국어, 영어, 일본어, 중국어, 스페인어)</li>
                                 </ul>
                                 <button class="btn btn-info" size="5" id="btn" style="margin-bottom: 15px">자기소개 수정</button>
                                 <form action="mypage-update.do" method="post" id="toggle" name="content">
@@ -332,7 +332,7 @@
                                                 <div class="carousel-inner">
                                                     <div class="item active">
                                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 item animate_afc d1">
-                                                            <div class="item-inner"><a href="single-post.do?no=2"><img alt="Upportdash" src="https://arthurhovinc.files.wordpress.com/2015/04/roadtriplarge.png"></a></div>
+                                                            <div class="item-inner"><a href="single-post.do?no=16"><img alt="Upportdash" src="https://arthurhovinc.files.wordpress.com/2015/04/roadtriplarge.png"></a></div>
                                                         </div>
                                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 item animate_afc d2">
                                                             <div class="item-inner"><a href="#"><img alt="Upportdash" src="http://tong.visitkorea.or.kr/cms/resource/79/2495979_image2_1.jpg"></a></div>

@@ -80,20 +80,14 @@
 							class="sf-sub-indicator"> <i class="fa fa-angle-down "></i>
 						</span>
 					</a>
-						<ul>
-							<li><a href="index.html" class="sf-with-ul">숙소 모아보기</a></li>
-							<li><a href="index-2.html" class="sf-with-ul">추천 숙소 보기</a></li>
-						</ul></li>
+						</li>
 					<li>
 						<a href="trip.do" class="sf-with-ul"> 여행 
 							<span class="sf-sub-indicator"> 
 								<i class="fa fa-angle-down "></i>
 							</span>
 						</a>
-						<ul>
-							<li><a href="shortcodes.html" class="sf-with-ul">여행 모아보기</a></li>
-							<li><a href="components.html" class="sf-with-ul">추천 여행 보기</a></li>
-						</ul>
+						
 					</li>
 					<li>
 						<a href="meet-up.do" class="sf-with-ul"> 모임 
@@ -101,65 +95,20 @@
 								<i class="fa fa-angle-down "></i>
 							</span>
 						</a>
-						<ul>
-							<li><a href="shortcodes.html" class="sf-with-ul">모임 모아보기</a></li>
-							<li><a href="components.html" class="sf-with-ul">추천 모임 보기</a></li>
-						</ul>
+					
 					</li>
-					<li>
-						<a href="single-post.do" class="sf-with-ul"> 블로그 
-							<span class="sf-sub-indicator"> 
-								<i class="fa fa-angle-down "></i>
-							</span>
-						</a>
-						<ul>
-							<li><a href="single-post.do" class="sf-with-ul">블로그1</a></li>
-							<li><a href="festi.do" class="sf-with-ul">축제정보</a></li>
-						</ul>
-					</li>
+				
 					<li><a href="board.do" class="sf-with-ul"> 게시판 <span
 							class="sf-sub-indicator"> <i class="fa fa-angle-down "></i>
 						</span>
 					</a>
-						<ul>
-							<li><a href="portfolio-two.html" class="sf-with-ul">2
-									Column</a></li>
-							<li><a href="portfolio-three.html" class="sf-with-ul">3
-									Column</a></li>
-							<li><a href="portfolio-four.html" class="sf-with-ul">4
-									Column</a></li>
-							<li><a href="portfolio-full-width.html" class="sf-with-ul">Full
-									Width</a></li>
-							<li><a href="portfolio-single.html" class="sf-with-ul">Single
-									Item Page</a></li>
-							<li><a href="portfolio-single-big.html" class="sf-with-ul">Single
-									Large Item Page</a></li>
-						</ul></li>
+						</li>
 					<li><a href="festi.do" class="sf-with-ul"> 축제정보 <span
 							class="sf-sub-indicator"> <i class="fa fa-angle-down "></i>
 						</span>
 					</a>
-						<ul>
-							<li><a href="blog-left-sidebar.html" class="sf-with-ul">Left
-									Sidebar Blog</a></li>
-							<li><a href="blog-right-sidebar.html" class="sf-with-ul">Right
-									Sidebar Blog</a></li>
-							<li><a href="blog-full-width.html" class="sf-with-ul">Blog
-									Full Width</a></li>
-							<li><a href="single-post.html" class="sf-with-ul">Single
-									Post</a></li>
-						</ul></li>
-					<li><a href="#"> 기타2 <span class="sf-sub-indicator">
-								<i class="fa fa-angle-down"></i>
-						</span>
-					</a>
-						<ul>
-							<li><a href="new_trip.do" class="sf-with-ul">새글</a></li>
-							<li><a href="contact-2.html" class="sf-with-ul">Contact
-									Option</a></li>
-							<li><a href="contact-3.html" class="sf-with-ul">Contact
-									Option 2</a></li>
-						</ul></li>
+						</li>
+					
 				</ul>
 			</nav>
 			<!-- /Menu -->

@@ -85,7 +85,7 @@
                                                     </span>
                                                     <!-- Swap image -->
                                                     <div class="flip">
-                                                        <a href="single-post.do?no=2" class="swap-image">
+                                                        <a href="single-post.do?no=16" class="swap-image">
                                                         <img src="img/trip/roadtripposter.png" title="iPhone 5s 64 GB" alt="iPhone 5s 64 GB" class="front">
                                                         </a>
                                                     </div>
@@ -94,7 +94,7 @@
                                                 </div>
                                                 <div class="product-meta">
                                                     <div class="left">
-                                                        <h3 class="name"><a href="single-post.do?no=2">로드 트립</a></h3>
+                                                        <h3 class="name"><a href="single-post.do?no=16">로드 트립</a></h3>
                                                         <div class="price">
                                                         
                                                             <span class="price-new">$150</span>
